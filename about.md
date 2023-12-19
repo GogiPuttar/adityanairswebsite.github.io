@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: midnight
+# layout: page
 title: About
 permalink: /about/
 ---

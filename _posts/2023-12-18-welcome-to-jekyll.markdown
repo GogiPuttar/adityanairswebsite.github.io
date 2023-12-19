@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: midnight
+# layout: post
 title:  "Welcome to Jekyll!"
 date:   2023-12-18 17:43:43 -0600
 categories: jekyll update
