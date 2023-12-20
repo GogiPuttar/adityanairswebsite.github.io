@@ -1,10 +1,10 @@
 # Site
-name: "James Oubre"
-title: "James' Portfolio"
+name: "Aditya Nair"
+title: "Aditya's Portfolio"
 description: "Northwestern MS in Robotics Student Portfolio"
 logo: 'assets/images/logo3.png'
-favicon: 'assets/images/logo3.png'
-url: oubrejames.github.io
+favicon: 'assets/images/logo.png'
+url: 
 baseurl: 
 google_analytics:
 include: ["_pages"]
@@ -12,12 +12,12 @@ permalink: /:title/
 
 # Authors
 authors:
-  James:
-    name: James Oubre
-    display_name: James Oubre
+  Aditya:
+    name: Aditya Nair
+    display_name: Aditya Nair
     gravatar:
-    email: jamesoubre2023@u.northwestern.edu
-    LinkedIn: https://www.linkedin.com/in/james-oubre
+    email: adityanair2024@u.northwestern.edu
+    LinkedIn: https://www.linkedin.com/in/aditya-nair-33b166203/
     description: 
 
 # Plugins

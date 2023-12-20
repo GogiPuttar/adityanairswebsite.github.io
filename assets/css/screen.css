@@ -10,6 +10,10 @@ License: https://www.wowthemes.net/freebies-license/
 .mainheading {
     padding: 1rem 0rem;
     background: rgb(42, 40, 94);
+    /* background: rgb(0, 200, 226); */
+    /* background: rgb(0, 134, 151); */
+    /* background: rgb(50, 0, 131); */
+    /* background: rgb(6, 0, 56); */
 }
 
 a {
@@ -55,6 +59,10 @@ pre {
     padding-top: 1.5rem;
     margin-top: 57px;
     transition: all 0.4s;
+    /* background: rgb(20, 0, 56); */
+    /* background: rgb(50, 0, 131); */
+    /* background: rgb(0, 134, 151); */
+    /* background: rgb(0, 200, 226); */
     background:rgb(42, 40, 94)
 }
 
@@ -339,6 +347,10 @@ span.post-read-more a:hover {
     margin-top: 50px;
     margin-bottom: 62px;
     position: relative;
+    background: rgb(20, 0, 56);
+    /* background: rgb(50, 0, 131); */
+    /* background: rgb(0, 134, 151); */
+    /* background: rgb(0, 200, 226); */
     background: rgb(42, 40, 94);
 }
 
@@ -573,6 +585,10 @@ ul.tags li a:hover {
     position: fixed;
     bottom: 0;
     left: 0;
+    background-color: rgb(20, 0, 56);
+    /* background-color: rgb(50, 0, 131); */
+    /* background-color: rgb(0, 134, 151); */
+    /* background-color: rgb(0, 200, 226); */
     background-color: rgb(42, 40, 94);
     width: 100%;
     padding: 14px 0;

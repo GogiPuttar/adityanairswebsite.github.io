@@ -1,17 +1,17 @@
 ---
 layout: page
 title: Resume and Contact Info
-permalink: /JamesOubre_Resume
+permalink: /AdityaNair_Resume
 comments: false
 ---
 
 # Contact
 
-#### jamesoubre2023@u.northwestern.edu
+#### adityanair2024@u.northwestern.edu
 
-#### [GitHub](https://github.com/oubrejames)
+#### [GitHub](https://github.com/gogiputtar)
 
-#### [LinkedIn](https://www.linkedin.com/in/james-oubre) 
+#### [LinkedIn](https://www.linkedin.com/in/aditya-nair-33b166203/) 
 
 <iframe src="_pages/Awesome_CV-15.pdf" width="100%" height="1500px">
 </iframe>
