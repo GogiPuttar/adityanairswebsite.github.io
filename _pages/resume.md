@@ -13,8 +13,8 @@ comments: false
 
 #### [LinkedIn](https://www.linkedin.com/in/aditya-nair-33b166203/) 
 
-<iframe src="_pages/Awesome_CV-15.pdf" width="100%" height="1500px">
+<iframe src="_pages/AdityaNair_Resume_Dec2023.pdf" width="100%" height="1500px">
 </iframe>
 
-## [Download Resume as a PDF](Awesome_CV-15.pdf)
+## [Download Resume as a PDF](AdityaNair_Resume_Dec2023.pdf)
 
