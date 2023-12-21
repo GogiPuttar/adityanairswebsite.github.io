@@ -89,17 +89,15 @@ A demo of the package's ability to detect the positions of the rings is shown be
 
 The `teleop_visualization` package allows you to visualize the avatar's workspace in RViz.
 
-__Real Life:__
-<p align = "center"><img src="assets/images/ShadowHandsRealLife.png" height="250"   width="500"/></p>
+<p style="text-align:left;">
+    <strong>Real Life</strong>
+    <span style="float:right;">
+        <strong>RViz</strong>
+    </span>
+</p>
 
-__RViz Visualization:__
-
-
-__Real Life:__
-![Avatar Station with Rings](https://github.com/ME495-EmbeddedSystems/final-project-teleop/assets/122302059/c47e4826-eb94-4f62-a949-32af5adda925)
-
-__RViz Visualization:__
-![Screenshot from 2023-11-30 15-52-21](https://github.com/ME495-EmbeddedSystems/final-project-teleop/assets/122302059/cb54bf83-4209-43e2-9299-f436f003a32e)
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ShadowHandsRealLife.png?raw=true" height="450"   width="49%"/>
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ShadowHandsRViz.png?raw=true" height="450"   width="49%"/></p>
 
 <br>
 
