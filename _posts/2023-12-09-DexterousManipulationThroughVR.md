@@ -89,15 +89,15 @@ A demo of the package's ability to detect the positions of the rings is shown be
 
 The `teleop_visualization` package allows you to visualize the avatar's workspace in RViz.
 
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ShadowHandsRealLife.png?raw=true" height="450"   width="49%"/>
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ShadowHandsRViz.png?raw=true" height="450"   width="49%"/></p>
+
 <p style="text-align:left;">
     <strong>Real Life</strong>
     <span style="float:right;">
         <strong>RViz</strong>
     </span>
 </p>
-
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ShadowHandsRealLife.png?raw=true" height="450"   width="49%"/>
-<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ShadowHandsRViz.png?raw=true" height="450"   width="49%"/></p>
 
 <br>
 
