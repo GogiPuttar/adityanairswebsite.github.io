@@ -11,6 +11,9 @@ hidden: false
 
 Research, Legged Robots, Manipulation
 
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.jpg?raw=true" height="480"   width="90%"/>
+</p>
+
 <div align="center"><h2> <a href="https://www.frontiersin.org/articles/10.3389/fmech.2023.1142421/full">View Publication ⇗</a></h2></div>
 <div align="center"><h2> OR </h2></div>
 <div align="center"><h2> <a href="https://www.frontiersin.org/articles/10.3389/fmech.2023.1142421/full">View PDF 📄</a></h2></div>
