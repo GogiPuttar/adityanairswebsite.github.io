@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Dexterous Manipulation through Virtual Reality"
-categories: [Python, ROS2, Computer Vision, Manipulation, Motion Planning, Dynamic Systems, Controls, Simulation, Shadow Hands, Emika Franka Robot Arm, Intel RealSense, ABB Gofa Arm]
+categories: [Python, ROS2, Computer Vision, Manipulation, Motion Planning, Dynamic Systems, Controls, Simulation, Gazebo, Shadow Hands, Emika Franka Robot Arm, Intel RealSense, ABB Gofa Arm]
 image: assets/images/ShadowHands.gif
 featured: true
 hidden: true
 ---
 
-Python, ROS2, Computer Vision, Manipulation, Motion Planning, Dynamic Systems, Controls, Simulation, Shadow Hands, Emika Franka Robot Arm, Intel RealSense, ABB Gofa Arm
+Python, ROS2, Computer Vision, Manipulation, Motion Planning, Dynamic Systems, Controls, Gazebo, Shadow Hands, Emika Franka Robot Arm, Intel RealSense, ABB Gofa Arm
 
 <div align="center"><iframe width="80%" height="375" src="https://www.youtube.com/embed/_XrXWBiALow" title="Dexterous Manipulation through Virtual Reality" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 

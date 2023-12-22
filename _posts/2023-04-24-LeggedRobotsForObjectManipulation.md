@@ -9,7 +9,7 @@ featured: false
 hidden: false
 ---
 
-Research, Legged Robots, Manipulation
+Research, Legged Locomotion, Manipulation
 
 <p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.jpg?raw=true" height="480"   width="90%"/>
 </p>

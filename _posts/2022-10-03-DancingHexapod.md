@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Dancing Hexapod"
-categories: [Python, Motion Planning, Simulation, Legged Locomotion, HEBI Daisy Hexapod
+categories: [Python, Controls, Motion Planning, Simulation, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
 ]
 image: assets/images/CrabRaveAlt.gif
@@ -9,7 +9,7 @@ featured: true
 hidden: true
 ---
 
-Python, Motion Planning, Simulation, Legged Locomotion, HEBI Daisy Hexapod
+Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
 ***To feel the rhythm of the robot, I recommend you turn the volume on! 🔊***
 
