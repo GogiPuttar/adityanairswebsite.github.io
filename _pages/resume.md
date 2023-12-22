@@ -13,7 +13,7 @@ comments: false
 
 #### [LinkedIn ⇗](https://www.linkedin.com/in/aditya-nair-33b166203/) 
 
-<iframe src="_pages/AdityaNair_Resume_Dec2023.pdf" width="80%" height="800px">
+<iframe src="_pages/AdityaNair_Resume_Dec2023.pdf" width="80%">
 </iframe>
 
 ## [Download Resume as a PDF ⇓](AdityaNair_Resume_Dec2023.pdf)

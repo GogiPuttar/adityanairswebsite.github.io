@@ -11,7 +11,7 @@ hidden: false
 
 Research, Legged Locomotion, Manipulation
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.jpg?raw=true" height="480"   width="90%"/>
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.jpg?raw=true"   width="90%"/>
 </p>
 
 <div align="center"><h2> <a href="https://www.frontiersin.org/articles/10.3389/fmech.2023.1142421/full">View Publication ⇗</a></h2></div>

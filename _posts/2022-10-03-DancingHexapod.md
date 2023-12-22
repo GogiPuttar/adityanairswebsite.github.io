@@ -14,7 +14,7 @@ Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 ***To feel the rhythm of the robot, I recommend you turn the volume on! 🔊***
 
 <div align="center">
-<video width="65%" height="305" controls loop autoplay muted>
+<video width="65%" controls loop autoplay muted>
     <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/f7d2aad3-1d4a-49ac-836a-8549b3f0fa4a" type="video/mp4">
 </video>
 </div>
