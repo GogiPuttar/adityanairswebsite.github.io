@@ -8,7 +8,7 @@ featured: true
 hidden: true
 ---
 
-Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimization, Controls, Dynamic Systems, Simulation, HEBI Daisy Hexapod
+Research, Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimization, Controls, Dynamic Systems, Simulation, HEBI Daisy Hexapod
 
 ### This Section is incomplete as finals week came in the way. Please check back again on December 25th 2023 🎄. Thank you for your interest `:)`
 
