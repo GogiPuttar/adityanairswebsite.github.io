@@ -1,20 +1,21 @@
 ---
 layout: post
 title:  "Dancing Hexapod"
-categories: [Python
+categories: [Python, Motion Planning, Simulation, Legged Locomotion, HEBI Daisy Hexapod
+
 ]
-image: assets/images/CrabRave.gif
+image: assets/images/CrabRaveAlt.gif
 featured: true
 hidden: true
 ---
 
-Python, Motion Planning, Simulation
+Python, Motion Planning, Simulation, Legged Locomotion, HEBI Daisy Hexapod
 
-<div align="center"><iframe width="65%" height="305" src="https://www.youtube.com/embed/uLeqXiA7C7Y" title="Crab Rave - Dancing Robot" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+***To feel the rhythm of the robot, I recommend you turn the volume on! 🔊***
 
 <div align="center">
-<video width="65%" height="305" controls>
-    <source src="assets/images/CrabRave.mp4" type="video/mp4">
+<video width="65%" height="305" controls loop autoplay muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/f7d2aad3-1d4a-49ac-836a-8549b3f0fa4a" type="video/mp4">
 </video>
 </div>
 

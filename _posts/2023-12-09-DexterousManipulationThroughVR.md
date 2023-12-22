@@ -103,6 +103,7 @@ The `teleop_visualization` package allows you to visualize the avatar's workspac
 
 ## `teleop_avatar` Package
 
+***My primary contribution to the project was the `teleop_avatar` package.***<br> 
 The `teleop_avatar` package controls the avatar robot to pick up objects and move them. In order to pick up an object, you can simply call a service specifying the object's id. There is also a service which allows you to pick up rings and place them on the peg by simply specifying the object's id.
 
 Here is an example of the teleop_avatar package picking up rings and stacking them on a peg:
