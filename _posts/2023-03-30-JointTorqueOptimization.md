@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Joint-Torque Optimization for Load Carrying Operations"
+title:  "Joint-Torque Optimization for Payload Carrying Operations"
 categories: [Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimization, Controls, Dynamic Systems, Simulation, HEBI Daisy Hexapod
 ]
 image: assets/images/Torque-ControlWalking.gif
