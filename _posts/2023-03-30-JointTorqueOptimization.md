@@ -10,7 +10,7 @@ hidden: true
 
 Research, Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimization, Controls, Dynamic Systems, Simulation, HEBI Daisy Hexapod
 
-### This Section is incomplete as finals week came in the way. Please check back again on December 25th 2023 🎄. Thank you for your interest `:)`
+### This Section is under construction 🛠️ since finals week came in the way. Please check back again on December 31st 2023 🎄. Thank you for your interest `:)`
 
 ### The post on Dexterous Manipulation through Virtual Reality is complete and ready for viewing.
 
