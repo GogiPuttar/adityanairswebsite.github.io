@@ -8,7 +8,7 @@ featured: false
 hidden: false
 ---
 
-C++, Signals, Mechatronics, Arduino
+Arduino, C++, Signals, Circuit Design
 
 <br>
 
