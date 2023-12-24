@@ -9,13 +9,11 @@ featured: false
 hidden: false
 ---
 
-MATLAB, Manipulation, Motion Planning, CoppeliaSim, KUKA YouBot
-
-***To feel the rhythm of the robot, I recommend you turn the volume on! 🔊***
+MATLAB, Manipulation, Motion Planning, Controls, CoppeliaSim, KUKA YouBot
 
 <div align="center">
-<video width="65%" controls loop autoplay muted>
-    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/f7d2aad3-1d4a-49ac-836a-8549b3f0fa4a" type="video/mp4">
+<video width="80%" controls loop autoplay muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/92870f41-206d-4030-be52-424c6fda87f2" type="video/mp4">
 </video>
 </div>
 
