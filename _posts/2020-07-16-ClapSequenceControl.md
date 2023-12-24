@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Home Automation with Clap Sequence Control"
-categories: [C++, Signals, Mechatronics, Arduino
+categories: [Arduino, C++, Signals, Circuit Design
 ]
 image: assets/images/Clap.gif
 featured: false
