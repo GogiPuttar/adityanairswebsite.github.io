@@ -8,7 +8,7 @@ License: https://www.wowthemes.net/freebies-license/
     .container {max-width:80%;}
 }
 .mainheading {
-    padding: 1rem 0rem;
+    padding: 2rem 0rem;
     background: rgb(42, 40, 94);
     /* background: rgb(0, 200, 226); */
     /* background: rgb(0, 134, 151); */
@@ -321,7 +321,7 @@ span.post-read-more a:hover {
 }
 
 .mediumnavigation .navbar-brand img {
-    max-height: 30px;
+    max-height: 80px;
     margin-right: 5px;
 }
 

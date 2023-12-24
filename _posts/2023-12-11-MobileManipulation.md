@@ -13,13 +13,17 @@ MATLAB, Manipulation, Motion Planning, Controls, CoppeliaSim, KUKA YouBot
 
 <div align="center">
 <video width="80%" controls loop autoplay muted>
-    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/92870f41-206d-4030-be52-424c6fda87f2" type="video/mp4">
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/a663013e-a913-4e6c-8d2e-881ea00691ce" type="video/mp4">
 </video>
 </div>
 
-### This Section is under construction 🛠️ since finals week came in the way. Please check back again on December 31st 2023 🎆. Thank you for your interest `:)`
+<br>
 
-### The post on Dexterous Manipulation through Virtual Reality is complete and ready for viewing.
+### This Section is under construction 🛠️
+Over the winter break, I will be adding more information about my personal and professional projects. 
+If you are interested, please check back on Janurary 1st, 2024.
+
+In the meanwhile, the post on [**Dexterous Manipulation through Virtual Reality**](https://adityanairs.website/DexterousManipulationThroughVR/) is complete and ready for viewing.
 
 
 

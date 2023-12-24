@@ -10,9 +10,13 @@ hidden: false
 
 Python, ROS, Motion Planning, Controls, Wheeled Locomotion, Jetson Nano
 
-### This Section is under construction 🛠️ since finals week came in the way. Please check back again on December 31st 2023 🎆. Thank you for your interest `:)`
+<br>
 
-### The post on Dexterous Manipulation through Virtual Reality is complete and ready for viewing.
+### This Section is under construction 🛠️
+Over the winter break, I will be adding more information about my personal and professional projects. 
+If you are interested, please check back on Janurary 1st, 2024.
+
+In the meanwhile, the post on [**Dexterous Manipulation through Virtual Reality**](https://adityanairs.website/DexterousManipulationThroughVR/) is complete and ready for viewing.
 
 
 
