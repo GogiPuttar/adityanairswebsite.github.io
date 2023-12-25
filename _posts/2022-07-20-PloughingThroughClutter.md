@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ploughing through Clutter - Robust Non-Holonomic Motion Control"
+title:  "Ploughing through Clutter: Robust Non-Holonomic Motion Control"
 categories: [Python, Controls, Nonlinear Optimization, Dynamic Systems, Manipulation, Simulation, PyBullet, Wheeled Locomotion
 
 ]

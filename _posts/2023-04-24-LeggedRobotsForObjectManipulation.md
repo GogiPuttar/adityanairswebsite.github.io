@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Legged Robots for Object Manipulation: A Review"
-categories: [Research, Legged Robots, Manipulation
+categories: [Research, Legged Locomotion, Manipulation
 
 ]
 image: assets/images/ReviewPaper.jpg
