@@ -8,7 +8,7 @@ featured: false
 hidden: false
 ---
 
-CAD, Mecchanical Design, Fusion360
+CAD, Mechanical Design, Fusion360
 
 <br>
 
