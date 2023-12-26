@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Super Mario Game From Scratch"
+title:  "Super Mario Game from scratch"
 categories: [Lua, Data Structures, Simulation
 ]
 image: assets/images/SuperMario.gif
