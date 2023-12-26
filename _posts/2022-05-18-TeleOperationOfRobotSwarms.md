@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "TeleOperation of Robot Swarms"
-categories: [Python, ROS, Motion Planning, Controls, Wheeled Locomotion, Jetson Nano, Data Structures
+categories: [Python, ROS2/ROS, Motion Planning, Controls, Wheeled Locomotion, Jetson Nano, Data Structures
 ]
 image: assets/images/TeleopSwarmAlt.gif
 featured: false
