@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mobile/Whole-Body Manipulation"
-categories: [MATLAB, Manipulation, Motion Planning, Controls, Simulation, Wheeled Locomotion, CoppeliaSim, KUKA YouBot
+categories: [MATLAB, Manipulation, Motion Planning, Controls, Simulation, Wheeled Locomotion, CoppeliaSim, KUKA YouBot, Data Structures
 
 ]
 image: assets/images/MobileManipulation.gif

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Dancing Hexapod - Full SE3 Body Pose Control"
-categories: [Python, Controls, Motion Planning, Simulation, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
+categories: [Python, Controls, Motion Planning, Simulation, Legged Locomotion, PyBullet, HEBI Daisy Hexapod, Data Structures
 
 ]
 image: assets/images/CrabRaveAlt.gif

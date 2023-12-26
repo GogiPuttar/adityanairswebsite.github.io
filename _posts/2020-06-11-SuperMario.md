@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Robot playing T-Rex Game"
-categories: [Arduino, C++, Manipulation, Signals, Mechatronics, Circuit Design, Data Structures
+title:  "Super Mario Game From Scratch"
+categories: [Lua, Data Structures, Simulation
 ]
-image: assets/images/dinogaur.gif
+image: assets/images/SuperMario.gif
 featured: false
 hidden: false
 ---
 
-Arduino, C++, Manipulation, Signals, Mechatronics, Circuit Design
+Lua, Data Structures, Simulation
 
 <br>
 
@@ -17,4 +17,6 @@ Over the winter break, I will be adding more information about my personal and p
 If you are interested, please check back on Janurary 1st, 2024.
 
 In the meanwhile, the post on [**Dexterous Manipulation through Virtual Reality**](https://adityanairs.website/DexterousManipulationThroughVR/) is complete and ready for viewing.
+
+
 
