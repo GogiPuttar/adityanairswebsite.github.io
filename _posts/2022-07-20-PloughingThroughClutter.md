@@ -13,18 +13,26 @@ Python, Controls, Nonlinear Optimization, Manipulation, PyBullet, Wheeled Locomo
 
 <br>
 
-## `teleop_visualization` Package
+## What problem does this solve?
 
-The `teleop_visualization` package allows you to visualize the avatar's workspace in RViz.
+Using PID control to track a moving target is inherently unstable on an under-actuated non-holonommic robot such as this one. Ultimately, any obstacles that come in the way can create errors so large, that they're impossible to recover from. 
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ShadowHandsRealLife.png?raw=true" height="450"   width="49%"/>
-<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ShadowHandsRViz.png?raw=true" height="450"   width="49%"/></p>
+<p align = "center">
+<video width="40%" controls loop autoplay muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/6664fca0-20e6-43be-904b-d0c549d0df81" type="video/mp4">
+</video>
+</p>
 
-<p style="text-align:left;">
-    <strong>Real Life</strong>
-    <span style="float:right;">
-        <strong>RViz</strong>
-    </span>
+<br>
+
+## Limit Cycles
+
+My approach instead uses a time-invariant controller based on a non-linear oscillator. 
+
+<p align = "center">
+<video width="40%" controls loop autoplay muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/de2dfd7a-b608-468b-8a97-80053587c1b7" type="video/mp4">
+</video>
 </p>
 
 <br>
