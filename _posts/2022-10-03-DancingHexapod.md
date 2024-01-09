@@ -21,6 +21,14 @@ Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
 <br>
 
+## Introduction
+
+## Motivation
+
+## Animatronic Control
+
+## Continuation
+
 ### This Post is under construction 🛠️
 Over the winter break, I will be adding more information about my personal and professional projects. 
 If you are interested, please check back on Janurary 5th, 2024.

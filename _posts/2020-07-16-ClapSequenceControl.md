@@ -21,7 +21,7 @@ Arduino, C++, Signals, Circuit Design
 </video>
 </div>
 
-## The Story behind this
+## Motivation
 
 ## Hardware
 <p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ClapSequence-Board.png?raw=true"  width="45%"/>
