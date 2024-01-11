@@ -16,5 +16,5 @@ comments: false
 <iframe src="_pages/AdityaNair_Resume_Jan2024.pdf" width="80%" height="800">
 </iframe>
 
-## [View as a PDF 📄](AdityaNair_Resume_Dec2023.pdf)
+## [View as a PDF 📄](AdityaNair_Resume_Jan2024.pdf)
 
