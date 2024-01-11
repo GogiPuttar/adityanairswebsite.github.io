@@ -29,8 +29,8 @@ Typically, a human operator and robot avatar pair involves live visual and tacti
 This team effort was part of the final project in the [ME 495 Embedded Systems]() course at Northwestern. I worked on this project with:
 - Rohan Kota
 - Luke Batteas
-- Zach Alves
-- Leo Chen
+- [Zach Alves](https://alves-zach.github.io/)
+- [Leo Chen](https://portfolio.limerobotlab.com)
 
 <br>
 
