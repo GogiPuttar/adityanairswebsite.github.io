@@ -14,14 +14,9 @@ Arduino, C++, Signals, Circuit Design
 
 ## Introduction
 
-<div align="center">
-<video width="90%" controls loop autoplay>
-    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/fd9044c1-e9d0-4dfb-a929-7865c77a7148
-" type="video/mp4">
-</video>
-</div>
+<div align="center"><h2> <a href="https://github.com/GogiPuttar/Clap-Sequence-Sensor">View it on Github ⇗</a></h2></div>
 
-## Motivation
+## Personal Motivation
 
 ## Hardware
 <p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ClapSequence-Board.png?raw=true"  width="45%"/>
