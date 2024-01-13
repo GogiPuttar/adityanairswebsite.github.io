@@ -29,34 +29,34 @@ Python, Motion Planning, Controls, Signals, Wheeled Locomotion, Webots
 
 ## Localization with Extended Kalman Filter
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ClapSequence-Board.png?raw=true"  width="45%"/>
-</p>
+## Path Planning ($$A*$$ Algorithm)
 
-## Path Planning ($A*$ Algorithm)
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarAStar.png?raw=true"  width="65%"/>
+</p>
 
 Path-planning is an important primitive for autonomous mobile robots that lets robots and the shortest (or otherwise optimal) path between two points. Optimal paths could be paths that minimize the amount of turning, the amount of braking or some other metric a specific
 application requires. In this project, the path is optimized in terms of the distance traveled by the path.
 
-For our path planning algorithm and navigation, we have put together some code from some open source libraries to implement the $A*$ algorithm.
+For our path planning algorithm and navigation, we have put together some code from some open source libraries to implement the $$A*$$ algorithm.
 
-Here, $n$ is the current node, and $n_0$ is the adjacent node. The accumulated cost from the start node to any given node $n$ with $g(n)$. The cost from a node $n$ to an adjacent node $n_0$ becomes $c(n; n_0 )$, and the expected cost (heuristic cost) from a node $n$ to the goal node is described with $h(n)$. The total expected cost from start to goal via state n can then be written as:
+Here, $$n$$ is the current node, and $$n_0$$ is the adjacent node. The accumulated cost from the start node to any given node $$n$$ with $$g(n)$$. The cost from a node $n$ to an adjacent node $$n_0$$ becomes $$c(n; n_0 )$$, and the expected cost (heuristic cost) from a node $$n$$ to the goal node is described with $h(n)$. The total expected cost from start to goal via state n can then be written as:
 
 $$
 f(n) = g(n) + h(n),
 $$
 
-where $h(n)$ is a parameter that denotes an algorithm-dependent heuristic. For the $A*$ algorithm, this value is $0$.
+where $$h(n)$$ is a parameter that denotes an algorithm-dependent heuristic. For the $$A*$$ algorithm, this value is $$0$$.
 
-$A*$ works by making a lowest-cost path tree from the start node to the target node. 
-$A*$ algorithm begins at the start (yellow star), and considers all adjacent cells. 
+$$A*$$ works by making a lowest-cost path tree from the start node to the target node. 
+$$A*$$ algorithm begins at the start (yellow star), and considers all adjacent cells. 
 Once the list of adjacent cells has been populated, it filters out those which are inaccessible (walls, obstacles, out of bounds). 
-It then picks the cell with the lowest cost, which is the estimated $f (n)$. 
+It then picks the cell with the lowest cost, which is the estimated $$f (n)$$. 
 This process is recursively repeated until the shortest path has been found to the target (red star). 
-The computation of $f(n)$ is done via a heuristic that usually gives good results. 
-$A*$ differs from an algorithm where a heuristic is more of an estimate and is not necessarily correct.
+The computation of $$f(n)$$ is done via a heuristic that usually gives good results. 
+$$A*$$ differs from an algorithm where a heuristic is more of an estimate and is not necessarily correct.
 Famous examples of heuristics are the ”Euclidean” and the ”Manhattan” distance. 
 The heuristic function must be admissible, which means it can never overestimate the cost to reach the goal.
-Also, the value of $h(n)$ would ideally equal the exact cost of reaching the destination. 
+Also, the value of $$h(n)$$ would ideally equal the exact cost of reaching the destination. 
 This is, however, not possible because the best path is not known. 
 Here, we have chosen the Manhattan distance given its advantages in grid based map representations.
 This in turn, generates a sequence of waypoints which the controller can follow.
