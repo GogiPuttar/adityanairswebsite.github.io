@@ -23,9 +23,16 @@ Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
 ## Introduction
 
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ShadowHandsRealLife.png?raw=true" height="420" width="49%"/>
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ShadowHandsRViz.png?raw=true" height="420" width="49%"/></p>
+
+<div align="center"><h2> <a href="https://github.com/marmotlab/Yuna_PyBullet/blob/main/setup/yunaAnimatronics.py">View it on Github ⇗</a></h2></div>
+
 ## Motivation
 
 ## Animatronic Control
+
+
 
 <div align="center">
 <video width="65%" controls loop autoplay muted>
