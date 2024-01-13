@@ -35,13 +35,14 @@ from temperature control to sensor fusion. The algorithm is relatively simple to
 requires minimal computational power making it suitable for this project. However a fundamental
 understanding of the basic concepts is very necessary for its implementation. For this project we
 have used an Extended Kalman Filter to incorporate multiple degrees of freedom of our sensors.
-A detailed description of the code used is given below:
+Here's a step-by-step description of our implementation:
 
-- **Initialization:**
+1. **Initialization:**
 For the first iteration of the Extended Kalman Filter, we start at time $$k$$. 
 We initialize the state vector and control vector for the previous time step $$k − 1$$. 
-We have also initialized the control
+|We have also initialized the control
 state variables and assigned them an initial value of $$0$$. 
+
 $$
 \begin{equation*}
     \hat{x}_{k-1|k-1} = \begin{bmatrix}
@@ -69,9 +70,106 @@ w_{k-1}
 \end{equation*},
 $$
 
-where $v_{k-1}$ is the forward velocity in the robot frame at time $k-1$, and $\omega_{k-1}$ is the angular velocity around the z-axis at time $k-1$ (yaw speed).
+2. **Predicted State Estimation:**
+This estimated state prediction for time $$k$$ is currently our best guess of the current state of the bot.
+We can also add some static noise values to make the sensor measurements more realistic. 
+However, for the purpose of implementing localization with maximum possible precision, we have assumed noise from measurements to be negligible. 
 
+$$
+\begin{equation*}
+    \begin{bmatrix}
+x_{k} \\
+y_{k}\\
+\gamma_{k} 
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1 
+\end{bmatrix} \begin{bmatrix}
+x_{k-1} \\
+y_{k-1}\\
+\gamma_{k-1} 
+\end{bmatrix} + \begin{bmatrix}
+ \cos{\gamma_{k-1} }*dk & 0 \\
+ \sin{\gamma_{k-1} }*dk & 0 \\
+ 0 & dk
+\end{bmatrix} \begin{bmatrix}
+v_{k-1} \\
+w_{k-1}
 
+\end{bmatrix} + \begin{bmatrix}
+noise_{k-1} \\
+noise_{k-1}\\
+noise_{k-1} 
+\end{bmatrix}
+\end{equation*} \\
+$$
+
+3. **Predicted Covariance of State Estimate:**
+Since our current predicted state estimate for time $$k$$ is not completely accurate, we now determine the state covariance matrix $$P_{k|k-1}$$ for the current time step . 
+Since our robot car has three state variables $$[x, y, \gamma]$$, $$P$$ is a $$3 \times 3$$ matrix, whose diagonal terms denote the variance, and off-diagonal terms denote the covariance. 
+Further, $$Q_k$$ which is the $$3 \times 3$$ state model noise covariance matrix i.e., the deviation of the actual motion from the space state model:
+
+$$
+\begin{equation*}
+    Q_k = \begin{bmatrix}
+Cov(x, x) & Cov(x, y) & Cov(x, \gamma)\\
+Cov(y, x) & Cov(y, y) & Cov(y, \gamma)\\
+Cov(\gamma, x) & Cov(\gamma, y) & Cov(\gamma, \gamma) 
+\end{bmatrix}
+\end{equation*}
+$$
+
+4. **Innovation/Measurement Residual:**
+The measurement residual $$\tilde{y}_k$$, is simply the difference between the observation vector $$z_k$$, and the observation model $$h(\hat{x}_{k|k-1})$$. 
+The observation vector contains the actual readings from our sensors at time $$k$$, and the observation model contains the predicted state mesurements at time $$k$$.
+
+$$
+\begin{equation*}
+    \tilde{y}_k = z_k- h(\hat{x}_{k|k-1})
+\end{equation*}
+$$
+
+5. **Innovation (or residual) Covariance:**
+Here we have used the predicted covariance of the state estimate $$P_{k|k-1}$$ from Step $$3$$ and the measurement matrix $$H_k$$ and its transpose, and $$R_k$$ (sensor measurement noise covariance matrix)
+to calculate $S_k$, which represents the measurement residual covariance (also known as measurement prediction covariance).
+
+$$
+\begin{equation*}
+    \mathbf{S}_k = \mathbf{H}_k\mathbf{P}_{k | k-1}{\mathbf{H}_k}^T -  h(\hat{x}_{k|k-1}) + \mathbf{R}_k
+\end{equation*}
+$$
+
+6. **Near-Optimal Kalman Gain:**
+his is effectively our parameter to compute the weighted average between our actual readings and the predicted values.
+When the sensor noise is large, it approaches $$0$$ and when the control state noise is large it approaches $$1$$.
+Thus, it allows us to estimate the most accurate readings and uses those values to update itself in the next iteration.
+
+$$
+\begin{equation*}
+ \mathbf{K}_k = \mathbf{P}_{k | k-1}{\mathbf{H}_k}^T{\mathbf{S}_k}^{-1}
+\end{equation*}
+$$
+
+7. **Updated State Estimation:**
+Here we finally compute the weighted average mentioned in the previous step.
+We use the predicted state values, the Kalman gain and the measurement residual to do so.
+
+$$
+\begin{equation*}
+\mathbf{\hat{x}_{k|k}} = \mathbf{\hat{x}_{k|k-1}} + \mathbf{K}_k \mathbf{\tilde{y}_k}
+\end{equation*}
+$$
+
+8. **Updated Covariance of the State Estimate:**
+Finally, we correct the estimated covariance for the timestep k by updating it.
+We use the near-optimal Kalman gain, the measurement matrix and the initially assumed values of the covariance for this timestep.
+
+$$
+\begin{equation*}
+    \mathbf{P_{k|k} = (I-K_{k}H_{k})~P_{k|k-1}}
+\end{equation*}
+$$
 
 ## Path Planning ($$A*$$ Algorithm)
 
