@@ -27,7 +27,13 @@ Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
 ## Animatronic Control
 
-## Continuation
+<div align="center">
+<video width="65%" controls loop autoplay muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/7f364020-b06b-46a9-ac32-d0b2ca041a63" type="video/mp4">
+</video>
+</div>
+
+## Success
 
 ### This Post is under construction 🛠️
 Over the winter break, I will be adding more information about my personal and professional projects. 
