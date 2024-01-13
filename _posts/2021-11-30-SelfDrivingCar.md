@@ -29,6 +29,50 @@ Python, Motion Planning, Controls, Signals, Wheeled Locomotion, Webots
 
 ## Localization with Extended Kalman Filter
 
+A Kalman Filter is a Bayes’ Filter for Gaussian Linear Case that relies on recursive state
+estimation to make it a popular estimation algorithm used for a variety of purposes ranging
+from temperature control to sensor fusion. The algorithm is relatively simple to implement and
+requires minimal computational power making it suitable for this project. However a fundamental
+understanding of the basic concepts is very necessary for its implementation. For this project we
+have used an Extended Kalman Filter to incorporate multiple degrees of freedom of our sensors.
+A detailed description of the code used is given below:
+
+- **Initialization:**
+For the first iteration of the Extended Kalman Filter, we start at time $$k$$. 
+We initialize the state vector and control vector for the previous time step $$k − 1$$. 
+We have also initialized the control
+state variables and assigned them an initial value of $$0$$. 
+$$
+\begin{equation*}
+    \hat{x}_{k-1|k-1} = \begin{bmatrix}
+x_{k-1} \\
+y_{k-1}\\
+\gamma_{k-1} 
+\end{bmatrix} = \begin{bmatrix}
+ 0 \\
+ 0 \\
+ 0
+\end{bmatrix} 
+\end{equation*},
+$$
+
+$$
+\begin{equation*}
+    u_{k-1} = \begin{bmatrix}
+v_{k-1} \\
+w_{k-1}
+
+\end{bmatrix} = \begin{bmatrix}
+ 0 \\
+ 0
+\end{bmatrix} 
+\end{equation*},
+$$
+
+where $v_{k-1}$ is the forward velocity in the robot frame at time $k-1$, and $\omega_{k-1}$ is the angular velocity around the z-axis at time $k-1$ (yaw speed).
+
+
+
 ## Path Planning ($$A*$$ Algorithm)
 
 Path-planning is an important primitive for autonomous mobile robots that lets robots and the shortest (or otherwise optimal) path between two points. Optimal paths could be paths that minimize the amount of turning, the amount of braking or some other metric a specific
