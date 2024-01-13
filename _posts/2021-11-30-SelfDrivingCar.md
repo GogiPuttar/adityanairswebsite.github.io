@@ -31,9 +31,6 @@ Python, Motion Planning, Controls, Signals, Wheeled Locomotion, Webots
 
 ## Path Planning ($$A*$$ Algorithm)
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarAStar.png?raw=true"  width="65%"/>
-</p>
-
 Path-planning is an important primitive for autonomous mobile robots that lets robots and the shortest (or otherwise optimal) path between two points. Optimal paths could be paths that minimize the amount of turning, the amount of braking or some other metric a specific
 application requires. In this project, the path is optimized in terms of the distance traveled by the path.
 
@@ -46,6 +43,11 @@ f(n) = g(n) + h(n),
 $$
 
 where $$h(n)$$ is a parameter that denotes an algorithm-dependent heuristic. For the $$A*$$ algorithm, this value is $$0$$.
+
+<figure align = "center">
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarAStar.png?raw=true"  width="65%"/>
+<figcaption><em>Fig. 3: MATLAB plot of our path planner in a sample environment.</em></figcaption>
+</figure>
 
 $$A*$$ works by making a lowest-cost path tree from the start node to the target node. 
 $$A*$$ algorithm begins at the start (yellow star), and considers all adjacent cells. 
