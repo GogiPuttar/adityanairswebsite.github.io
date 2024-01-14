@@ -11,23 +11,78 @@ hidden: true
 
 Python, Motion Planning, Controls, Signals, Wheeled Locomotion, Webots
 
-## Introduction
+## Introduction:
 
 <div align="center"><h2> <a href="https://github.com/GogiPuttar/Four-wheeled-robot-localization-with-Kalman-Filter">View it on Github ⇗</a></h2></div>
 
-## Personal Motivation 
+## Personal Motivation:
 
-## Design 
+## Design:
+
+The robot has been modeled in Webots. 
+It has four wheels that have a width of 10 mm and a radius of 25 mm. Fig. 2.1 has a CAD layout of the body of the robot.
+The robot is designed to have four wheels because over the years the four wheeled vehicle design has been proven to be the most versatile for a variety of terrains. 
+These physical parameters have been chosen in order to make the robot symmetric, balanced and place the chassis moderately high up.
+
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarCAD.png?raw=true"  width="31%"/>
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarSim.png?raw=true" width="45%"/>
+<figcaption><em>Fig. 1: Robot model.</em></figcaption>
+</figure>
 
 ### Sensors
 
-## Control
+1. **Rotary Encoders:**
+A rotary-encoder is an electro-mechanical device that converts the angular position or motion of a shaft or axle to analog or digital output signals.
+Both back wheels of the robot are equipped with rotary encoders for wheel odometry.
+Limitations of wheel-odometry through rotary encoders include errors due to slipping along and perpendicular to the wheel and bouncing of wheels. 
+As a result it suffers from positional drift that accumulates over time. 
+Although it is easy and inexpensive to implement, it is not reliable where precise and long-term localisation is needed.
+
+2. **Accelerometer and IMU:**
+An accelerometer is a device that measures the proper acceleration along all 3--axes. Modern mechanical accelerometers are often small micro--electro-mechanical systems (MEMS), and are often very simple MEMS devices, consisting of little more than a cantilever beam with a proof mass (also known as seismic mass). The acceleration values can be integrated once to give the velocity of the robot, and then once again to get the position of the robot. We have implemented this using the Runge--Kutta method. Accelerometer based localization suffers from drift  due to double integration of finite timesteps. An IMU is just an accelerometer integrated with a gyroscope that can in turn measure acceleration as well as rotation along all 3--axes. The measurements of roll, pitch and yaw also suffer from the same drift and need to be corrected.
+
+## Control:
 
 ### Steering
+We have implemented the Ackermann Steering mechanism for the robot. The intention of Ackermann geometry is to avoid the need for tires to slip sideways when following the path around a curve. The geometrical solution to this is for all wheels to have their axles arranged as radii of circles with a common centre point. As the rear wheels are fixed, this centre point must be on a line extended from the rear axle. Intersecting the axes of the front wheels on this line as well requires that the inside front wheel be turned, when steering, through a greater angle than the outside wheel. The robot implements this mechanism through the following formulae, which we have derived, enabling the robot to travel in an arc.
+
+<figure align = "center">
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarSim.png?raw=true" width="45%"/>
+<figcaption><em>Fig. 2: Robot model.</em></figcaption>
+</figure>
 
 ### Waypoint Navigation
+The documentation for kinematics for a four wheeled robot is scarce. The problem of kinematics is more complex and involved compared to a 2 wheeled differential drive robot since the four wheeled robot is a non-holonomic system. We need to divide the problem into two segments namely; traveling straight and moving in an arc. Traveling in a straight line involves setting the velocity of all wheels to be the same, however for traveling in an arc of radius 110 mm, the implementation from Fig. 2.6. is utilized. 
+To travel from any one coordinate to another the robot has to orient itself onto the line joining the two points while also facing the destination point. The robot must traverse on 2 different arcs to reach this pose as seen in Fig. 3.
 
-## Localization with Extended Kalman Filter
+<figure align = "center">
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarSim.png?raw=true" width="45%"/>
+<figcaption><em>Fig. 3: Robot model.</em></figcaption>
+</figure>
+
+## Localization with Extended Kalman Filter:
+Our code allows us the capability of simply entering the waypoints in a list resulting in the robot traveling to each one of these waypoints in that order. 
+In order to do this, the robot must be able to travel to any given point, know that it has reached its destination and then begin traveling to the next point. 
+Localization can be done using the wheel odometry values as well as acceleration readings. 
+
+### Wheel Odometry
+
+For Wheel odometry, we derived the following formula to compute the $$x$$ and $$y$$ increment in every timestep.
+
+$$
+\begin{align*}
+    dx = \frac{(dR + dL)}{2} \times \cos{\frac{\theta}{2}} \\
+    dy = \frac{(dR + dL)}{2} \times \sin{\frac{\theta}{2}} \\
+    \theta = 2 (sin^{-1}(\frac{dR-dL}{2})-\gamma), \\
+\end{align*}
+$$
+
+where $$\gamma$$ is yaw.
+
+### IMU Odometry
+For IMU, we use the Runge-Kutta method to double integrate the acceleration in every iteration of the time loops to get the $x$ and $y$ increments. It should be noted that the values we obtain have significant errors due to drift because Webots does not allow timesteps smaller than 0.032 seconds.
+
+### Kalman Filter
 
 A Kalman Filter is a Bayes’ Filter for Gaussian Linear Case that relies on recursive state
 estimation to make it a popular estimation algorithm used for a variety of purposes ranging
@@ -171,7 +226,7 @@ $$
 \end{equation*}
 $$
 
-## Path Planning ($$A*$$ Algorithm)
+## Path Planning with $$A*$$:
 
 Path-planning is an important primitive for autonomous mobile robots that lets robots and the shortest (or otherwise optimal) path between two points. Optimal paths could be paths that minimize the amount of turning, the amount of braking or some other metric a specific
 application requires. In this project, the path is optimized in terms of the distance traveled by the path.
@@ -188,7 +243,7 @@ where $$h(n)$$ is a parameter that denotes an algorithm-dependent heuristic. For
 
 <figure align = "center">
 <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarAStar.png?raw=true"  width="65%"/>
-<figcaption><em>Fig. 3: MATLAB plot of our path planner in a sample environment.</em></figcaption>
+<figcaption><em>Fig. 4: MATLAB plot of our path planner in a sample environment.</em></figcaption>
 </figure>
 
 $$A*$$ works by making a lowest-cost path tree from the start node to the target node. 
