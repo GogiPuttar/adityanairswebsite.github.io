@@ -36,7 +36,7 @@ $$
 
 <br>
 
-## Perosnal Motivation
+## Personal Motivation
 
 <br> 
 
