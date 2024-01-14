@@ -16,6 +16,8 @@ Research, Legged Locomotion, Manipulation
 <p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.jpg?raw=true"   width="90%"/>
 </p>
 
+<br>
+
 <div align="center"><h2> <a href="https://www.frontiersin.org/articles/10.3389/fmech.2023.1142421/full">View Publication ⇗</a></h2></div>
 <div align="center"><h2> OR </h2></div>
 <div align="center"><h2> <a href="AdityaNair_LeggedRobotsForObjectManipulationAReview.pdf">View PDF 📄</a></h2></div>
