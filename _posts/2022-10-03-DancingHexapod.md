@@ -25,6 +25,10 @@ Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
 ## Overview
 
+I created a framework for full $$SE(3)$$ body pose control for HEBI's Daisy Hexapod, and made it dance using it's front legs and body pose to the [Crab Rave](https://www.youtube.com/watch?v=LDU_Txk06tM) song. 
+This robot is simulated in PyBullet, and follows a sequence of 17 keyframes in order to complete its dancing motion.
+These keyframes are also stitched together using a Catmull-Rom spline (described below) in order to make the motion appear more natural and rhythmic, which really brings this to life.
+
 $$
 \begin{align*}
 q(s) &= c_0 + c_1 u + c_2 u^2 + c_3 u^3\\
@@ -39,6 +43,13 @@ $$
 <br>
 
 ## Personal Motivation
+
+While writing my bachelor's thesis at the [MARMot Lab](https://marmotlab.org/), National University of Singapore, I derived the inverse kinematics and velocity kinematics for the body pose of a six-legged robot, to gain insight on the load distributiion over its joints. 
+One fine day, I happened to come across [Boston Dynamics' Video of Spot and Atlas dancing](https://www.youtube.com/watch?v=fn3KWM1kuAw) and thought that this was the coolest thing ever. 
+I tried to see if I could do something similar with MARMot's hexapod, but I couldn't figure how exact I would make something dance, whose body plan is similar to an insect. 
+This is when I had the AHA! moment as I recalled the [Crab Rave](https://www.youtube.com/watch?v=LDU_Txk06tM) meme, and then spent the next couple of days making this work.
+What I ended up with was a flawless demonstration of my body pose controller.
+Suffice to say, the Lab loved it `:)`
 
 <br> 
 
@@ -97,7 +108,7 @@ The Catmull-Rom Spline, originally formulated by Edwin Catmull (Co-Founder of Pi
 
 The advantages this specific spline possesses over other widely used curves are:
 
-1. Unlike **Bezier Curves**, Catmull-Rom splines actually pass through every point, and do not increase in polynomial order as the number of points increases.
+1. Unlike **Bezier Curves**, Catmull-Rom splines actually pass through every point, and additionally do not increase in polynomial order with increasing target points.
 
 2. Unlike **NURBS**, these splines do not have a complicated iterative formula.
 
@@ -139,11 +150,15 @@ where $$q_i$$ is the $$i$$-th target configuration.
 </figure>
 
 ## Success
+While it is self-evident that the simulation behaves how it is supposed to, I was unsuccessful in the completing my final goal of taking our real hexapod to the Marina Bay Sands beach in Singapore and filming it dancing over there. 
+This is primarily because even though all of these target poses are within the reachable workspaces, given the 20kg weight of the actual robot, it cannot statically stand in some of these configurations. Given the somewhat chaotic nature of the dynamics of such a complex system, surfing the edge of what the robot can and cannot support is a precarious task. 
+Maybe someday when I have the time, I'll be able to actualize this dream too.
 
 ## References
 
-1. [Christopher Twigg on Catmull-Rom Splines](https://www.cs.cmu.edu/~fp/courses/graphics/asst5/catmullRom.pdf)
-2. [javidx9's Series on Using Splines](https://www.youtube.com/watch?v=9_aJGUTePYo&t=1127s)
+1. [Noisestorm's Crab Rave](https://www.youtube.com/watch?v=LDU_Txk06tM)
+2. [Christopher Twigg on Catmull-Rom Splines](https://www.cs.cmu.edu/~fp/courses/graphics/asst5/catmullRom.pdf)
+3. [javidx9's Series on Using Splines](https://www.youtube.com/watch?v=9_aJGUTePYo&t=1127s)
 
 ### This Post is under construction 🛠️
 Over the winter break, I will be adding more information about my personal and professional projects. 
