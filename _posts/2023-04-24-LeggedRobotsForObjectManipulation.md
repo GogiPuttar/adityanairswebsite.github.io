@@ -23,7 +23,7 @@ Research, Legged Locomotion, Manipulation
 
 <br>
 
-## Introduction
+## Overview
 
 This is an invited research paper I wrote in collaboration with the [MARMot Lab](https://marmotlab.org/) at the National University of Singapore, and the [Daltorio Lab](https://engineering.case.edu/research/labs/daltorio-lab) at Case Western Reserve University, for the journal [Frontiers in Mechanical Engineering](https://www.frontiersin.org/journals/mechanical-engineering). 
 
