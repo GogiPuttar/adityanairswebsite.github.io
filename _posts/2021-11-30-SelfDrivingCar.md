@@ -11,11 +11,36 @@ hidden: true
 
 Python, Motion Planning, Controls, Signals, Wheeled Locomotion, Webots
 
+<br>
+
+<div align="center">
+<video width="75%" controls loop autoplay muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/02747c6e-d602-4190-bb4c-e01b4e0d5c85" type="video/mp4">
+</video>
+</div>
+
+<br>
+
 ## Introduction:
+
+With the commercial availability of mobile robots for personal, industrial, military, hospital and academic requirements, the need for a versatile and economic design has also increased over the past few years. A critical design of these robots is to ensure they are physically stable. While a majority of robots may have 2 wheels, balancing such a robot requires the use of advanced controllers and uses up a good portion of computational resources(the alternative may be to use wheels larger than the wheelbase of the platform, creating an impractical design). A way around this can be found in the use of four wheeled robot systems to the centre of gravity of the system remains in equilibrium. 
+
+From a theoretical view, the concept of implementing a 4 wheel drive system seems quite feasible but the alignment of the wheels must be carefully considered, keeping in mind that we must ensure pure rolling motion at all times to maintain efficiency and durability of components. A few ways to implement this are by using Ackermann steering, or omnidirectional wheels. 
+
+Further, upon deploying such robots in more natural environments, the problem of reliable localization crops up. While addressing the prevalence of visual or LIDAR based localization, it is important to note the large computation cost this creates. Since wheel encoders as well as IMU's can provide some level of reliable odometry, we decided to investigate the efficacy of these two systems in overcoming their individual weaknesses.
+
+**Following this methodology, we created and simulated an autonomous self-driving car in Webots. This car can plan paths around obstacles using $$A*$$ path planning, and navigate to waypoints using a custom steering controller, all through localizing itself effectively on uneven terrain by using a Kalman Filter for sensor fusion.**
+
+<br>
 
 <div align="center"><h2> <a href="https://github.com/GogiPuttar/Four-wheeled-robot-localization-with-Kalman-Filter">View it on Github ⇗</a></h2></div>
 
+<br>
+
 ## Personal Motivation:
+This project was mine and [Samaksh Judson](https://www.linkedin.com/in/samakshjudson/)'s effort for the Autonomous Mobile Robotics course in our third year of undergrad at BITS Pilani. 
+This was my first formal robotics project featuring advanced concepts (at least to us, at that time) like localization, planning, and control.
+This project **won the 1st prize**, and we ended up with the highest grades in the class. 
 
 ## Design:
 
@@ -60,7 +85,7 @@ To travel from any one coordinate to another the robot has to orient itself onto
 <figcaption><em>Fig. 3: The motion the robot follows to turn towards the waypoint, while also being on the line joining the next and previous waypoints.</em></figcaption>
 </figure>
 
-## Localization with Extended Kalman Filter:
+## Localization with Kalman Filter:
 Our code allows us the capability of simply entering the waypoints in a list resulting in the robot traveling to each one of these waypoints in that order. 
 In order to do this, the robot must be able to travel to any given point, know that it has reached its destination and then begin traveling to the next point. 
 Localization can be done using the wheel odometry values as well as acceleration readings. 
@@ -89,11 +114,11 @@ estimation to make it a popular estimation algorithm used for a variety of purpo
 from temperature control to sensor fusion. The algorithm is relatively simple to implement and
 requires minimal computational power making it suitable for this project. However a fundamental
 understanding of the basic concepts is very necessary for its implementation. For this project we
-have used an Extended Kalman Filter to incorporate multiple degrees of freedom of our sensors.
+have used a Kalman Filter to incorporate multiple degrees of freedom of our sensors.
 Here's a step-by-step description of our implementation:
 
 1. **Initialization:**
-For the first iteration of the Extended Kalman Filter, we start at time $$k$$. 
+For the first iteration of the Kalman Filter, we start at time $$k$$. 
 We initialize the state vector and control vector for the previous time step $$k − 1$$. 
 |We have also initialized the control
 state variables and assigned them an initial value of $$0$$. 
@@ -267,7 +292,7 @@ We have modelled a robust 4-wheeled robot capable of traveling on uneven rigid s
 Our controller can make the 4-wheeled, non-holonomic robot travel on any path by just giving it a list of waypoints.
 The controller can also incorporate the A* Algorithm for avoiding obstacles. 
 This in-turn makes the robot capable of autonomously navigating through any course with mapped obstacles. 
-We have developed an Extended Kalman Filter suitable for accurate localization and pose estimation of our 4-wheeled robot, enabling it to overcome the physical limitations of its sensors, so that it can travel in statically uneven and non-ideal environments.
+We have developed an Kalman Filter suitable for accurate localization and pose estimation of our 4-wheeled robot, enabling it to overcome the physical limitations of its sensors, so that it can travel in statically uneven and non-ideal environments.
 
 Future improvements and augmentations in our project may include: Inclusion of Trajectory error and Pose error matrices to quantify the performance of Localization through the Kalman-filtering algorithm.
 Capability of detecting and avoiding transient obstacles through techniques such as SLAM. 
