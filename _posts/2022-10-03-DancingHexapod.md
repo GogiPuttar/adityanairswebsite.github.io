@@ -11,12 +11,14 @@ hidden: true
 
 Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
-***To feel the rhythm of the robot, I recommend you turn the volume on! 🔊***
 
 <div align="center">
 <video width="75%" controls loop autoplay muted>
     <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/f7d2aad3-1d4a-49ac-836a-8549b3f0fa4a" type="video/mp4">
 </video>
+</div>
+<div align="center">
+<em><b>To feel the rhythm of the robot, I recommend you turn your volume on! 🔊</b></em>
 </div>
 
 <br>
@@ -43,6 +45,7 @@ $$
 ## Full $$SE(3)$$ Body Pose Control
 
 Provided sufficient forces, the standing legs of a legged robot can "manipulate" the ground in its body's frame, to any pose within a reachable workspace; thereby allowing body pose control in the ground frame. 
+
 This is my ***complete derivation*** of Body Pose Control in full $$SE(3)$$. 
 This can be applied to any standing legged robot / delta platform provided it has sufficient degrees of freedom and reliable IK.
 In this case, the $$3$$ standing legs possess $$9$$ degrees of freedom which is greater than $$6$$ required for body pose control (kinematically redundant).
@@ -74,6 +77,10 @@ $$
 
 ## Animatronic Motion
 
+Trajectory planning for the robot's body and legs in order to make the robot dance cannot be as simple as iteratively commanding target poses to the robot.
+In order to make the motion appear organic, I decided to stitch these various target poses in the task space, using the simple Catmull-Rom spline. 
+Here, the task space is defined by the $$3+3+6=12$$-dimensional space in which each target pose of the robot lies.
+
 <br>
 
 <div align="center">
@@ -85,6 +92,24 @@ $$
 <br>
 
 ### Catmull-Rom Splines
+
+The Catmull-Rom Spline, originally formulated by Edwin Catmull (Co-Founder of Pixar) and Raphael Rom, is a smooth curve that can be made to pass through certain $$n$$-dimensional points.
+
+The advantages this specific spline possesses over other widely used curves are:
+
+1. Unlike **Bezier Curves**, Catmull-Rom splines actually pass through every point, and do not increase in polynomial order as the number of points increases.
+
+2. Unlike **NURBS**, these splines do not have a complicated iterative formula.
+
+3. Unlike **general Splines**, the points along the original set of points can also make up the control points for this curve.
+
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SplineTrajectory.png?raw=true" width="50%"/>
+<figcaption>Fig. 1. Example trajectory of Catmull-Rom Splines</figcaption>
+</figure>
+
+To create such a spline we need to extra control points, before the first point and after the last point in the curve.
+Within a loop, these could also just be the last and first points respectively.
+The parameterization is described as follows:
 
 $$
 q(s) = 
@@ -104,16 +129,21 @@ q(s) =
     q_{i-1}\\
     q_{i}\\
     q_{i+1}\\ 
-    \end{bmatrix}
+    \end{bmatrix},
 $$
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SplineTrajectory.png?raw=true" width="50%"/>
-</p>
+where $$q_i$$ is the $$i$$-th target configuration.
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SplineBlendingFunction.png?raw=true" width="50%"/>
-</p>
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SplineBlendingFunction.png?raw=true" width="50%"/>
+<figcaption>Fig 2. Blending functions for Tau = 2</figcaption>
+</figure>
 
 ## Success
+
+## References
+
+1. [Christopher Twigg on Catmull-Rom Splines](https://www.cs.cmu.edu/~fp/courses/graphics/asst5/catmullRom.pdf)
+2. [javidx9's Series on Using Splines](https://www.youtube.com/watch?v=9_aJGUTePYo&t=1127s)
 
 ### This Post is under construction 🛠️
 Over the winter break, I will be adding more information about my personal and professional projects. 
