@@ -29,13 +29,6 @@ I created a framework for full $$SE(3)$$ body pose control for HEBI's Daisy Hexa
 This robot is simulated in PyBullet, and follows a sequence of 17 keyframes in order to complete its dancing motion.
 These keyframes are also stitched together using a Catmull-Rom spline (described below) in order to make the motion appear more natural and rhythmic, which really brings this to life.
 
-$$
-\begin{align*}
-q(s) &= c_0 + c_1 u + c_2 u^2 + c_3 u^3\\
-&= \sum_{k=0}^{3} c_k u^k
-\end{align*}
-$$
-
 <br>
 
 <div align="center"><h2> <a href="https://github.com/marmotlab/Yuna_PyBullet/blob/main/setup/yunaAnimatronics.py">View it on Github ⇗</a></h2></div>
