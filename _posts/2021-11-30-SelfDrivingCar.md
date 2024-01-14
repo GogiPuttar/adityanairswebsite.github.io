@@ -47,8 +47,8 @@ An accelerometer is a device that measures the proper acceleration along all 3--
 We have implemented the Ackermann Steering mechanism for the robot. The intention of Ackermann geometry is to avoid the need for tires to slip sideways when following the path around a curve. The geometrical solution to this is for all wheels to have their axles arranged as radii of circles with a common centre point. As the rear wheels are fixed, this centre point must be on a line extended from the rear axle. Intersecting the axes of the front wheels on this line as well requires that the inside front wheel be turned, when steering, through a greater angle than the outside wheel. The robot implements this mechanism through the following formulae, which we have derived, enabling the robot to travel in an arc.
 
 <figure align = "center">
-<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarSim.png?raw=true" width="45%"/>
-<figcaption><em>Fig. 2: Robot model.</em></figcaption>
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarAckermann.png?raw=true" width="55%"/>
+<figcaption><em>Fig. 2: Ackermann steering geometry.</em></figcaption>
 </figure>
 
 ### Waypoint Navigation
@@ -56,8 +56,8 @@ The documentation for kinematics for a four wheeled robot is scarce. The problem
 To travel from any one coordinate to another the robot has to orient itself onto the line joining the two points while also facing the destination point. The robot must traverse on 2 different arcs to reach this pose as seen in Fig. 3.
 
 <figure align = "center">
-<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarSim.png?raw=true" width="45%"/>
-<figcaption><em>Fig. 3: Robot model.</em></figcaption>
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SelfDrivingCarWaypoint.png?raw=true" width="70%"/>
+<figcaption><em>Fig. 3: The motion the robot follows to turn towards the waypoint, while also being on the line joining the next and previous waypoints.</em></figcaption>
 </figure>
 
 ## Localization with Extended Kalman Filter:
