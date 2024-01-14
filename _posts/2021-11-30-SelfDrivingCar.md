@@ -27,7 +27,7 @@ With the commercial availability of mobile robots for personal, industrial, mili
 
 From a theoretical view, the concept of implementing a 4 wheel drive system seems quite feasible but the alignment of the wheels must be carefully considered, keeping in mind that we must ensure pure rolling motion at all times to maintain efficiency and durability of components. A few ways to implement this are by using Ackermann steering, or omnidirectional wheels. Of these, omnidirectional wheels can only be used on flat surfaces.
 
-Further, upon deploying such robots in more natural environments, the problem of reliable localization crops up. While we address the prevalence of visual or LIDAR based localization, it is important to note the large computation cost this creates. Since wheel encoders as well as IMU's can provide some level of reliable odometry, we decided to investigate the efficacy of these two systems in overcoming their individual weaknesses.
+Further, upon deploying such robots in more natural environments, the problem of reliable localization crops up. While we address the prevalence of visual or LIDAR based localization, it is important to note the large computation cost this creates. Since wheel encoders as well as IMU's can provide some level of reliable odometry, we decided to use sensor fusion to investigate the efficacy of these two systems in overcoming each other's individual weaknesses.
 
 **Following this methodology, we created and simulated an autonomous self-driving car in Webots. This car can plan paths around obstacles using $$A*$$ path planning, and navigate to waypoints using a custom steering controller, all through localizing itself effectively on uneven terrain by using a Kalman Filter for sensor fusion.**
 
