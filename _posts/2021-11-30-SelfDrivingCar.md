@@ -70,7 +70,7 @@ An accelerometer is a device that measures the proper acceleration along all 3--
 
 <br>
 
-## Control:
+## Control
 
 ### Steering
 We have implemented the Ackermann Steering mechanism for the robot. The intention of Ackermann geometry is to avoid the need for tires to slip sideways when following the path around a curve. The geometrical solution to this is for all wheels to have their axles arranged as radii of circles with a common centre point. As the rear wheels are fixed, this centre point must be on a line extended from the rear axle. Intersecting the axes of the front wheels on this line as well requires that the inside front wheel be turned, when steering, through a greater angle than the outside wheel. The robot implements this mechanism through the following formulae, which we have derived, enabling the robot to travel in an arc.
