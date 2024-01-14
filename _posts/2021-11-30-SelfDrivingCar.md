@@ -21,7 +21,7 @@ Python, Motion Planning, Controls, Signals, Wheeled Locomotion, Webots
 
 <br>
 
-## Introduction:
+## Overview
 
 With the commercial availability of mobile robots for personal, industrial, military, hospital and academic requirements, the need for a versatile and economic design has also increased over the past few years. A critical design of these robots is to ensure they are physically stable. While a majority of robots may have 2 wheels, balancing such a robot requires the use of advanced controllers and uses up a good portion of computational resources(the alternative may be to use wheels larger than the wheelbase of the platform, creating an impractical design). A way around this can be found in the use of four wheeled robot systems to the centre of gravity of the system remains in equilibrium. 
 
@@ -37,12 +37,14 @@ Further, upon deploying such robots in more natural environments, the problem of
 
 <br>
 
-## Personal Motivation:
+## Personal Motivation
 This project was mine and [Samaksh Judson](https://www.linkedin.com/in/samakshjudson/)'s effort for the Autonomous Mobile Robotics course in our third year of undergrad at BITS Pilani. 
 This was my first formal robotics project featuring advanced concepts (at least to us, at that time) like localization, planning, and control.
 This project **won the 1st prize**, and we ended up with the highest grades in the class. 
 
-## Design:
+<br>
+
+## Design
 
 The robot has been modeled in Webots. 
 It has four wheels that have a width of 10 mm and a radius of 25 mm. Fig. 2.1 has a CAD layout of the body of the robot.
@@ -66,6 +68,8 @@ Although it is easy and inexpensive to implement, it is not reliable where preci
 2. **Accelerometer and IMU:**
 An accelerometer is a device that measures the proper acceleration along all 3--axes. Modern mechanical accelerometers are often small micro--electro-mechanical systems (MEMS), and are often very simple MEMS devices, consisting of little more than a cantilever beam with a proof mass (also known as seismic mass). The acceleration values can be integrated once to give the velocity of the robot, and then once again to get the position of the robot. We have implemented this using the Runge--Kutta method. Accelerometer based localization suffers from drift  due to double integration of finite timesteps. An IMU is just an accelerometer integrated with a gyroscope that can in turn measure acceleration as well as rotation along all 3--axes. The measurements of roll, pitch and yaw also suffer from the same drift and need to be corrected.
 
+<br>
+
 ## Control:
 
 ### Steering
@@ -85,7 +89,9 @@ To travel from any one coordinate to another the robot has to orient itself onto
 <figcaption><em>Fig. 3: The motion the robot follows to turn towards the waypoint, while also being on the line joining the next and previous waypoints.</em></figcaption>
 </figure>
 
-## Localization with Kalman Filter:
+<br>
+
+## Localization with Kalman Filter
 Our code allows us the capability of simply entering the waypoints in a list resulting in the robot traveling to each one of these waypoints in that order. 
 In order to do this, the robot must be able to travel to any given point, know that it has reached its destination and then begin traveling to the next point. 
 Localization can be done using the wheel odometry values as well as acceleration readings. 
@@ -251,7 +257,9 @@ $$
 \end{equation*}
 $$
 
-## Path Planning with $$A*$$:
+<br>
+
+## Path Planning with $$A*$$
 
 Path-planning is an important primitive for autonomous mobile robots that lets robots and the shortest (or otherwise optimal) path between two points. Optimal paths could be paths that minimize the amount of turning, the amount of braking or some other metric a specific
 application requires. In this project, the path is optimized in terms of the distance traveled by the path.
@@ -285,6 +293,7 @@ This is, however, not possible because the best path is not known.
 Here, we have chosen the Manhattan distance given its advantages in grid based map representations.
 This in turn, generates a sequence of waypoints which the controller can follow.
 
+<br>
 
 ## Conclusion and Future Work
 

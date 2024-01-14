@@ -17,7 +17,11 @@ Python, ROS2, Computer Vision, Manipulation, Motion Planning, Gazebo, Shadow Han
 ## Overview
 The goal of this project was to design a teleoperation system which leverages object models in order to make the user's experience more intuitive. The idea is that a human operator can stack virtual rings in a simulated environment, all while getting instantaneous haptic feedback thanks to the local object models and low-latency simulation environment. The user's impact on the world is then replicated by an avatar robot, i.e. the robot does the same thing with the rings that the human user did. While we did not end up bridging the operator station and avatar station, we developed several key packages which will contribute to this end goal. These packages are outlined below, and more detailed information about how to run each package, etc. can be found in the READMEs of each individual package.
 
+<br>
+
 <div align="center"><h2> <a href="https://github.com/ME495-EmbeddedSystems/final-project-teleop">View it on Github ⇗</a></h2></div>
+
+<br>
 
 ### What Problem Does This Solve?
 Typically, a human operator and robot avatar pair involves live visual and tactile feedback, in that the operator can adjust their motion based on what they see/feel through the avatar. This sort of a setup is not very good in high latency networks which would be the case if the avatar is on a different continent, or maybe even in space. Our approach tries to solve this problem by:
@@ -59,6 +63,8 @@ The `teleop_tasks` package defines and launches virtual tasks, which can be comp
 The video below shows an example of a user completing a ring stacking task. The user can feel the mass of the rings due to the Franka robots attached to their hands. The HaptX gloves allow the user to feel the rings in their hands by activating the finger brakes and inflating the tactors when the user picks up a ring.
 
 <div align="center"><iframe width="80%" height="375" src="https://github.com/ME495-EmbeddedSystems/final-project-teleop/assets/122302059/b09ece30-6af2-4751-981c-6e6976359e5a" title="RViz Simulation Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+<br>
 
 ### Gazebo:
 The video below shows a hand moving around in Gazebo. This hand can interact with the objects in the Gazebo world, and the hand's state is dictated by the hand of the human operator.
