@@ -21,11 +21,11 @@ Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
 <br>
 
-## Introduction
+## Overview
 
 $$
 \begin{align*}
-p(s) &= c_0 + c_1 u + c_2 u^2 + c_3 u^3\\
+q(s) &= c_0 + c_1 u + c_2 u^2 + c_3 u^3\\
 &= \sum_{k=0}^{3} c_k u^k
 \end{align*}
 $$
@@ -40,7 +40,35 @@ $$
 
 <br> 
 
-## Full SE3 Body Pose Control
+## Full $$SE(3)$$ Body Pose Control
+
+Provided sufficient forces, the standing legs of a legged robot can "manipulate" the ground in its body's frame, to any pose within a reachable workspace; thereby allowing body pose control in the ground frame. 
+This is my ***complete derivation*** of Body Pose Control in full $$SE(3)$$. 
+This can be applied to any standing legged robot / delta platform provided it has sufficient degrees of freedom and reliable IK.
+In this case, the $$3$$ standing legs possess $$9$$ degrees of freedom which is greater than $$6$$ required for body pose control (kinematically redundant).
+I have also derived an equivalent expression for ***velocity kinematics*** and a ***$$9 \times 6 $$ Body Pose Jacobian*** but I have excluded it here to save space since it was not directly utilized for this project.
+
+Given the world frame $$a$$, the initial body frame (home configuration) $$b$$ and the changed body frame $$c$$. We define the body pose $$[x, y, z, \alpha, \beta. \gamma]^T$$ such that:
+
+$$
+T_{bc} = 
+\begin{bmatrix}
+    &  &  & x\\
+    & R_z(\gamma)R_y(\beta)R_x(\alpha)& & y\\
+    &  &  & z\\
+   0 & 0 & 0 & 1
+\end{bmatrix},
+$$
+
+in the standard order, roll ($$\alpha$$) $$\rightarrow$$ pitch ($$\beta$$) $$\rightarrow$$ yaw ($$\gamma$$) in local frames.
+
+Further, the positions of the three standing feet $$p_i: i = \{1,2,3\}$$, in the instantaneous body frame, are what we command to the IK-based controller to change the body pose. 
+These feet positions are static in the world frame $$a$$. 
+Therefore, changing these achieve a certain body pose amounts to only a simple reference frame shift of these points:
+
+$$
+p_{i,C} = T_{bc}^{-1} p_{i,B} : i = \{1, 2, 3\}.
+$$
 
 <br>
 
@@ -56,12 +84,10 @@ $$
 
 <br>
 
-<br>
-
 ### Catmull-Rom Splines
 
 $$
-p(s) = 
+q(s) = 
 \begin{bmatrix}
     1 & u & u^2 & u^3\\ 
     \end{bmatrix} 
@@ -74,10 +100,10 @@ p(s) =
     \end{bmatrix}
 
 \begin{bmatrix}
-    p_{i-2}\\
-    p_{i-1}\\
-    p_{i}\\
-    p_{i+1}\\ 
+    q_{i-2}\\
+    q_{i-1}\\
+    q_{i}\\
+    q_{i+1}\\ 
     \end{bmatrix}
 $$
 
