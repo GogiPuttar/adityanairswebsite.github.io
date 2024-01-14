@@ -26,8 +26,8 @@ The goal of this project was to design a teleoperation system which leverages ob
 ### What Problem Does This Solve?
 Typically, a human operator and robot avatar pair involves live visual and tactile feedback, in that the operator can adjust their motion based on what they see/feel through the avatar. This sort of a setup is not very good in high latency networks which would be the case if the avatar is on a different continent, or maybe even in space. Our approach tries to solve this problem by:
 
- 1. Simulating a virtual environment for the human operator and 
- 2. Subscribing some intelligence to the robot avatar to adapt to the real world environment.
+ 1. Simulating a virtual environment for the human operator, and 
+ 2. Prescribing some intelligence to the robot avatar to adapt to the real world environment.
 
 ### Team Members
 This team effort was part of the final project in the [ME 495 Embedded Systems]() course at Northwestern. I worked on this project with:
