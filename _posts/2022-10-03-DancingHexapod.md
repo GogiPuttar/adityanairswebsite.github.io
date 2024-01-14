@@ -23,16 +23,30 @@ Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
 ## Introduction
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SplineEquationIntro.png?raw=true" width="40%"/>
-</p>
+$$
+\begin{align*}
+p(s) &= c_0 + c_1 u + c_2 u^2 + c_3 u^3\\
+&= \sum_{k=0}^{3} c_k u^k
+\end{align*}
+$$
+
+<br>
 
 <div align="center"><h2> <a href="https://github.com/marmotlab/Yuna_PyBullet/blob/main/setup/yunaAnimatronics.py">View it on Github ⇗</a></h2></div>
 
-## Motivation
+<br>
+
+## Perosnal Motivation
+
+<br> 
 
 ## Full SE3 Body Pose Control
 
+<br>
+
 ## Animatronic Motion
+
+<br>
 
 <div align="center">
 <video width="65%" controls loop autoplay muted>
@@ -40,10 +54,32 @@ Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 </video>
 </div>
 
+<br>
+
+<br>
+
 ### Catmull-Rom Splines
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SplineEquation.png?raw=true" width="40%"/>
-</p>
+$$
+p(s) = 
+\begin{bmatrix}
+    1 & u & u^2 & u^3\\ 
+    \end{bmatrix} 
+
+\begin{bmatrix}
+    0 & 1 & 0 & 0\\
+    -\tau & 0 & \tau & 0\\
+    2\tau & \tau-3 & 3 - 3\tau & -\tau \\
+    -\tau & 2 - \tau & \tau - 2 & \tau \\ 
+    \end{bmatrix}
+
+\begin{bmatrix}
+    p_{i-2}\\
+    p_{i-1}\\
+    p_{i}\\
+    p_{i+1}\\ 
+    \end{bmatrix}
+$$
 
 <p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SplineTrajectory.png?raw=true" width="50%"/>
 </p>
