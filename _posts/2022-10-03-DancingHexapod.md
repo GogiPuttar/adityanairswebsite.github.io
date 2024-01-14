@@ -160,11 +160,5 @@ Maybe someday when I have the time, I'll be able to actualize this dream too.
 2. [Christopher Twigg on Catmull-Rom Splines](https://www.cs.cmu.edu/~fp/courses/graphics/asst5/catmullRom.pdf)
 3. [javidx9's Series on Using Splines](https://www.youtube.com/watch?v=9_aJGUTePYo&t=1127s)
 
-### This Post is under construction 🛠️
-Over the winter break, I will be adding more information about my personal and professional projects. 
-If you are interested, please check back on Janurary 14th, 2024.
-
-In the meanwhile, the post on [**Dexterous Manipulation through Virtual Reality**](https://adityanairs.website/DexterousManipulationThroughVR/) is complete and ready for viewing.
-
 
 
