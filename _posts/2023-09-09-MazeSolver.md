@@ -39,37 +39,53 @@ A wavefront planner is a breadth-first technique for finding paths in a maze.
 It provides the shortest path from any starting location to a given goal.
 It also requires full knowledge of the maze.
 
-1. **Setup**
+1. **SETUP**
+
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeSetup.png?raw=true" width="65%"/>
     <figcaption><em>Fig. 1. The Goal is the red square. The robot starts at the green square and knows the full layout of the maze.</em></figcaption>
     </figure>
 
-2. **First Step**
+    <br>
+
+2. **FIRST STEP**
+
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeFirstStep.png?raw=true" width="65%"/>
     <figcaption><em>Fig. 2. Start at the goal. It is 0 squares from the goal so label it 0.</em></figcaption>
     </figure>
 
-3. **First Expansion**
+    <br>
+
+3. **FIRST EXPANSION**
+
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeFirstExpansion.png?raw=true" width="65%"/>
     <figcaption><em>Fig. 3. All the neighbors of the goal are a distance of 1 from the goal. (In this example the robot cannot move diagonally).</em></figcaption>
     </figure>
 
-4. **Next Expansion**
+    <br>
+
+4. **NEXT EXPANSION**
+
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeNextExpansion.png?raw=true" width="65%"/>
     <figcaption><em>Fig. 4. All the neighbors of the 1-distance squares are a distance of 2 from the goal.</em></figcaption>
     </figure>
 
-5. **Subsequent Expansions**
+    <br>
+
+5. **SUBSEQUENT EXPANSIONS**
+
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeSubsequentExpansions.png?raw=true" width="65%"/>
     <figcaption><em>Fig. 5. Keep expanding until every square is labeled with its distance from the goal.</em></figcaption>
     </figure>
 
-6. **Using the Plan**
+    <br>
+
+6. **USING THE PLAN**
+
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeUsingThePlan.png?raw=true" width="65%"/>
     <figcaption><em>Fig. 6. Starting at any square (say the green one) the robot moves to the neighbor that is closest to the goal.</em></figcaption>
@@ -83,9 +99,11 @@ It also requires full knowledge of the maze.
 This project fulfills its intended goal in a very pretty manner.
 The reason I have a separate post for this relatively short project is largely because it looks asthetically pleasing.
 
+<br>
+
 ## References
 
 1. [MSR Hackathon: a-Maze-ing Challenge](https://nu-msr.github.io/hackathon/python_challenge.html)
 
-
+<br>
 
