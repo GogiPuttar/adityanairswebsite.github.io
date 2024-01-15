@@ -312,5 +312,5 @@ The implementation of a PID controller in our algorithm will allow the robot to 
 There are various assumptions made by the software during a simulation. Real world application will involve many other considerations. 
 Fabrication of a real-life model based on our current one will help us tackle a lot of these first hand and should be the next step in further development of our project.
 
-
+<br>
 
