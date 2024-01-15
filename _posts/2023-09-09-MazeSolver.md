@@ -40,11 +40,6 @@ In a span of two weeks, we undertook various projects involving Randomly-explori
 This project fulfills its intended goal in a very pretty manner.
 The reason I have a separate post for this relatively short project is largely because it looks asthetically pleasing.
 
-### This Post is under construction 🛠️
-Building a perfect portfolio from the ground up is a demanding process.
-Over the coming weeks, I will be adding more information about my personal and professional projects. 
-If you're interested, please check back on Janurary 31st, 2024.
-Your curiosity is greatly appreciated `:)`
 
 
 
