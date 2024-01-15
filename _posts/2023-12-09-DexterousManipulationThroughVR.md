@@ -140,6 +140,4 @@ The `teleop_interfaces` package contains all the custom messages and services us
 
 The `teleop` package is a work in progress, but it is meant to bridge the operator and avatar stations and orchestrate the entire teleoperation experience. It will launch all the nodes necessary for the user to complete the task in a simulated environments, as well as all the nodes needed to run the avatar station. When a user begins moving objects in the simulated world, it will sense this and begin publishing the transforms of the object to the avatar station. Once the user is done moving the object, the nodes within this package will prompt the avatar station to begin executing the same trajectories with the real-life objects.
 
-Python, ROS2, Computer Vision, Manipulation, Motion Planning, Gazebo, Shadow Hands, Emika Franka Robot Arm, Intel RealSense, ABB Gofa Arm
-
 
