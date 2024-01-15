@@ -12,6 +12,8 @@ Python, Motion Planning
 
 <!-- Note to self: Added multiple starting points in the video! -->
 
+<br>
+
 <div align="center">
 <video width="65%" controls loop autoplay muted>
     <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/4f124db2-c6fe-415d-9a1a-28966b6713ab" type="video/mp4">
