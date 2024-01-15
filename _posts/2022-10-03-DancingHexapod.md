@@ -11,6 +11,7 @@ hidden: true
 
 Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
+<br>
 
 <div align="center">
 <video width="75%" controls loop autoplay muted>
