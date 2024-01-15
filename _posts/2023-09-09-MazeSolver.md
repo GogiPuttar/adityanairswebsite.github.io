@@ -85,5 +85,7 @@ The reason I have a separate post for this relatively short project is largely b
 
 ## References
 
+1. [MSR Hackathon: a-Maze-ing Challenge](https://nu-msr.github.io/hackathon/python_challenge.html)
+
 
 
