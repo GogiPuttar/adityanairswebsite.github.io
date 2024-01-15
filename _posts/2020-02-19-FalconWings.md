@@ -23,8 +23,9 @@ In the meanwhile, the posts on:
 - [**Dancing Hexapod - Full SE3 Body Pose Control**](https://adityanairs.website/DancingHexapod/), 
 - [**Navigation and Kalman Filter Localization of Self Driving Car**](https://adityanairs.website/SelfDrivingCar/), 
 - [**Legged Robots for Object Manipulation: A Review**](https://adityanairs.website/LeggedRobotsForObjectManipulation/), 
-- [**Home Automation with Clap Sequence Control**](https://adityanairs.website/ClapSequenceControl/), and 
-- [**Robot playing T-Rex Game**](https://adityanairs.website/TRexGame/) 
+- [**Home Automation with Clap Sequence Control**](https://adityanairs.website/ClapSequenceControl/), 
+- [**Robot playing T-Rex Game**](https://adityanairs.website/TRexGame/), and
+- [**Maze Solver**](https://adityanairs.website/MazeSolver/)
 
 are complete and ready for viewing!
 
