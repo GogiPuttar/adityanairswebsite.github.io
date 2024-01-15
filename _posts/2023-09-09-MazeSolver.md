@@ -33,6 +33,14 @@ Further, the entire interface is in a terminal and the walls of the maze are ren
 I completed this project during Northwestern's MS in Robotics Hackathon. 
 In a span of two weeks, we undertook various projects involving Randomly-exploring Random Trees (RRTs), computer vision, manipulation, path planning, and shell scripting in an extremely fun, gamified environment. 
 
+## Wavefront Planner
+
+A wavefront planner is a breadth-first technique for finding paths in a maze.
+It provides the shortest path from any starting location to a given goal.
+It also requires full knowledge of the maze.
+
+
+
 <br>
 
 ## Conclusion
