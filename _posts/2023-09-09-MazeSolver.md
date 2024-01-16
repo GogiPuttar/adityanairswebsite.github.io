@@ -24,7 +24,7 @@ Python, Motion Planning
 
 ## Overview
 
-This is my implementation of the [Wavefront Planner](https://nu-msr.github.io/hackathon/wavefront.html) maze solving algorithm. 
+This is my implementation of the [Wavefront Planner](https://nu-msr.github.io/hackathon/wavefront.html){:target="_blank" rel="noopener"} maze solving algorithm. 
 Here, an Agent is manually moved around an M x N grid maze, and at any point can summon the Oracle to show them the path to the goal.
 Further, the entire interface is in a terminal and the walls of the maze are rendered off a bitmap, with unicode.
 
@@ -105,7 +105,7 @@ The reason I have a separate post for this relatively short project is largely b
 
 ## References
 
-1. [MSR Hackathon: a-Maze-ing Challenge](https://nu-msr.github.io/hackathon/python_challenge.html)
+1. [MSR Hackathon: a-Maze-ing Challenge](https://nu-msr.github.io/hackathon/python_challenge.html){:target="_blank" rel="noopener"}
 
 <br>
 

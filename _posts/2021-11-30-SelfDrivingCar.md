@@ -38,7 +38,7 @@ Further, upon deploying such robots in more natural environments, the problem of
 <br>
 
 ## Personal Motivation
-This project was mine and [Samaksh Judson](https://www.linkedin.com/in/samakshjudson/)'s effort for the Autonomous Mobile Robotics course in our third year of undergrad at BITS Pilani. 
+This project was mine and [Samaksh Judson](https://www.linkedin.com/in/samakshjudson/){:target="_blank" rel="noopener"}'s effort for the Autonomous Mobile Robotics course in our third year of undergrad at BITS Pilani. 
 This was my first formal robotics project featuring advanced concepts (at least to us, at that time) like localization, planning, and control.
 This project **won the 1st prize**, and we ended up with the highest grades in the class. 
 

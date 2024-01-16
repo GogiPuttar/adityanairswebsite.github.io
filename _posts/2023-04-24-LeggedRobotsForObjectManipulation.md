@@ -27,7 +27,7 @@ Research, Legged Locomotion, Manipulation
 
 ## Overview
 
-This is an invited research paper I wrote in collaboration with the [MARMot Lab](https://marmotlab.org/) at the National University of Singapore, and the [Daltorio Lab](https://engineering.case.edu/research/labs/daltorio-lab) at Case Western Reserve University, for the journal [Frontiers in Mechanical Engineering](https://www.frontiersin.org/journals/mechanical-engineering). 
+This is an invited research paper I wrote in collaboration with the [MARMot Lab](https://marmotlab.org/){:target="_blank" rel="noopener"} at the National University of Singapore, and the [Daltorio Lab](https://engineering.case.edu/research/labs/daltorio-lab){:target="_blank" rel="noopener"} at Case Western Reserve University, for the journal [Frontiers in Mechanical Engineering](https://www.frontiersin.org/journals/mechanical-engineering){:target="_blank" rel="noopener"}. 
 
 <br>
 
@@ -56,13 +56,13 @@ preserved natural areas, and especially for home robotics.
 
 ## Personal Motivation
 
-While writing my bachelor's thesis as a visiting researcher at [MARMot Lab](https://marmotlab.org/), I undertook various additional projects exploring legged robots. Some of these entailed investigating their ability to perform useful manipulation tasks with minimal augmentation to their mechanical design. Since there are many possibile ways of implementing such an idea, I searched for a coherent account for this manipulation technique and was disappointed when I was unable to find one. Since our labs consisted of people with individual expertise in various segments of this topic, we decided to put our heads together and create such a resource by organizing the community's existing body of work, and highlighting interesting avenues for future research.
+While writing my bachelor's thesis as a visiting researcher at [MARMot Lab](https://marmotlab.org/){:target="_blank" rel="noopener"}, I undertook various additional projects exploring legged robots. Some of these entailed investigating their ability to perform useful manipulation tasks with minimal augmentation to their mechanical design. Since there are many possibile ways of implementing such an idea, I searched for a coherent account for this manipulation technique and was disappointed when I was unable to find one. Since our labs consisted of people with individual expertise in various segments of this topic, we decided to put our heads together and create such a resource by organizing the community's existing body of work, and highlighting interesting avenues for future research.
 
 <br>
 
 ## Acknowledgements
 
-This was a product of the combined effort of Yifeng Gong, Ge Sun, Aditya Bidwai, Raghuram, and myself. It was truly a pleasure to work with them, and I also learned a lot about writing meaningful research in my first such endeavour. The support and invaluable advice from our advisors: [Dr. Guillaume Sartoretti](https://www.sartoretti.science/) and Dr. Kathryn Daltorio was paramount in making this a great experience. Thanks Guillaume, for seeing the potential in my writing `:)`
+This was a product of the combined effort of Yifeng Gong, Ge Sun, Aditya Bidwai, Raghuram, and myself. It was truly a pleasure to work with them, and I also learned a lot about writing meaningful research in my first such endeavour. The support and invaluable advice from our advisors: [Dr. Guillaume Sartoretti](https://www.sartoretti.science/){:target="_blank" rel="noopener"} and Dr. Kathryn Daltorio was paramount in making this a great experience. Thanks Guillaume, for seeing the potential in my writing `:)`
 
 <br>
 

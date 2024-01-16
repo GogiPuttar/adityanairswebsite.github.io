@@ -32,11 +32,11 @@ Typically, a human operator and robot avatar pair involves live visual and tacti
  2. Prescribing some intelligence to the robot avatar to adapt to the real world environment.
 
 ### Team Members
-This team effort was part of the final project in the [ME 495 Embedded Systems]() course at Northwestern. I worked on this project with:
+This team effort was part of the final project in the [ME 495 Embedded Systems](https://github.com/ME495-EmbeddedSystems){:target="_blank" rel="noopener"} course at Northwestern. I worked on this project with:
 - Rohan Kota
 - Luke Batteas
-- [Zach Alves](https://alves-zach.github.io/)
-- [Leo Chen](https://portfolio.limerobotlab.com)
+- [Zach Alves](https://alves-zach.github.io/){:target="_blank" rel="noopener"}
+- [Leo Chen](https://portfolio.limerobotlab.com){:target="_blank" rel="noopener"}
 
 <br>
 

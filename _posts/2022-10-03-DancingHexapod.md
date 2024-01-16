@@ -26,7 +26,7 @@ Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
 ## Overview
 
-I created a framework for full $$SE(3)$$ body pose control for HEBI's Daisy Hexapod, and made it dance using it's front legs and body pose to the [Crab Rave](https://www.youtube.com/watch?v=LDU_Txk06tM) song. 
+I created a framework for full $$SE(3)$$ body pose control for HEBI's Daisy Hexapod, and made it dance using it's front legs and body pose to the [Crab Rave](https://www.youtube.com/watch?v=LDU_Txk06tM){:target="_blank" rel="noopener"} song. 
 This robot is simulated in PyBullet, and follows a sequence of 17 keyframes in order to complete its dancing motion.
 These keyframes are also stitched together using a Catmull-Rom spline (described below) in order to make the motion appear more natural and rhythmic, which really brings this to life.
 
@@ -38,10 +38,10 @@ These keyframes are also stitched together using a Catmull-Rom spline (described
 
 ## Personal Motivation
 
-While writing my bachelor's thesis at the [MARMot Lab](https://marmotlab.org/), National University of Singapore, I derived the inverse kinematics and velocity kinematics for the body pose of a six-legged robot, to gain insight on the load distributiion over its joints. 
-One fine day, I happened to come across [Boston Dynamics' Video of Spot and Atlas dancing](https://www.youtube.com/watch?v=fn3KWM1kuAw) and thought that this was the coolest thing ever. 
+While writing my bachelor's thesis at the [MARMot Lab](https://marmotlab.org/){:target="_blank" rel="noopener"}, National University of Singapore, I derived the inverse kinematics and velocity kinematics for the body pose of a six-legged robot, to gain insight on the load distributiion over its joints. 
+One fine day, I happened to come across [Boston Dynamics' Video of Spot and Atlas dancing](https://www.youtube.com/watch?v=fn3KWM1kuAw){:target="_blank" rel="noopener"} and thought that this was the coolest thing ever. 
 I tried to see if I could do something similar with MARMot's hexapod, but I couldn't figure how exact I would make something dance, whose body plan is similar to an insect. 
-This is when I had the AHA! moment as I recalled the [Crab Rave](https://www.youtube.com/watch?v=LDU_Txk06tM) meme, and then spent the next couple of days making this work.
+This is when I had the AHA! moment as I recalled the [Crab Rave](https://www.youtube.com/watch?v=LDU_Txk06tM){:target="_blank" rel="noopener"} meme, and then spent the next couple of days making this work.
 What I ended up with was a flawless demonstration of my body pose controller.
 Suffice to say, the Lab loved it `:)`
 
@@ -150,9 +150,9 @@ Maybe someday when I have the time, I'll be able to actualize this dream too.
 
 ## References
 
-1. [Noisestorm's Crab Rave](https://www.youtube.com/watch?v=LDU_Txk06tM)
-2. [Christopher Twigg on Catmull-Rom Splines](https://www.cs.cmu.edu/~fp/courses/graphics/asst5/catmullRom.pdf)
-3. [javidx9's Series on Using Splines](https://www.youtube.com/watch?v=9_aJGUTePYo&t=1127s)
+1. [Noisestorm's Crab Rave](https://www.youtube.com/watch?v=LDU_Txk06tM){:target="_blank" rel="noopener"}
+2. [Christopher Twigg on Catmull-Rom Splines](https://www.cs.cmu.edu/~fp/courses/graphics/asst5/catmullRom.pdf){:target="_blank" rel="noopener"}
+3. [javidx9's Series on Using Splines](https://www.youtube.com/watch?v=9_aJGUTePYo&t=1127s){:target="_blank" rel="noopener"}
 
 
 
