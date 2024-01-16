@@ -20,17 +20,6 @@ Research, Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimiz
 
 <br>
 
-## Overview
-
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.jpg?raw=true"   width="90%"/>
-</p>
-
-<br>
-
-## Personal Motivation
-
-<br>
-
 ## Abstract
 
 The great terrain adaptability of legged robots,
@@ -57,48 +46,69 @@ overall torques and lower average individual actuator effort.
 
 <br>
 
-## Introduction
+## Personal Motivation
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.jpg?raw=true"   width="90%"/>
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaCarry.jpg?raw=true"   width="60%"/>
 </p>
 
 <br>
 
-## Background
+## I. Introduction
 
-A. Kinematics of a Legged Robot
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaCarry.jpg?raw=true"   width="60%"/>
+</p>
 
-B. Hybrid Motion-Force Control
+<br>
+
+## II. Background
+
+### A. Kinematics of a Legged Robot
+
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaLegs.jpg?raw=true"   width="70%"/>
+</p>
+
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaFoot.png?raw=true"   width="50%"/>
+</p>
+
+### B. Hybrid Motion-Force Control
 
 <br>
 
 ## Joint-Torque Optimization for Payload Carrying
 
-A. Hybrid Motion-Force Control in Hexapedal Locomotion
+### A. Hybrid Motion-Force Control in Hexapedal Locomotion
 
-B. Static Analysis and Ground Reaction Forces
+### B. Static Analysis and Ground Reaction Forces
 
-C. Joint-Torque Estimation
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaFull.png?raw=true"   width="70%"/>
+</p>
 
-D. Optimal Control
+<br>
+
+### C. Joint-Torque Estimation
+
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaGRF.jpg?raw=true"   width="70%"/>
+</p>
+
+### D. Optimal Control
 
 <br>
 
 ## Hardware Experiments
 
-A. Robot Description and CPG Walking
+### A. Robot Description and CPG Walking
 
-B. Iterative Trust Region Optimization
+### B. Iterative Trust Region Optimization
 
-C. Experimental Procedure
+### C. Experimental Procedure
 
 <br>
 
 ## Results and Discussion
 
-A. Normalized Joint-Torque Measurements
+### A. Normalized Joint-Torque Measurements
 
-B. Joint-Torque Measurements
+### B. Joint-Torque Measurements
 
 <br>
 
