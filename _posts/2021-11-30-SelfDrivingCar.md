@@ -33,7 +33,7 @@ Further, upon deploying such robots in more natural environments, the problem of
 
 <br>
 
-<div align="center"><h2> <a href="https://github.com/GogiPuttar/Four-wheeled-robot-localization-with-Kalman-Filter">View it on Github ⇗</a></h2></div>
+<div align="center"><h2> <a href="https://github.com/GogiPuttar/Four-wheeled-robot-localization-with-Kalman-Filter" target="_blank">View it on Github ⇗</a></h2></div>
 
 <br>
 

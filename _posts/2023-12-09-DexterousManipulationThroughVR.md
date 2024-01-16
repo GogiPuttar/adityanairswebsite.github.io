@@ -21,7 +21,7 @@ The goal of this project was to design a teleoperation system which leverages ob
 
 <br>
 
-<div align="center"><h2> <a href="https://github.com/ME495-EmbeddedSystems/final-project-teleop">View it on Github ⇗</a></h2></div>
+<div align="center"><h2> <a href="https://github.com/ME495-EmbeddedSystems/final-project-teleop" target="_blank">View it on Github ⇗</a></h2></div>
 
 <br>
 

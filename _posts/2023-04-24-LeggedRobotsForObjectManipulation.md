@@ -18,9 +18,9 @@ Research, Legged Locomotion, Manipulation
 
 <br>
 
-<div align="center"><h2> <a href="https://www.frontiersin.org/articles/10.3389/fmech.2023.1142421/full">View Publication ⇗</a></h2></div>
+<div align="center"><h2> <a href="https://www.frontiersin.org/articles/10.3389/fmech.2023.1142421/full" target="_blank">View Publication ⇗</a></h2></div>
 <div align="center"><h2> OR </h2></div>
-<div align="center"><h2> <a href="AdityaNair_LeggedRobotsForObjectManipulationAReview.pdf">View PDF 📄</a></h2></div>
+<div align="center"><h2> <a href="AdityaNair_LeggedRobotsForObjectManipulationAReview.pdf" target="_blank">View PDF 📄</a></h2></div>
 
 
 <br>
