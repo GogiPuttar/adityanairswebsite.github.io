@@ -12,7 +12,11 @@ Research, Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimiz
 
 <br>
 
-
+<div align="center">
+<video width="75%" controls loop autoplay muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/3b7aff70-48e1-4a76-ab71-8d593b03e74a" type="video/mp4">
+</video>
+</div>
 
 <br>
 
@@ -24,7 +28,39 @@ Research, Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimiz
 
 ## Introduction
 
-## 
+## Background
+
+A. Kinematics of a Legged Robot
+
+B. Hybrid Motion-Force Control
+
+## Joint-Torque Optimization for Payload Carrying
+
+A. Hybrid Motion-Force Control in Hexapedal Locomotion
+
+B. Static Analysis and Ground Reaction Forces
+
+C. Joint-Torque Estimation
+
+D. Optimal Control
+
+## Hardware Experiments
+
+A. Robot Description and CPG Walking
+
+B. Iterative Trust Region Optimization
+
+C. Experimental Procedure
+
+## Results and Discussion
+
+A. Normalized Joint-Torque Measurements
+
+B. Joint-Torque Measurements
+
+## Conclusion
+
+<br>
 
 ### This Post is under construction 🛠️
 Building a perfect portfolio from the ground up is a demanding process.
