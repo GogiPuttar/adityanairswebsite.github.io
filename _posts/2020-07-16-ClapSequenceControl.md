@@ -31,7 +31,7 @@ The main accomplishments of this project are:
 
 <br>
 
-<div align="center"><h2> <a href="https://github.com/GogiPuttar/Clap-Sequence-Sensor">View it on Github ⇗</a></h2></div>
+<div align="center"><h2> <a href="https://github.com/GogiPuttar/Clap-Sequence-Sensor" target="_blank">View it on Github ⇗</a></h2></div>
 
 <br>
 
