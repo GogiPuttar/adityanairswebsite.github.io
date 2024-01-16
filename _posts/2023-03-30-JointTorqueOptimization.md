@@ -12,6 +12,20 @@ Research, Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimiz
 
 <br>
 
+
+
+<br>
+
+## Overview
+
+## Personal Motivation
+
+## Abstract
+
+## Introduction
+
+## 
+
 ### This Post is under construction 🛠️
 Building a perfect portfolio from the ground up is a demanding process.
 Over the coming weeks, I will be adding more information about my personal and professional projects. 
