@@ -75,8 +75,9 @@ overall torques and lower average individual actuator effort.
 
 <br>
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaFoot.png?raw=true"   width="50%"/>
-</p>
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaFoot.png?raw=true"   width="50%"/>
+<figcaption><b><em>Fig. 3. Foot-ground interface during the stance phase of a leg.</em></b></figcaption>
+</figure>
 
 <br>
 
@@ -90,15 +91,18 @@ overall torques and lower average individual actuator effort.
 
 ### B. Static Analysis and Ground Reaction Forces
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaFull.png?raw=true"   width="70%"/>
-</p>
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaFull.png?raw=true"   width="70%"/>
+<figcaption><b><em>Fig. 4. External forces acting on the robot in the static case.</em></b></figcaption>
+</figure>
 
 <br>
 
 ### C. Joint-Torque Estimation
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaGRF.jpg?raw=true"   width="70%"/>
-</p>
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaGRF.jpg?raw=true"   width="70%"/>
+<figcaption><b><em>Fig. 5. Ground reaction forces and torque generated about an example
+actuator (here, the front left elbow actuator).</em></b></figcaption>
+</figure>
 
 ### D. Optimal Control
 
