@@ -48,15 +48,20 @@ overall torques and lower average individual actuator effort.
 
 ## Personal Motivation
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaCarry.jpg?raw=true"   width="60%"/>
-</p>
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/marmot.jpg?raw=true" width="70%"/>
+<figcaption><b><em>(Some of) the MARMot Family :)</em></b></figcaption>
+</figure>
 
 <br>
 
 ## I. Introduction
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaCarry.jpg?raw=true"   width="60%"/>
-</p>
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaCarry.jpg?raw=true"   width="60%"/>
+<figcaption><b><em>Fig. 1. 18-DoF series-elastic hexapod robot carrying a payload of 2 kg
+(1kg yellow water bottle, plus 1kg metal weight) on top of its body.</em></b></figcaption>
+</figure>
+
+<br>
 
 <br>
 
@@ -64,11 +69,16 @@ overall torques and lower average individual actuator effort.
 
 ### A. Kinematics of a Legged Robot
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaLegs.jpg?raw=true"   width="70%"/>
-</p>
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaLegs.jpg?raw=true"   width="70%"/>
+<figcaption><b><em>Fig. 2. Hexapod’s body reference frame and orientation of indexed legs.</em></b></figcaption>
+</figure>
+
+<br>
 
 <p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaFoot.png?raw=true"   width="50%"/>
 </p>
+
+<br>
 
 ### B. Hybrid Motion-Force Control
 
