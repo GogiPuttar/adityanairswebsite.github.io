@@ -22,6 +22,9 @@ Research, Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimiz
 
 ## Overview
 
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.jpg?raw=true"   width="90%"/>
+</p>
+
 <br>
 
 ## Personal Motivation
@@ -55,6 +58,9 @@ overall torques and lower average individual actuator effort.
 <br>
 
 ## Introduction
+
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.jpg?raw=true"   width="90%"/>
+</p>
 
 <br>
 
