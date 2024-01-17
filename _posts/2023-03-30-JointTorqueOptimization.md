@@ -43,10 +43,17 @@ experimentally validate our approach in static and walking
 tests, where a series-elastic hexapod robot carries payloads of
 varying weight, and show that our method results in lower
 overall torques and lower average individual actuator effort.
+This paper is co-authored by [Swasti Khurana](https://swastikh.github.io/){:target="_blank" rel="noopener"} and [Dr. Guillaume Sartoretti](https://www.sartoretti.science/){:target="_blank" rel="noopener"}.
 
 <br>
 
 ## Personal Motivation
+
+This paper is the condensed version of close to one year of continuous work at the National University of Singapore's [MARMot Lab](https://marmotlab.org/){:target="_blank" rel="noopener"}. 
+When I began as a researcher at MARMot, [Dr. Guillaume Sartoretti](https://www.sartoretti.science/){:target="_blank" rel="noopener"} tasked me with solving the broad problem of "how to make a legged robot walk *better*". 
+The cycle this put me on over the next few months, of understanding, failing, and learning (sometimes succeeding!), has been the most life changing experience of mine as a roboticist. 
+This transformed me from a novice with a restlessness to leap into the great beyond of this field, to a seasoned roboticist able to ask the right questions and deliver robust solutions. 
+I'm eternally grateful to Guillaume for his unwavering faith in me, and for all the friends I made along the way.
 
 <figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/marmot.jpg?raw=true" width="70%"/>
 <figcaption><b><em>(Some of) the MARMot Family :)</em></b></figcaption>
@@ -535,21 +542,4 @@ We found that our approach results in overall reduced torques for the robot in a
 The "Results and Discussion" section has currently been omitted from this webpage.
 
 <br>
-
-### This Post is under construction 🛠️
-Building a perfect portfolio from the ground up is a demanding process.
-Over the coming weeks, I will be adding more information about my personal and professional projects. 
-If you're interested, please check back on Janurary 31st, 2024.
-Your curiosity is greatly appreciated `:)`
-
-In the meanwhile, the posts on:
-- [**Dexterous Manipulation through Virtual Reality**](https://adityanairs.website/DexterousManipulationThroughVR/), 
-- [**Dancing Hexapod - Full SE3 Body Pose Control**](https://adityanairs.website/DancingHexapod/), 
-- [**Navigation and Kalman Filter Localization of Self Driving Car**](https://adityanairs.website/SelfDrivingCar/), 
-- [**Legged Robots for Object Manipulation: A Review**](https://adityanairs.website/LeggedRobotsForObjectManipulation/), 
-- [**Home Automation with Clap Sequence Control**](https://adityanairs.website/ClapSequenceControl/), 
-- [**Robot playing T-Rex Game**](https://adityanairs.website/TRexGame/), and
-- [**Maze Solver**](https://adityanairs.website/MazeSolver/)
-
-are complete and ready for viewing!
 
