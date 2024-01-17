@@ -33,7 +33,7 @@ MATLAB, Manipulation, Motion Planning, Controls, CoppeliaSim, KUKA youBot
 
 ## Reference
 
-1. [Mobile Manipulation Capstone 2023](https://hades.mech.northwestern.edu/index.php/Mobile_Manipulation_Capstone_2023){:target="_blank" rel="noopener"}
+1. [Mobile Manipulation Capstone 2023 - Northwestern Mechatronics Wiki](https://hades.mech.northwestern.edu/index.php/Mobile_Manipulation_Capstone_2023){:target="_blank" rel="noopener"}
 
 ### This Post is under construction 🛠️
 Building a perfect portfolio from the ground up is a demanding process.
