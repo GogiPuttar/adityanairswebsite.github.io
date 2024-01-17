@@ -20,6 +20,7 @@ Your curiosity is greatly appreciated `:)`
 
 In the meanwhile, the posts on:
 - [**Dexterous Manipulation through Virtual Reality**](https://adityanairs.website/DexterousManipulationThroughVR/), 
+- [**Optimized Torques for Load Carrying**](https://adityanairs.website/JointTorqueOptimization/),
 - [**Dancing Hexapod - Full SE3 Body Pose Control**](https://adityanairs.website/DancingHexapod/), 
 - [**Navigation and Kalman Filter Localization of Self Driving Car**](https://adityanairs.website/SelfDrivingCar/), 
 - [**Legged Robots for Object Manipulation: A Review**](https://adityanairs.website/LeggedRobotsForObjectManipulation/), 
