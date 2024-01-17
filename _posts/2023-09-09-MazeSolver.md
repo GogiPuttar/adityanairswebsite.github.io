@@ -45,7 +45,7 @@ It also requires full knowledge of the maze.
 
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeSetup.png?raw=true" width="65%"/>
-    <figcaption><em>Fig. 1. The Goal is the red square. The robot starts at the green square and knows the full layout of the maze.</em></figcaption>
+    <figcaption><em>Fig. 1. The Goal is the red square. The robot starts at the green square and knows the full layout of the maze. [Source: Ref 1].</em></figcaption>
     </figure>
 
     <br>
@@ -54,7 +54,7 @@ It also requires full knowledge of the maze.
 
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeFirstStep.png?raw=true" width="65%"/>
-    <figcaption><em>Fig. 2. Start at the goal. It is 0 squares from the goal so label it 0.</em></figcaption>
+    <figcaption><em>Fig. 2. Start at the goal. It is 0 squares from the goal so label it 0. [Source: Ref 1].</em></figcaption>
     </figure>
 
     <br>
@@ -63,7 +63,7 @@ It also requires full knowledge of the maze.
 
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeFirstExpansion.png?raw=true" width="65%"/>
-    <figcaption><em>Fig. 3. All the neighbors of the goal are a distance of 1 from the goal. (In this example the robot cannot move diagonally).</em></figcaption>
+    <figcaption><em>Fig. 3. All the neighbors of the goal are a distance of 1 from the goal. (In this example the robot cannot move diagonally). [Source: Ref 1].</em></figcaption>
     </figure>
 
     <br>
@@ -72,7 +72,7 @@ It also requires full knowledge of the maze.
 
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeNextExpansion.png?raw=true" width="65%"/>
-    <figcaption><em>Fig. 4. All the neighbors of the 1-distance squares are a distance of 2 from the goal.</em></figcaption>
+    <figcaption><em>Fig. 4. All the neighbors of the 1-distance squares are a distance of 2 from the goal. [Source: Ref 1].</em></figcaption>
     </figure>
 
     <br>
@@ -81,7 +81,7 @@ It also requires full knowledge of the maze.
 
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeSubsequentExpansions.png?raw=true" width="65%"/>
-    <figcaption><em>Fig. 5. Keep expanding until every square is labeled with its distance from the goal.</em></figcaption>
+    <figcaption><em>Fig. 5. Keep expanding until every square is labeled with its distance from the goal. [Source: Ref 1].</em></figcaption>
     </figure>
 
     <br>
@@ -90,7 +90,7 @@ It also requires full knowledge of the maze.
 
     <figure align = "center">
     <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MazeUsingThePlan.png?raw=true" width="65%"/>
-    <figcaption><em>Fig. 6. Starting at any square (say the green one) the robot moves to the neighbor that is closest to the goal.</em></figcaption>
+    <figcaption><em>Fig. 6. Starting at any square (say the green one) the robot moves to the neighbor that is closest to the goal. [Source: Ref 1].</em></figcaption>
     </figure>
 
 
