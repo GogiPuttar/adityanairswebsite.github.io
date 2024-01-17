@@ -143,7 +143,7 @@ where $$q_i$$ is the $$i$$-th target configuration.
 <figcaption>Fig 2. Blending functions for Tau = 2</figcaption>
 </figure>
 
-## Success
+## Conclusion
 While it is self-evident that the simulation behaves how it is supposed to, I was unsuccessful in the completing my final goal of taking our real hexapod to the Marina Bay Sands beach in Singapore and filming it dancing over there. 
 This is primarily because even though all of these target poses are within the reachable workspaces, given the 20kg weight of the actual robot, it cannot statically stand in some of these configurations. Given the somewhat chaotic nature of the dynamics of such a complex system, surfing the edge of what the robot can and cannot support is a precarious task. 
 Maybe someday when I have the time, I'll be able to actualize this dream too.
