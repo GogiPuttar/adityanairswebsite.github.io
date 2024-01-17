@@ -91,7 +91,7 @@ However, our torque optimization method could be built on top of any arbitrary l
 ### A. Kinematics of a Legged Robot
 
 In this work, we consider a bilaterally symmetrical hexapod robot, comprising a central body link and six articulated legs.
-Each of the legs, indexed $i$ as in Fig. 2., consists of links connected by three actuated joints, namely the base, shoulder, and elbow. 
+Each of the legs, indexed $$i$$ as in Fig. 2., consists of links connected by three actuated joints, namely the base, shoulder, and elbow. 
 This grants each end-effector i.e., the foot, three degrees of freedom relative to the body.
 For leg $$i$$, we represent the Jacobian matrix in the body frame as $$J_i(\theta_i) \in \mathbb{R}^{6 \times 3}$$ such that:
 
@@ -144,7 +144,7 @@ $$
 where $$M_i(\theta_i) \in \mathbb{R}^{3 \times 3}$$ is the symmetric positive-definite mass matrix of the leg, and $$K_P$$, $$K_I$$, and $$K_D$$ are the respective PID control gains, which effectively translate joint-space errors into torque commands.
 That is because, $$\theta_{e_i} = \theta_{d_i} - \theta_{i}$$ represents the error between the desired angle vector $$\theta_{d_i}$$ (obtained through inverse kinematics of the required leg pose $$X_{d_i} \in \mathbb{R}^6$$) and the current angle vector $$\theta_i$$.
 
-On the other hand, feedforward *force control* offers a natural means to let foot $i$ exert a specific wrench $$\mathcal{F}_{d_i}$$ onto the environment:
+On the other hand, feedforward *force control* offers a natural means to let foot $$i$$ exert a specific wrench $$\mathcal{F}_{d_i}$$ onto the environment:
 
 $$
 \begin{equation}
@@ -152,7 +152,62 @@ $$
 \end{equation}
 $$
 
+We note that pure motion control generally requires the end-effector to accurately produce arbitrary velocities and is therefore better suited to environments where there is no resistance to the end-effector's motion along any direction. 
+On the other hand, pure force control is only possible if the environment provides resistance forces along each direction.
+In some environments, resistance is provided only along certain directions which may limit the use of either one of these strategies i.e., motion control would be sacrificed along directions where the end-effector cannot move, or force control would be sacrificed along directions where the end-effector is free to move.
+In such cases, we can effectively utilize all available degrees of actuation through *hybrid motion-force control*.
+This strategy combines both approaches, by generating controlled motion along free directions and controlled forces along resisted direction, and can be implemented as:
+
+$$
+\begin{equation}
+\label{Eq6}
+\begin{split}
+    &\tau_{d_i}=\\
+    &J_i^{T}(\theta_i)\biggl(\underbrace{P(\theta_i)\left(\Lambda(\theta_i)\left(K_P \theta_{e_i} + K_D \dot{\theta}_{e_i} + \int_{}^{} K_I \theta_{e_i} dt\right)\right)}_{\text{motion control}}\\
+    & + \underbrace{(I - P(\theta_i))\left(\mathcal{F}_{d_i}\right)}_{\text{force control}}\biggr),
+\end{split}
+\end{equation}
+$$
+
+where $$\Lambda(\theta_i) = (J_i^{T})^{+}M_i(\theta_i)$$, in which $$(J_i^{T})^{+} \in \mathbb{R}^{6 \times 3}$$ is the Moore-Penrose pseudoinverse of $$J_i^{T}$$, and $$P(\theta_i) \in \mathbb{R}^{6 \times 6}$$ represents the natural constraints imposed on the end-effector by the environment.
+For example, when the end-effector is completely free, $$P(\theta_i) = I$$ has rank 6, whereas when it cannot move, $$P(\theta_i) = O$$ has rank 0.
+When the end-effector has restricted movement along some $$k$$ directions, $$P(\theta_i)$$'s diagonal is populated with zeroes for these $$k$$ directions and ones for the remaining $$6 - k$$ directions. 
+Therefore, $$P(\theta_i)$$ is rank $$6 - k$$, and $$I - P(\theta_i)$$ is rank $$k$$. 
+Thus, $$P(\theta_i)$$ partitions the $$6$$-dimensional force space into wrenches that address the motion control task and wrenches that address the force control task.
+
 <br>
+
+## III. Problem Analysis
+
+In this section, we derive important relationships among the hexapod's configuration, its ground reaction forces, and joint-torques in order to define our optimization method.
+We start by explaining the relevance of hybrid motion-force control to walking robots, considering the foot-ground interface.
+We then advance our understanding of the foot-ground interface by conducting a static analysis of the entire hexapod (including any payload), and estimating the resulting torque load on each joint.
+Finally, we combine these tools and analyses to formulate and solve an optimization problem, and explain how this translates to optimal locomotion for load carrying operations. 
+
+### A. Hybrid Motion-Force Control in Hexapedal Locomotion
+
+In particular, for our case of a hexapod walking in a statically stable tripod gait, we observe two scenarios where hybrid motion-force control can be utilized.
+While walking on flat ground, at any given moment, there are ideally three legs in the air (swing stage) and three legs on the ground (stance stage) given our alternate-tripod gait.
+The legs in swing stage face no restriction from the environment and thus have their natural constraints matrix $$P(\theta_i) = I$$. 
+The legs in stance stage, however, are restricted due to their contact with the ground.
+By modelling the foot-ground interface as a point contact with friction $$\{\textbf{S}(C)\}$$, we obtain: 
+
+$$
+\begin{equation}
+    P(\theta_i) = 
+    \begin{bmatrix}
+    0 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 0 & 1 \\
+    \end{bmatrix}.
+\end{equation}
+$$
+
+This is a suitable approximation, not only for our hexapod whose feet have a rounded mushroom-like shape, but also for arbitrary multi-legged robots whose foot ground interfaces are generally much smaller than their overall size.
+As illustrated in Fig. 3., this implies that the foot has three rotational degrees of freedom i.e., it cannot slide on the ground or penetrate it, however it can wobble and spin about the point of contact.
 
 <figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaFoot.png?raw=true"   width="50%"/>
 <figcaption><b><em>Fig. 3. Foot-ground interface during the stance phase of a leg.</em></b></figcaption>
@@ -160,11 +215,88 @@ $$
 
 <br>
 
-## Joint-Torque Optimization for Payload Carrying
-
-### A. Hybrid Motion-Force Control in Hexapedal Locomotion
-
 ### B. Static Analysis and Ground Reaction Forces
+
+In Fig. 4., we see that when the hexapod is standing stationary on three legs (indexed $$i = \{1, 2, 3\}$$), each foot at position $$(x_i, y_i, z_i)$$ experiences a normal reaction $$N_i$$ along the $$+z$$ axis, and friction $$f_{x_i}$$ and $$f_{y_i}$$ along the $$+x$$ and $$+y$$ axes respectively.
+Since the robot's body link is at equilibrium with respect to the ground for translation along the $$z$$ axis, and rotation about the $$x$$ and $$y$$ axes (roll-pitch), by balancing external forces and torques we obtain:
+
+$$
+\begin{equation}
+    \begin{bmatrix}
+        1   & 1   & 1\\
+        x_1 & x_2 & x_3\\
+        y_1 & y_2 & y_3
+    \end{bmatrix}
+    \begin{bmatrix}
+        N_1\\
+        N_2\\
+        N_3
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        W_{robot} + W_{load}\\
+        0\\
+        0
+    \end{bmatrix},
+\end{equation}
+$$
+
+where $$W_{robot}$$ is the combined weight of the hexapod's body and legs, and $$W_{load}$$ is the weight of the robot's payload (assumed to be placed at the robot's center-of-mass) which simply behaves like extra body weight.
+
+Through the robot's model and position feedback, we know the position and mass of every link of the hexapod and can simply obtain the normal reaction forces as:
+
+$$
+\begin{equation}
+    \begin{bmatrix}
+        N_1\\
+        N_2\\
+        N_3
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        1   & 1   & 1\\
+        x_1 & x_2 & x_3\\
+        y_1 & y_2 & y_3
+    \end{bmatrix}^{-1}
+    \begin{bmatrix}
+        W_{robot} + W_{load}\\
+        0\\
+        0
+    \end{bmatrix}.
+\end{equation}
+$$
+
+Note that this inverse exists when the support polygon defined by the three feet has some non-zero area (which holds true for statically-stable gaits).
+
+Similarly, as the body link is at equilibrium for translation along the $$x$$ and $$y$$ axes, and for rotation about the $$z$$ axis (yaw), we obtain three constraints on friction:
+
+$$
+\begin{equation}
+    \begin{bmatrix}
+        1 & 1 & 1 & 0 & 0 & 0\\
+        0 & 0 & 0 & 1 & 1 & 1\\
+        y_1 & y_2 & y_3 & -x_1 & -x_2 & -x_3
+    \end{bmatrix}
+    \begin{bmatrix}
+        f_{x_1}\\
+        f_{x_2}\\
+        f_{x_3}\\
+        f_{y_1}\\
+        f_{y_2}\\
+        f_{y_3}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        0\\
+        0\\
+        0
+    \end{bmatrix}.
+\end{equation}
+$$
+
+Through our analysis we can infer that, for any given configuration of the hexapod, the normal reaction forces are determinate, while the friction forces lie on a 3-dimensional surface within the 6-dimensional frictional force space.
+It is these supernumery degrees-of-freedom of the hexapod, which we exploit to optimize joint torques. 
+Therefore, we manipulate the ground reaction forces at the robot's feet to increase/decrease internal moments in the robot's body, such that the final torques that must be commanded by each actuator remains within its limits.
 
 <figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaFull.png?raw=true"   width="70%"/>
 <figcaption><b><em>Fig. 4. External forces acting on the robot in the static case.</em></b></figcaption>
@@ -174,34 +306,233 @@ $$
 
 ### C. Joint-Torque Estimation
 
+We now determine the torques generated at each joint given a desired configuration of the hexapod and a set of ground reaction forces (in practice, measured from sensors on the robot).
+As shown in Fig. 5., for any stance leg, the torque $$\tau_{a_i}$$ due to ground reaction forces, about any unit vector $$(u_i, v_i, w_i)$$ situated at $$(x_{a_i}, y_{a_i}, z_{a_i})$$ is:
+
+$$
+\begin{equation}
+    \tau_{a_i} = 
+    \begin{pmatrix}
+        x_i - x_{a_i}\\
+        y_i - y_{a_i}\\
+        z_i - z_{a_i}
+    \end{pmatrix}
+    \times
+    \begin{pmatrix}
+        f_{x_i}\\
+        f_{y_i}\\
+        N_i
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        u_i\\
+        v_i\\
+        w_i
+    \end{pmatrix}.
+\end{equation}
+$$
+
+As we substitute $$(x_{a_i}, y_{a_i}, z_{a_i})$$ with the location of each actuator, and $(u_i, v_i, w_i)$ with the positive joint axis of that actuator, we are able to deduce the base $$\tau_{b_i}$$, shoulder $$\tau_{s_i}$$, and elbow $$\tau_{e_i}$$ joint-torques as:
+
+$$
+\begin{align}
+    \tau_{b_i} &=
+    \begin{pmatrix}
+        x_i - x_{b_i}\\
+        y_i - y_{b_i}\\
+        z_i - z_{b_i}
+    \end{pmatrix}
+    \times
+    \begin{pmatrix}
+        f_{x_i}\\
+        f_{y_i}\\
+        N_i
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        0\\
+        0\\
+        1
+    \end{pmatrix}\\
+    \tau_{s_i} &=
+    \begin{pmatrix}
+        x_i - x_{s_i}\\
+        y_i - y_{s_i}\\
+        z_i - z_{s_i}
+    \end{pmatrix}
+    \times
+    \begin{pmatrix}
+        f_{x_i}\\
+        f_{y_i}\\
+        N_i
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        sin(\theta_{b_i})\\
+        -cos(\theta_{b_i})\\
+        0
+    \end{pmatrix}\\
+    \tau_{e_i} &= 
+    \begin{pmatrix}
+        x_i - x_{e_i}\\
+        y_i - y_{e_i}\\
+        z_i - z_{e_i}
+    \end{pmatrix}
+    \times
+    \begin{pmatrix}
+        f_{x_i}\\
+        f_{y_i}\\
+        N_i
+    \end{pmatrix}
+    \cdot
+    \begin{pmatrix}
+        sin(\theta_{b_i})\\
+        -cos(\theta_{b_i})\\
+        0
+    \end{pmatrix},
+\end{align}
+$$
+
+where $$(x_{b_i}, y_{b_i}, z_{b_i})$$, $$(x_{s_i}, y_{s_i}, z_{s_i})$$, $$(x_{e_i}, y_{e_i}, z_{e_i})$$ are the respective positions of the base, shoulder, and elbow actuators, while $$\theta_{b_i}$$ is the base joint angle.
+Note that these equations for joint-torques are linear in terms of $$(f_{x_i}$$, $$f_{y_i}$$, and $$N_{i})$$, whose coefficients are functions of quantities given by the hexapod's mass distribution.
+
 <figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/YunaGRF.jpg?raw=true"   width="70%"/>
 <figcaption><b><em>Fig. 5. Ground reaction forces and torque generated about an example
 actuator (here, the front left elbow actuator).</em></b></figcaption>
 </figure>
 
+<br>
+
 ### D. Optimal Control
 
+We first define a dimensionless term known as the normalized joint-torque $$\tilde{\tau}_{a_i}$$, i.e., the absolute value of the joint-torque $$\tau_{a_i}$$ divided by the maximum torque the actuator can generate $$\tau_{a, max_i}$$:
+
+$$
+\begin{equation}
+    \tilde{\tau}_{a_i} = \left|\frac {\tau_{a_i}}{\tau_{a, max_i}}\right|.
+\end{equation}
+$$
+
+In order for the hexapod to be functioning within its torque limits, the normalized joint-torque of all its actuators must lie between 0 and 1, at every time step. 
+We further note that, the lower the normalized joint-torque of the most strained actuator (maximum normalized torque), the farther all of the hexapod's actuators are from exceeding their limits.
+Thus, we can define our optimization problem as a typical Minimax problem:
+
+$$
+\begin{align}
+   &\min_{f_{x_1},f_{x_2},f_{x_3},f_{y_1},f_{y_1},f_{y_3},}
+   \begin{aligned}[t]
+      &Z \\
+   \end{aligned} \notag \\
+   \\
+   \text{subject to:} \notag \\
+   & \begin{bmatrix}
+        1 & 1 & 1 & 0 & 0 & 0\\
+        0 & 0 & 0 & 1 & 1 & 1\\
+        y_1 & y_2 & y_3 & -x_1 & -x_2 & -x_3
+    \end{bmatrix}
+    \begin{bmatrix}
+        f_{x_1}\\
+        f_{x_2}\\
+        f_{x_3}\\
+        f_{y_1}\\
+        f_{y_2}\\
+        f_{y_3}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        0\\
+        0\\
+        0
+    \end{bmatrix},
+\end{align}
+$$
+
+where the cost function reads:
+
+$$
+\begin{equation}
+    Z = \text{max}(\tilde{\tau}_{b_1}, \tilde{\tau}_{s_1}, \tilde{\tau}_{e_1},\\
+    \tilde{\tau}_{b_2}, \tilde{\tau}_{s_2}, \tilde{\tau}_{e_2},\\
+    \tilde{\tau}_{b_3}, \tilde{\tau}_{s_3}, \tilde{\tau}_{e_3}),
+\end{equation}
+$$
+
+since we already established that given any configuration of the hexapod, the joint-torques (and subsequently $$Z$$) are a function of the frictional forces.
+
+In practice, we solve this constrained optimization problem over the 3-dimensional surface within the 6-dimensional frictional force space, by relying on the *trust region method*.
+This iterative optimization method essentially works by approximating a portion of the cost function, within a given neighborhood (trust region) of the current point, using a quadratic modelling function.
+The optimal value is searched for within this trust region, subject to the constraints.
+If the model accurately represents the cost function, the trust region is expanded; conversely, an inaccurate model results in a contraction of the trust region.
+This iterative process is terminated when the size of the trust region falls below an appropriate tolerance, indicating convergence to a (local) minimum. 
+
+Finally, the desired output wrench of the stance feet $$\mathcal{F}_{d_i}$$ is constructed using the determined normal reactions $$N_i$$, and predicted optimal friction values $$f_{x_i}$$ and $$f_{y_i}$$:
+
+$$
+\begin{equation}
+    \mathcal{F}_{d_i} = 
+    \begin{bmatrix}
+        -f_{x_i}\\
+        -f_{y_i}\\
+        -N_i\\
+        0\\
+        0\\
+        0
+    \end{bmatrix},
+\end{equation}
+$$
+
+which when plugged into Eq. 6, with the appropriate natural constraints matrix $$P(\theta_i)$$, yield the optimal desired joint-torques for every actuator of the robot. 
+
 <br>
 
-## Hardware Experiments
+## IV. Hardware Experiments
 
 ### A. Robot Description and CPG Walking
+We experimentally validate our optimization method on a HEBI Daisy Hexapod Robot with 18 series-elastic actuators.
+Within each actuator, the series-elastic element allow us to accurately sense the external torque applied by the environment at every time step.
+Since, for an actuator at equilibrium, this external/environmental torque is equal and opposite to the commanded joint-torque, this quantifies the effort required in motion.
+For our hexapod, the base, shoulder, and elbow actuators have maximum continuous torques as 8 Nm, 16 Nm, and 8 Nm respectively.
+Therefore, the normalized torques read:
+
+$$
+\begin{align}
+    \tilde{\tau}_{b_i} = \frac {\left|\tau_{b_i}\right|}{8} \quad \quad
+    \tilde{\tau}_{s_i} = \frac {\left|\tau_{s_i}\right|}{16} \quad \quad
+    \tilde{\tau}_{e_i} = \frac {\left|\tau_{e_i}\right|}{8},
+\end{align}
+$$
+
+where all torque measurements are in Nm.
+The weight of the robot $$W_{robot} \approx 210~ \textnormal{N}$$: 75 N for the body, and 135 N for all legs.
+Tripod gait walking is implemented using the low-level Central Pattern Generator (CPG) task-space motion controller, parameterized with: the center of each foot's limit cycle i.e. grasp map, the step size, forcing to limit cycle, coupling strength, and coupling matrix for tripod gait.
 
 ### B. Iterative Trust Region Optimization
+To solve the optimal control problem, we use the `minimize(method='trust-constr')` function of the `scipy.optimize` library in python3.
+Using this, a typical one-shot optimization takes approximately 200 milliseconds to converge.
+However, this computing times prevents us from running this optimization at every time step of the hexapod's sensing-actuation cycles, as they are programmed to operate at 50 Hz (20 ms per time step).
+To improve this, we first capitalize on the fact that the cost function surface, is polygonal in nature, consisting of piecewise linear surfaces.
+Therefore, any sufficiently local approximation of this surface is linear, implying that we can initialize the Hessian matrix as a zero matrix for all trust region searches, thereby reducing the typical convergence time to approximately 45 ms.
+Second, by assuming that the robot's motion does not considerably change the cost function within the convergence window, we can decompose the optimization iterations over the sensing-actuation cycles of the hexapod such that only one iteration of the trust region method takes place per time step. 
+This makes the approach more robust, as it not only enables us to parallelly update the optimization problem and compute optimal values at each time step, but also reduces the computation time per iteration to just 2 ms.
+The iterative nature of our approach also makes it suitable for implementation with our underlying CPG controller, since joint-torque optimization can simply be incorporated as another set of state-space variables within the first-order dynamical model of the CPG.
 
 ### C. Experimental Procedure
+We tested our hexapod's motion in three scenarios, namely: walking with no load, walking with a 2 kg load, and standing with a 5 kg load.
+All loads are placed on top of the body link of the hexapod, approximately at the hexapod's centre-of-mass.
+The 2 kg and 5 kg loads increase the body's weight to 120% and 160% respectively.
+For each scenario, we record the external torques in the actuators with and without our optimization strategy.
+For the walking cases, the torques are recorded over the duration of precisely one step.
 
 <br>
 
-## Results and Discussion
+## V. Conclusion
 
-### A. Normalized Joint-Torque Measurements
-
-### B. Joint-Torque Measurements
-
-<br>
-
-## Conclusion
+In this paper, we addressed the problem of joint-torque optimization during strenuous tasks in legged robots by proposing an optimization method that manipulates the ground reaction forces to create internal moments with the robot system to minimize joint-torques. 
+To this end, we developed a detailed understanding of the relationship between the joint-torques, ground reaction forces, and robot configuration.
+Further, we developed and validated a framework for adapting the trust region search method to the iterative first-order CPG dynamical system, by decomposing its iterations over the CPG time steps. 
+We then experimentally validated our optimization strategy on a series-elastic hexapod robot, walking without a load, walking with a 2 kg load, and standing with a 5 kg load. Through our results, we inferred that our optimization method is prone to joint-torques overshooting their optimal values. 
+We found that our approach results in overall reduced torques for the robot in all cases, and significantly reduced normalized torques while walking with a 2 kg load.
+The "Results and Discussion" section has currently been omitted from this webpage.
 
 <br>
 
