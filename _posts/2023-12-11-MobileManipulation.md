@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mobile/Whole-Body Manipulation"
-categories: [MATLAB, Manipulation, Motion Planning, Controls, Simulation, Wheeled Locomotion, CoppeliaSim, KUKA YouBot, Data Structures
+categories: [MATLAB, Manipulation, Motion Planning, Controls, Simulation, Wheeled Locomotion, CoppeliaSim, KUKA youBot, Data Structures
 
 ]
 image: assets/images/MobileManipulation.gif
@@ -9,7 +9,7 @@ featured: false
 hidden: false
 ---
 
-MATLAB, Manipulation, Motion Planning, Controls, CoppeliaSim, KUKA YouBot
+MATLAB, Manipulation, Motion Planning, Controls, CoppeliaSim, KUKA youBot
 
 <div align="center">
 <video width="80%" controls loop autoplay muted>
@@ -18,6 +18,22 @@ MATLAB, Manipulation, Motion Planning, Controls, CoppeliaSim, KUKA YouBot
 </div>
 
 <br>
+
+## Overview
+
+## Personal Motivation
+
+## Kinematics of the youBot
+
+## Dynamics Simulation
+
+## Trajectory Generation
+
+## Feedback Control
+
+## Reference
+
+1. [Mobile Manipulation Capstone 2023](https://hades.mech.northwestern.edu/index.php/Mobile_Manipulation_Capstone_2023){:target="_blank" rel="noopener"}
 
 ### This Post is under construction 🛠️
 Building a perfect portfolio from the ground up is a demanding process.
