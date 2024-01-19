@@ -25,11 +25,48 @@ MATLAB, Manipulation, Motion Planning, Controls, CoppeliaSim, KUKA youBot
 
 ## Kinematics of the youBot
 
+<figure align = "center">
+    <img src="https://hades.mech.northwestern.edu/images/thumb/3/33/Yb-book.png/1200px-Yb-book.png" width="65%"/>
+    <figcaption><em>Fig. 1. This figure illustrates the arm at its home configuration (all joint angles zero) and the frames {s}, {b}, {0}, and {e}. For the image on the right, joint axes 1 and 5 (not shown) point upward and joint axes 2, 3, and 4 are out of the screen. 
+    <a href="https://hades.mech.northwestern.edu/index.php/File:Yb-book.png" target="_blank">[Image Source]</a></em></figcaption>
+</figure>
+
+<br>
+
 ## Dynamics Simulation
 
 ## Trajectory Generation
 
+<figure align = "center">
+    <img src="https://hades.mech.northwestern.edu/images/f/fc/Capstone-traj1.png" width="42%"/>
+    <img src="https://hades.mech.northwestern.edu/images/6/68/Capstone-traj2.png" width="42%"/>
+</figure>
+<figure align = "center">
+    <img src="https://hades.mech.northwestern.edu/images/2/2c/Capstone-traj3.png" width="42%"/>
+    <img src="https://hades.mech.northwestern.edu/images/f/fe/Capstone-traj4.png" width="42%"/>
+</figure>
+<figure align = "center">
+    <img src="https://hades.mech.northwestern.edu/images/f/f5/Capstone-traj5.png" width="42%"/>
+    <img src="https://hades.mech.northwestern.edu/images/a/a2/Capstone-traj6.png" width="42%"/>
+</figure>
+<figure align = "center">
+    <img src="https://hades.mech.northwestern.edu/images/4/4c/Capstone-traj7.png" width="42%"/>
+    <img src="https://hades.mech.northwestern.edu/images/1/18/Capstone-traj8.png" width="42%"/>
+    <figcaption><em>Fig. 2. The 8 segments of the KUKA youBot's trajectory. This picks the cube up and then places it at another location.
+    <a href="https://hades.mech.northwestern.edu/index.php/Mobile_Manipulation_Capstone_2023" target="_blank">[Image Source]</a></em></figcaption>
+</figure>
+
+<br>
+
 ## Feedback Control
+
+<figure align = "center">
+    <img src="https://hades.mech.northwestern.edu/images/1/13/Yb-fbtest-new.png" width="65%"/>
+    <figcaption><em>Fig. 3. This figure illustrates a test for your FeedbackControl and Jacobian pseudoinverse functions. The current robot configuration is shown, as well as the current end-effector configuration, the current reference end-effector configuration, and the reference end-effector configuration at the next time-step.
+    <a href="https://hades.mech.northwestern.edu/index.php/File:Yb-fbtest-new.png" target="_blank">[Image Source]</a></em></figcaption>
+</figure>
+
+<br>
 
 ## Reference
 
