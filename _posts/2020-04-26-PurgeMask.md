@@ -22,6 +22,7 @@ In the meanwhile, the posts on:
 - [**Optimized Torques for Load Carrying**](https://adityanairs.website/JointTorqueOptimization/),
 - [**Dancing Hexapod - Full SE3 Body Pose Control**](https://adityanairs.website/DancingHexapod/), 
 - [**Navigation and Kalman Filter Localization of Self Driving Car**](https://adityanairs.website/SelfDrivingCar/), 
+- [**Mobile/Whole-body Manipulation with KUKA youBot**](https://adityanairs.website/MobileManipulation/),
 - [**Legged Robots for Object Manipulation: A Review**](https://adityanairs.website/LeggedRobotsForObjectManipulation/), 
 - [**Home Automation with Clap Sequence Control**](https://adityanairs.website/ClapSequenceControl/), 
 - [**Robot playing T-Rex Game**](https://adityanairs.website/TRexGame/), and
