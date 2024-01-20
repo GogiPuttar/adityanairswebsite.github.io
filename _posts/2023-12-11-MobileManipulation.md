@@ -44,15 +44,21 @@ Here, the ODE physics engine was used to simulate contact dynamics and inertial 
 
 <br>
 
-## Personal Motivation
+<!-- ## Personal Motivation -->
 
-## Kinematics of the youBot
+
+
+## Kinematics of the KUKA youBot
+
+<br>
 
 <figure align = "center">
     <img src="https://hades.mech.northwestern.edu/images/thumb/3/33/Yb-book.png/1200px-Yb-book.png" width="65%"/>
     <figcaption><em>Fig. 1. This figure illustrates the arm at its home configuration (all joint angles zero) and the frames {s}, {b}, {0}, and {e}. For the image on the right, joint axes 1 and 5 (not shown) point upward and joint axes 2, 3, and 4 are out of the screen. 
     <a href="https://hades.mech.northwestern.edu/index.php/File:Yb-book.png" target="_blank">[Image Source]</a></em></figcaption>
 </figure>
+
+<br>
 
 The configuration of the frame {b} of the mobile base, relative to the frame {s} on the floor, is described by the 3-vector $$q = (\phi, x, y)$$ or the $$SE(3)$$ matrix:
 
@@ -72,11 +78,17 @@ $$
 
 The wheel numbering and forward driving and "free sliding" direction $$\gamma$$ of each wheel is indicated as:
 
+<br>
+
 <figure align = "center">
-    <img src="https://hades.mech.northwestern.edu/images/c/c8/Yb-base-capstone.png" width="65%"/>
+    <img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/MobileBase.png?raw=true" width="65%"/>
     <figcaption><em>Fig. 2. Top view of the mobile base. 
     <a href="https://hades.mech.northwestern.edu/index.php/File:Yb-book.png" target="_blank">[Image Source]</a></em></figcaption>
 </figure>
+
+<br>
+
+
 
 ## Dynamics Simulation in CoppeliaSim
 
