@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Optimized Torques for Load Carrying"
+title:  "Optimized Torque-Control for Load Carrying"
 categories: [Research, Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimization, Controls, Dynamic Systems, Simulation, PyBullet, HEBI Daisy Hexapod, Data Structures
 ]
 image: assets/images/Torque-ControlWalking.gif

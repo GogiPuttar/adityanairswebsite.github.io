@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mobile/Whole-Body Manipulation"
+title:  "Mobile/Whole-Body Manipulation with KUKA youBot"
 categories: [MATLAB, Manipulation, Motion Planning, Controls, Simulation, Wheeled Locomotion, CoppeliaSim, KUKA youBot, Data Structures
 
 ]
@@ -11,6 +11,8 @@ hidden: false
 
 MATLAB, Manipulation, Motion Planning, Controls, CoppeliaSim, KUKA youBot
 
+<br>
+
 <div align="center">
 <video width="80%" controls loop autoplay muted>
     <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/a663013e-a913-4e6c-8d2e-881ea00691ce" type="video/mp4">
@@ -20,10 +22,32 @@ MATLAB, Manipulation, Motion Planning, Controls, CoppeliaSim, KUKA youBot
 <br>
 
 ## Overview
+This was the Capstone Project for the course: ***ME 449 Robotic Manipulation*** by ***Dr. Kevin Lynch*** at Northwestern University.
+In this project, I wrote software that ***plans a trajectory*** for the end-effector of a KUKA youBot mobile manipulator (a mobile base with four mecanum wheels and a 5R robot arm), ***performs odometry*** as the chassis moves, and performs ***feedback control*** to drive the youBot to pick up a block at a specified location, carry it to a desired location, and put it down.
+
+The final output of my software is a comma-separated value (csv) text file generated using a MATLAB script that specifies the configurations of the chassis and the arm, the angles of the four wheels, and the state of the gripper (open or closed) as a function of time. 
+This specification of the position-controlled youBot was then tested on the CoppeliaSim simulator.
+Here, the ODE physics engine was used to simulate contact dynamics and inertial forces.
+
+**The program takes as input:**
+
+- The initial resting configuration of the cube object (which has a known geometry), represented by a frame attached to the center of the object
+- The desired final resting configuration of the cube object
+- The actual initial configuration of the youBot.
+- The initial configuration $$T_{se}$$ of the reference trajectory for the end-effector frame of the youBot 
+
+**The program's output is:**
+
+- A csv file which, when "played" through the CoppeliaSim scene, drives the youBot to successfully pick up the block and put it down at the desired location.
+- A data file containing the 6-vector end-effector error as a function of time
+
+<br>
 
 ## Personal Motivation
 
 ## Kinematics of the youBot
+
+
 
 <figure align = "center">
     <img src="https://hades.mech.northwestern.edu/images/thumb/3/33/Yb-book.png/1200px-Yb-book.png" width="65%"/>
