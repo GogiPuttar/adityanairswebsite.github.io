@@ -174,7 +174,7 @@ The 8 segments of the trajectory comprise:
 <figure align = "center">
     <img src="https://hades.mech.northwestern.edu/images/4/4c/Capstone-traj7.png" width="42%"/>
     <img src="https://hades.mech.northwestern.edu/images/1/18/Capstone-traj8.png" width="42%"/>
-    <figcaption><em>Fig. 2. The 8 segments of the KUKA youBot's trajectory. This picks the cube up and then places it at another location.
+    <figcaption><em>Fig. 3. The 8 segments of the KUKA youBot's trajectory. This picks the cube up and then places it at another location.
     <a href="https://hades.mech.northwestern.edu/index.php/Mobile_Manipulation_Capstone_2023" target="_blank">[Image Source]</a></em></figcaption>
 </figure>
 
@@ -200,7 +200,7 @@ to give us the commanded end-effector twist $$\mathcal{V}$$ at every time step.
 
 <figure align = "center">
     <img src="https://hades.mech.northwestern.edu/images/1/13/Yb-fbtest-new.png" width="65%"/>
-    <figcaption><em>Fig. 3. This figure illustrates a test for your FeedbackControl and Jacobian pseudoinverse functions. The current robot configuration is shown, as well as the current end-effector configuration, the current reference end-effector configuration, and the reference end-effector configuration at the next time-step.
+    <figcaption><em>Fig. 4. This figure illustrates a test for your FeedbackControl and Jacobian pseudoinverse functions. The current robot configuration is shown, as well as the current end-effector configuration, the current reference end-effector configuration, and the reference end-effector configuration at the next time-step.
     <a href="https://hades.mech.northwestern.edu/index.php/File:Yb-fbtest-new.png" target="_blank">[Image Source]</a></em></figcaption>
 </figure>
 
