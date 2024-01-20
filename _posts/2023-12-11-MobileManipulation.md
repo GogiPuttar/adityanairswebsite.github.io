@@ -74,8 +74,6 @@ sin \phi & cos \phi & 0 & y \\
 
 $$
 
-<br>
-
 The wheel numbering and forward driving and "free sliding" direction $$\gamma$$ of each wheel is indicated as:
 
 <br>
