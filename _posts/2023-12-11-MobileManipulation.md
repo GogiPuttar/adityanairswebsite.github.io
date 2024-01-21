@@ -44,9 +44,15 @@ Here, the ODE physics engine was used to simulate contact dynamics and inertial 
 
 <br>
 
-<!-- ## Personal Motivation -->
+## Personal Motivation
 
+In my junior year at BITS Pilani, I began reading ***Dr. Kevin Lynch***’s book on [Modern Robotics](https://hades.mech.northwestern.edu/index.php/Modern_Robotics). 
+In the weeks that followed, I just could not put the book down and I solved every single exercise in the foundational chapters.
+The book’s formal, systematic, and comprehensive approach to robotics was what I resonated with the most and is precisely the mindset I wanted to adopt as a roboticist.
+Since then, I have referred to it throughout my experiences in controlling and designing robots, and is why I decided to pursue an [MS in Robotics at Northwestern](https://www.mccormick.northwestern.edu/robotics/).
+In my first quarter here, I actually got to attend Dr. Lynch's ***Robotic Manipulation*** Class, and undertake this final project.
 
+<br>
 
 ## Kinematics of the KUKA youBot
 
