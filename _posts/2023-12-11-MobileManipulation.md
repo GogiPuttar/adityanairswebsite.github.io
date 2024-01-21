@@ -56,16 +56,6 @@ In my first quarter here, I actually got to attend Dr. Lynch's ***Robotic Manipu
 
 ## Kinematics of the KUKA youBot
 
-<br>
-
-<figure align = "center">
-    <img src="https://hades.mech.northwestern.edu/images/thumb/3/33/Yb-book.png/1200px-Yb-book.png" width="65%"/>
-    <figcaption><em>Fig. 1. This figure illustrates the arm at its home configuration (all joint angles zero) and the frames {s}, {b}, {0}, and {e}. For the image on the right, joint axes 1 and 5 (not shown) point upward and joint axes 2, 3, and 4 are out of the screen. 
-    <a href="https://hades.mech.northwestern.edu/index.php/File:Yb-book.png" target="_blank">[Image Source]</a></em></figcaption>
-</figure>
-
-<br>
-
 The configuration of the frame {b} of the mobile base, relative to the frame {s} on the floor, is described by the 3-vector $$q = (\phi, x, y)$$ or the $$SE(3)$$ matrix:
 
 $$
@@ -77,6 +67,16 @@ sin \phi & cos \phi & 0 & y \\
 0 & 0 & 0 & 1
 
 \end{bmatrix}
+
+<br>
+
+<figure align = "center">
+    <img src="https://hades.mech.northwestern.edu/images/thumb/3/33/Yb-book.png/1200px-Yb-book.png" width="65%"/>
+    <figcaption><em>Fig. 1. This figure illustrates the arm at its home configuration (all joint angles zero) and the frames {s}, {b}, {0}, and {e}. For the image on the right, joint axes 1 and 5 (not shown) point upward and joint axes 2, 3, and 4 are out of the screen. 
+    <a href="https://hades.mech.northwestern.edu/index.php/File:Yb-book.png" target="_blank">[Image Source]</a></em></figcaption>
+</figure>
+
+<br>
 
 $$
 
