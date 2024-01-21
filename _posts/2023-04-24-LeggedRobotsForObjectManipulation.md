@@ -13,7 +13,7 @@ Research, Legged Locomotion, Manipulation
 
 <br>
 
-<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.jpg?raw=true"   width="90%"/>
+<p align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/ReviewPaper.png?raw=true"   width="90%"/>
 </p>
 
 <br>
