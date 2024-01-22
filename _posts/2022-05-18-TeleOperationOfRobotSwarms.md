@@ -10,6 +10,21 @@ hidden: false
 
 Python, ROS, Motion Planning, Controls, Wheeled Locomotion, Jetson Nano
 
+
+
+## Versatility of motion
+
+<br>
+
+<div align="center">
+<video width="75%" controls loop autoplay muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/0f61cab0-0b81-4446-aeb2-996a49263181" type="video/mp4">
+</video>
+</div>
+<div align="center">
+<em><b>Versatile motion: Can travel through a tunnel at a slant.</b></em>
+</div>
+
 <br>
 
 ### This Post is under construction 🛠️

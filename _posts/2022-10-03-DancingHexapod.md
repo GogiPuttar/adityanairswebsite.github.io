@@ -15,7 +15,7 @@ Python, Motion Planning, Legged Locomotion, PyBullet, HEBI Daisy Hexapod
 
 <div align="center">
 <video width="75%" controls loop autoplay muted>
-    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/f7d2aad3-1d4a-49ac-836a-8549b3f0fa4a" type="video/mp4">
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/f81ca225-8e2e-4902-b735-e2e5997a4b14" type="video/mp4">
 </video>
 </div>
 <div align="center">
