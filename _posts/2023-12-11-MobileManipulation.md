@@ -15,7 +15,7 @@ MATLAB, Manipulation, Motion Planning, Controls, CoppeliaSim, KUKA youBot
 
 <div align="center">
 <video width="80%" controls loop autoplay muted>
-    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/a663013e-a913-4e6c-8d2e-881ea00691ce" type="video/mp4">
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/d4022996-c302-42a6-bb16-91fd77b095bb" type="video/mp4">
 </video>
 </div>
 
