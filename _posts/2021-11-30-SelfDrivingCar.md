@@ -15,7 +15,8 @@ Python, Motion Planning, Controls, Signals, Wheeled Locomotion, Webots
 
 <div align="center">
 <video width="75%" controls loop autoplay muted>
-    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/02747c6e-d602-4190-bb4c-e01b4e0d5c85" type="video/mp4">
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/9d3a30ab-a094-4fe5-8248-0561bd77b718
+" type="video/mp4">
 </video>
 </div>
 
