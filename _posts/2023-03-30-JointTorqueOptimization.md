@@ -14,7 +14,7 @@ Research, Python, Legged Locomotion, Model-Predictive Control, Nonlinear Optimiz
 
 <div align="center">
 <video width="75%" controls loop autoplay muted>
-    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/3b7aff70-48e1-4a76-ab71-8d593b03e74a" type="video/mp4">
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/838d02d7-b675-429b-8677-a3da5a1c37e1" type="video/mp4">
 </video>
 </div>
 
