@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Autonomous Outdoor Search and Rescue with UnitreeGo1 (in progress)"
+title:  "Autonomous Search and Rescue with UnitreeGo1 (in progress)"
 categories: [ROS2/ROS, C++, Python, SLAM, Computer Vision, Legged Locomotion, Unitree, Zed, Exploration, Motion Planning, Dynamic Systems,Controls, Data Structures
 ]
 image: assets/images/UnitreeMapping.gif
