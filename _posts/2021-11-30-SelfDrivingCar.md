@@ -111,7 +111,7 @@ $$
 where $$\gamma$$ is yaw.
 
 ### IMU Odometry
-For IMU, we use the Runge-Kutta method to double integrate the acceleration in every iteration of the time loops to get the $x$ and $y$ increments. It should be noted that the values we obtain have significant errors due to drift because Webots does not allow timesteps smaller than 0.032 seconds.
+For IMU, we use the Runge-Kutta method to double integrate the acceleration in every iteration of the time loops to get the $$x$$ and $$y$$ increments. It should be noted that the values we obtain have significant errors due to drift because Webots does not allow timesteps smaller than 0.032 seconds.
 
 ### Kalman Filter
 
