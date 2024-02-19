@@ -8,7 +8,7 @@ featured: false
 hidden: false
 ---
 
-ROS2/ROS, C++, Python, SLAM, Computer Vision, Exploration, Legged Locomotion
+C++, ROS2/ROS, Python, SLAM, Computer Vision, Exploration, Legged Locomotion, Unitree
 
 <br>
 
