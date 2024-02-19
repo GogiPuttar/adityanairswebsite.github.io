@@ -13,8 +13,8 @@ comments: false
 
 #### [LinkedIn ⇗](https://www.linkedin.com/in/aditya-nair-33b166203/){:target="_blank" rel="noopener"}
 
-## [View Resume as a PDF 📄](AdityaNair_Resume_Jan2024.pdf){:target="_blank" rel="noopener"}
+## [View Resume as a PDF 📄](AdityaNair_Resume_Feb2024.pdf){:target="_blank" rel="noopener"}
 
-<iframe src="_pages/AdityaNair_Resume_Jan2024.pdf" width="80%" height="800">
+<iframe src="_pages/AdityaNair_Resume_Feb2024.pdf" width="80%" height="800">
 </iframe>
 
