@@ -10,12 +10,26 @@ hidden: false
 
 Python, ROS, Motion Planning, Controls, Wheeled Locomotion, Jetson Nano
 
+<br>
+
+<div align="center">
+<video width="85%" controls loop autoplay muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/cf68b973-d896-4529-8686-8b9e3ea964e2" type="video/mp4">
+</video>
+</div>
+<div align="center">
+<em><b>The operator can make the swarm autonomously change shape to travel through narrow tunnels, and morph around small obstacles.</b></em>
+</div>
+
+<br>
+
 ## Overview
-Swarm Robotics explores the design of robot groups operating independently, guided by principles of swarm intelligence. My project focuses on implementing swarm control principles for two Firebird VI robots, allowing them to navigate an obstacle map collectively. The project embraces the challenges of fault tolerance, scalability, and flexibility inherent in swarm robotics, making it suitable for tasks like demining, search and rescue, and planetary exploration.
+Swarm Robotics explores the design of robot groups operating independently, guided by principles of swarm intelligence. My project focuses on implementing swarm control principles for two Firebird VI robots, allowing them to navigate an obstacle map collectively. The aim of this project was to create a ***human-in-the-loop swarm control algorithm, combining the abstraction of control offered by swarm intelligence with the robust maneuverability of teleoperation***. The project embraces the challenges of fault tolerance, scalability, and flexibility inherent in swarm robotics, making it suitable for tasks like demining, search and rescue, and planetary exploration.
 
 <br>
 
 ## Personal Motivation
+As an undergraduate researcher at the [Inspire Lab](https://universe.bits-pilani.ac.in/pilani/avinash/inspireLab) at BITS Pilani, our team developed various ROS packages for Single-Agent and Multi-Agent control, navigation, and sensing of mobile robots. As the head of this investigation, this project was my contribution to the pipeline.
 
 <br>
 
@@ -27,7 +41,9 @@ In the realm of swarm robotics, abstraction is essential, granting the swarm a l
 ## Firebird VI Robots
 The Firebird VI platforms serve as the foundation for the swarm, equipped with high-precision DC gear motors, ultrasonic range sensors, IR distance sensors, and more. These robots provide a versatile base for swarm robotics, combining indoor and outdoor mobility. While the 4-wheeled differential drive offers robustness on rough surfaces, it introduces challenges in motion accuracy, addressed through this innovative approach.
 
-<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/FirebirdVI.png?raw=true" width="50%"/>
+<br>
+
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/FirebirdVI.png?raw=true" width="40%"/>
 <figcaption>Fig. 1. A Firebird VI robot.</figcaption>
 </figure>
 
@@ -39,14 +55,16 @@ The project leverages the Robot Operating System (ROS), a middleware suite facil
 <br>
 
 ## Polymorphic Scripts and Swarm Control Algorithms
-These polymorphic scripts, designed for flexibility, dynamically adjust based on input and robot identity. Swarm control algorithms like 'Square', 'Elongate' and 'Flatten' showcase the swarm's ability to split, trace patterns, and adapt to changing configurations. 
+These polymorphic scripts, designed for flexibility, dynamically adjust based on input and robot identity (ROS namespace). Swarm control algorithms like 'Square', 'Elongate' and 'Flatten' showcase the swarm's ability to split, trace patterns, and adapt to changing configurations. 
 
 ### Square Maneuver
 The square functionality, for instance, orchestrates a synchronized movement to outline a square, demonstrating the collaborative nature of the swarm. This allows a swarm to passes around obstacles, in an otherwise sparesly populated environment.
 
+<br>
+
 <div align="center">
-<video width="75%" controls loop autoplay muted>
-    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/0f61cab0-0b81-4446-aeb2-996a49263181" type="video/mp4">
+<video width="75%" controls loop muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/2655f34d-a3d7-4993-8ba1-b5a28fa6e07c" type="video/mp4">
 </video>
 </div>
 <div align="center">
@@ -56,10 +74,13 @@ The square functionality, for instance, orchestrates a synchronized movement to 
 <br>
 
 ### Elongating and Flattening
+The operator can make the swarm orient itself in a long straight line which is suitable for traveling through narrow tunnels, after which the swarm can restore itself to its initial configuration.
+
+<br>
 
 <div align="center">
-<video width="75%" controls loop autoplay muted>
-    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/0f61cab0-0b81-4446-aeb2-996a49263181" type="video/mp4">
+<video width="75%" controls loop muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/cf68b973-d896-4529-8686-8b9e3ea964e2" type="video/mp4">
 </video>
 </div>
 <div align="center">
@@ -69,9 +90,12 @@ The square functionality, for instance, orchestrates a synchronized movement to 
 <br>
 
 ### Elongating and Flattening at an angle
+This strategy can even work for tunnels at arbitrary angles by initially spinning every individual robot. 
+
+<br>
 
 <div align="center">
-<video width="75%" controls loop autoplay muted>
+<video width="75%" controls loop muted>
     <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/0f61cab0-0b81-4446-aeb2-996a49263181" type="video/mp4">
 </video>
 </div>
@@ -83,25 +107,6 @@ The square functionality, for instance, orchestrates a synchronized movement to 
 
 ## Conclusion
 The Firebird VI robot's sensor array, coupled with ROS control, proves versatile for diverse applications. Navigating the challenges of swarm control required a strong foundation in ROS, evident in the creation of launch files and polymorphic scripts. However, the 4-wheel differential drive posed challenges in motion accuracy, suggesting potential improvements in robot configurations for future work.
-
-### This Post is under construction 🛠️
-Building a perfect portfolio from the ground up is a demanding process.
-Over the coming weeks, I will be adding more information about my personal and professional projects. 
-If you're interested, please check back on Janurary 31st, 2024.
-Your curiosity is greatly appreciated `:)`
-
-In the meanwhile, the posts on:
-- [**Dexterous Manipulation through Virtual Reality**](https://adityanairs.website/DexterousManipulationThroughVR/), 
-- [**Optimized Torques for Load Carrying**](https://adityanairs.website/JointTorqueOptimization/),
-- [**Dancing Hexapod - Full SE3 Body Pose Control**](https://adityanairs.website/DancingHexapod/), 
-- [**Navigation and Kalman Filter Localization of Self Driving Car**](https://adityanairs.website/SelfDrivingCar/), 
-- [**Mobile/Whole-body Manipulation with KUKA youBot**](https://adityanairs.website/MobileManipulation/),
-- [**Legged Robots for Object Manipulation: A Review**](https://adityanairs.website/LeggedRobotsForObjectManipulation/), 
-- [**Home Automation with Clap Sequence Control**](https://adityanairs.website/ClapSequenceControl/), 
-- [**Robot playing T-Rex Game**](https://adityanairs.website/TRexGame/), and
-- [**Maze Solver**](https://adityanairs.website/MazeSolver/)
-
-are complete and ready for viewing!
 
 
 
