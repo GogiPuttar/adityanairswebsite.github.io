@@ -8,7 +8,7 @@ featured: false
 hidden: false
 ---
 
-Python, ROS, Motion Planning, Controls, Wheeled Locomotion, Jetson Nano
+Python, ROS2/ROS, Motion Planning, Controls, Wheeled Locomotion, Jetson Nano
 
 <br>
 
