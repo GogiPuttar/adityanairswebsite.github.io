@@ -15,7 +15,7 @@ Python, Controls, Nonlinear Optimization, Manipulation, PyBullet, Wheeled Locomo
 
 ## What problem does this solve?
 
-Using PID control to track a moving target is inherently unstable on an under-actuated non-holonomic robot such as this one. Ultimately, any obstacles that come in the way can create errors so large, that they're impossible to recover from. 
+Traditional PID control for tracking a moving target is inherently unstable on an under-actuated non-holonomic robot such as this one. Ultimately, any obstacles that come in the way can create errors so large, they're impossible to recover from. 
 
 <p align = "center">
 <video width="40%" controls loop muted>
@@ -27,7 +27,7 @@ Using PID control to track a moving target is inherently unstable on an under-ac
 
 ## Limit Cycles
 
-My approach instead uses a time-invariant controller based on a non-linear oscillator. 
+My approach instead uses a time-invariant controller based on a non-linear vector field. 
 
 <p align = "center">
 <video width="40%" controls loop muted>
