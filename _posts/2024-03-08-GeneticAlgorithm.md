@@ -12,7 +12,7 @@ Python, MuJoCo, Machine Learning, Nonlinear Optimization, Controls
 
 <br>
 
-<div align="center"><iframe width="1273" height="716" src="https://www.youtube.com/embed/0MoBF7s_TN0" title="Genetic Algorithm for Slithering and Sidewinding Creatures" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<div align="center"><iframe width="1273" height="616" src="https://www.youtube.com/embed/0MoBF7s_TN0" title="Genetic Algorithm for Slithering and Sidewinding Creatures" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
 <br>
 
