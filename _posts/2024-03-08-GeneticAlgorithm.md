@@ -36,7 +36,7 @@ Python, MuJoCo, Machine Learning, Nonlinear Optimization, Controls
 <br>
 
 <div align="center">
-<video width="75%" controls loop muted>
+<video width="75%" controls loop autoplay muted>
     <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/b7bf184f-5dd2-4c51-b305-f4efbc447556" type="video/mp4">
 </video>
 </div>
@@ -80,7 +80,7 @@ Python, MuJoCo, Machine Learning, Nonlinear Optimization, Controls
 <br>
 
 <div align="center">
-<video width="75%" controls loop muted>
+<video width="75%" controls loop autoplay muted>
     <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/273229b6-c057-475e-bd05-0cb352b885d4" type="video/mp4">
 </video>
 </div>
@@ -106,7 +106,7 @@ Python, MuJoCo, Machine Learning, Nonlinear Optimization, Controls
 <br>
 
 <div align="center">
-<video width="75%" controls loop muted>
+<video width="75%" controls loop autoplay muted>
     <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/97a24f43-8b98-418c-b6d0-6db51f3be56a" type="video/mp4">
 </video>
 </div>
