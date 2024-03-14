@@ -12,14 +12,7 @@ Python, MuJoCo, Machine Learning, Nonlinear Optimization, Controls
 
 <br>
 
-<!-- <div align="center">
-<video width="75%" controls loop autoplay muted>
-    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/f81ca225-8e2e-4902-b735-e2e5997a4b14" type="video/mp4">
-</video>
-</div>
-<div align="center">
-<em><b>To feel the rhythm of the robot, I recommend you turn your volume on! 🔊</b></em>
-</div> -->
+<div align="center"><iframe width="1273" height="716" src="https://www.youtube.com/embed/0MoBF7s_TN0" title="Genetic Algorithm for Slithering and Sidewinding Creatures" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
 <br>
 
