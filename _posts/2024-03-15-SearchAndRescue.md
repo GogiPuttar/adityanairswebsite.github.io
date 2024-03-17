@@ -93,6 +93,10 @@ The dog will be equipped with a **ZED 2i camera** and use its built in [position
 
 ### 2-D Map filtering
 
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/Dog3Dmap.png?raw=true" width="50%"/>
+<figcaption>Fig. 1. Example trajectory of Catmull-Rom Splines</figcaption>
+</figure>
+
 - Must be usable by Nav Stack
 - Algorithm for free space generation
 - Eroding away outliers
@@ -103,13 +107,20 @@ The dog will be equipped with a **ZED 2i camera** and use its built in [position
 ## Nav Stack
 
 - unitree_nav package by nick morales
-- Photo
+
+<br>
+
+<div align="center">
+<video width="80%" controls loop muted>
+    <source src="https://github.com/ME495-EmbeddedSystems/Mapping-and-Exploration-in-ROS2/assets/59332714/e8ebbd4d-7144-4a7c-b044-cb987d462da5" type="video/mp4">
+</video>
+</div>
 
 <br>
 
 ## Frontier Exploration
 
-<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SplineTrajectory.png?raw=true" width="50%"/>
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/DogFrontiers.png?raw=true" width="80%"/>
 <figcaption>Fig. 1. Example trajectory of Catmull-Rom Splines</figcaption>
 </figure>
 
