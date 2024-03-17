@@ -37,7 +37,23 @@ The dog will be equipped with a **ZED 2i camera** and use its built in [position
 
 ## System design
 
-(flowchart)
+<br>
+
+<figure align = "center">
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/DogFront.png?raw=true" width="80%"/>
+<img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/DogSide.png?raw=true" width="80%"/>
+<figcaption>Fig. 1. </figcaption>
+</figure>
+
+<br>
+
+<br>
+
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/DogDiagram.png?raw=true" width="80%"/>
+<figcaption>Fig. 1. </figcaption>
+</figure>
+
+<br>
 
 ### Unitree Go1
 
