@@ -14,6 +14,15 @@ ROS2/ROS, C++, Python, SLAM, Machine Learning, Wheeled Locomotion, Turtlebot
 
 <div align="center">
 <video width="90%" controls loop autoplay muted>
+    <source src="https://github.com/ME495-Navigation/slam-project-GogiPuttar/assets/59332714/2776878f-69f1-487e-9ec8-3d6d252ae449
+" type="video/mp4">
+</video>
+</div>
+
+<br>
+
+<div align="center">
+<video width="90%" controls loop autoplay muted>
     <source src="https://github.com/ME495-Navigation/slam-project-GogiPuttar/assets/59332714/b38505b0-d3cf-4aae-aefa-e1a778615cb1
 " type="video/mp4">
 </video>
