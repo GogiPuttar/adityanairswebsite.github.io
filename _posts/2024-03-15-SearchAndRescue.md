@@ -12,7 +12,11 @@ C++, ROS2/ROS, Python, SLAM, Computer Vision, Exploration, Legged Locomotion, Un
 
 <br>
 
-<div align="center"><iframe width="972" height="750" src="https://www.youtube.com/embed/eCHhzRkATEU" title="Visual SLAM with Zed2i and UnitreeGo1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<div align="center">
+<video width="80%" controls loop autoplay muted>
+    <source src="https://github.com/ME495-Navigation/slam-project-GogiPuttar/assets/59332714/521cd789-6aac-4c77-86be-2921d3629d72" type="video/mp4">
+</video>
+</div>
 
 <br>
 
@@ -30,6 +34,97 @@ The dog will be equipped with a **ZED 2i camera** and use its built in [position
 </figure>
 
 <br>
+
+## System design
+
+(flowchart)
+
+### Unitree Go1
+
+<br>
+
+<div align="center">
+<video width="80%" loop autoplay muted>
+    <source src="https://github.com/ME495-EmbeddedSystems/Mapping-and-Exploration-in-ROS2/assets/59332714/407e18ca-219e-4e14-9dea-ff7d3f920b10" type="video/mp4">
+</video>
+</div>
+
+<br>
+
+### Jetson Orin Nano
+- Isaac ROS
+- Jetpack 5.1.2
+
+### Zed camera
+- Perfect, great documenttion, works very well
+- ROS2 wrapper
+
+<br>
+
+## Visual SLAM
+
+### Visual-Inertial Odometry
+
+<br>
+
+<p align = "center">
+<video width="40%" loop autoplay muted>
+    <source src="https://docs.stereolabs.com/positional-tracking/images/zed-positional-tracking.mp4" type="video/mp4">
+</video>
+<video width="40%" loop autoplay muted>
+    <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/ff766a79-617e-4516-a7f3-eaf4ef81644e" type="video/mp4">
+</video>
+</p>
+
+<br>
+
+
+### 3-D Map Building
+
+<br>
+
+<div align="center"><iframe width="972" height="750" src="https://www.youtube.com/embed/eCHhzRkATEU" title="Visual SLAM with Zed2i and UnitreeGo1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+<br>
+
+### Human Detection
+
+<br>
+
+### 2-D Map filtering
+
+- Must be usable by Nav Stack
+- Algorithm for free space generation
+- Eroding away outliers
+- RTAB map works better for lidar scans
+
+<br>
+
+## Nav Stack
+
+- unitree_nav package by nick morales
+- Photo
+
+<br>
+
+## Frontier Exploration
+
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/SplineTrajectory.png?raw=true" width="50%"/>
+<figcaption>Fig. 1. Example trajectory of Catmull-Rom Splines</figcaption>
+</figure>
+
+(best exploration video)
+ 
+- Considerations
+    - Zed camera 30cm
+    - Limited field of view
+    - Holonomic
+
+- BFS vs DFS for stereo camera
+
+<br>
+
+
 
 
 
