@@ -68,10 +68,10 @@ The dog will be equipped with a **ZED 2i camera** and use its built in [position
 <br>
 
 <p align = "center">
-<video width="40%" loop autoplay muted>
+<video width="48%" loop autoplay muted>
     <source src="https://docs.stereolabs.com/positional-tracking/images/zed-positional-tracking.mp4" type="video/mp4">
 </video>
-<video width="40%" loop autoplay muted>
+<video width="48%" loop autoplay muted>
     <source src="https://github.com/GogiPuttar/adityanairswebsite.github.io/assets/59332714/ff766a79-617e-4516-a7f3-eaf4ef81644e" type="video/mp4">
 </video>
 </p>
@@ -94,6 +94,10 @@ The dog will be equipped with a **ZED 2i camera** and use its built in [position
 ### 2-D Map filtering
 
 <figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/Dog3Dmap.png?raw=true" width="50%"/>
+<figcaption>Fig. 1. Example trajectory of Catmull-Rom Splines</figcaption>
+</figure>
+
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/Dog2Dmap.png?raw=true" width="50%"/>
 <figcaption>Fig. 1. Example trajectory of Catmull-Rom Splines</figcaption>
 </figure>
 
