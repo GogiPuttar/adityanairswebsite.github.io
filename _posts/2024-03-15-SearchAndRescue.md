@@ -175,7 +175,7 @@ For example, a human walking in front of the camera can register enough outliers
 <br>
 
 <figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/Dog3Dmap.png?raw=true" width="50%"/>
-<figcaption>Fig. 3. A person walking past the camera in the mapping process. Example of how dynamic obstacles can result in outliers in the well formed 3-D map.</figcaption>
+<figcaption>Fig. 3. Example of how dynamic obstacles can result in outliers in the well formed 3-D map.</figcaption>
 </figure>
 
 <br>
@@ -254,6 +254,8 @@ Fig. 5. Frontiers are identified and the closest frontier is chosen as the goal 
 
 ### Deploying the Algorithm Outdoors
 
+<br>
+
 <div align="center">
 <video width="80%" controls loop muted>
     <source src="https://github.com/ME495-EmbeddedSystems/Mapping-and-Exploration-in-ROS2/assets/59332714/665011b5-b424-4f12-9bd0-36ba38541acc" type="video/mp4">
@@ -265,10 +267,12 @@ Frontier exploration successfully working in a tight space.
 </em>
 </p>
 
-While the exploration worked in a smaller indoor environment, 
+<br>
 
-
-- BFS vs DFS for stereo camera
+While the exploration worked in a smaller indoor environment, it wasn't suitable to be deployed in a sparse outdoor enviornment. 
+This is because the current exploration algorithm picks the closest reachable frontier which is more explorative and less exploitative akin to a Breadth First Search.
+This leads to the robot spending a large time exploring its immediate surroundings rather than commiting to a path and covering larger ground.
+On the other hand, a highly exploitative algorithm akin to Depth First Search which is biased to covering larger ground in less time is not guaranteed to explore the space properly which might lead swathes of unexplored regions.
 
 <br>
 
