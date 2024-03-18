@@ -275,7 +275,7 @@ Frontier exploration successfully working in a tight space.
 While the exploration worked in a smaller indoor environment, it wasn't suitable to be deployed in a sparse outdoor enviornment. 
 This is because the current exploration algorithm picks the closest reachable frontier which is more explorative and less exploitative akin to a Breadth First Search.
 This leads to the robot spending a large time exploring its immediate surroundings rather than commiting to a path and covering larger ground.
-On the other hand, a highly exploitative algorithm akin to Depth First Search which is biased to covering larger ground in less time is not guaranteed to explore the space properly which might lead swathes of unexplored regions.
+On the other hand, a highly exploitative algorithm akin to Depth First Search which is biased to covering larger ground in less time is not guaranteed to explore the space properly which might lead to swathes of unexplored regions.
 
 <br>
 
