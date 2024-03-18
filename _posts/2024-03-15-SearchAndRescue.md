@@ -40,6 +40,10 @@ The dog will be equipped with a **ZED 2i camera** and use its built in [position
 
 <br>
 
+<div align="center"><h2> <a href="https://github.com/GogiPuttar/Search_for_missing_person_Unitree_Go1/tree/main" target="_blank">View it on Github ⇗</a></h2></div>
+
+<br>
+
 ## System design
 
 The system consists of a Unitree Go1, a Zed 2i Camera and an Nvidia Jetson Orin Nano, and uses ROS2 `humble`. 
@@ -248,12 +252,21 @@ Fig. 5. Frontiers are identified and the closest frontier is chosen as the goal 
 
 <br>
 
-### Success of exploration algorithm
+### Deploying the Algorithm Outdoors
 
-While there was some success in indoor settings, the exploration algorithm was not suitable for large outdoor settings.
+<div align="center">
+<video width="80%" controls loop muted>
+    <source src="https://github.com/ME495-EmbeddedSystems/Mapping-and-Exploration-in-ROS2/assets/59332714/665011b5-b424-4f12-9bd0-36ba38541acc" type="video/mp4">
+</video>
+</div>
+<p align="center">
+<em>
+Frontier exploration successfully working in a tight space.
+</em>
+</p>
 
+While the exploration worked in a smaller indoor environment, 
 
-(best exploration video)
 
 - BFS vs DFS for stereo camera
 
