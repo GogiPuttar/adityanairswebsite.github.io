@@ -99,7 +99,6 @@ It also requires full knowledge of the maze.
     <a href="https://nu-msr.github.io/hackathon/wavefront.html" target="_blank">[Image Source]</a></em></figcaption>
     </figure>
 
-
 <br>
 
 ## Conclusion
