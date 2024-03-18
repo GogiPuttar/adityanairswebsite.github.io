@@ -230,7 +230,7 @@ There are certain salient considerations that were kept in mind while writing th
 - The Unitree is a holonomic mobile base and therefore has decoupled view and heading. If used correctly, this can be a major advantage in efficiently exploraing an area. 
 - The map may have small encalves of unexplored regions which can be outliers for the exploration algorithm.
 
-My frontier exploration algorithm:
+My frontier exploration algorithm is as follows:
 
 1. Dilate the free space of the map to cover any enclaves.
 2. Locate the position and direction of each frontiers by evaluating neighboring unexplored cells around free cells.
@@ -246,16 +246,16 @@ Fig. 5. Frontiers are identified and the closest frontier is chosen as the goal 
 </figcaption>
 </figure>
 
+<br>
+
+### Success of exploration algorithm
+
+While there was some success in indoor settings, the exploration algorithm was not suitable for large outdoor settings.
+
+
 (best exploration video)
- 
-- Considerations
-    - Zed camera 30cm
-    - Limited field of view
-    - Holonomic
 
 - BFS vs DFS for stereo camera
-
-- Not about the destination, about the journey
 
 <br>
 
