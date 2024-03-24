@@ -291,7 +291,13 @@ Fig. 5. Frontiers are identified and the closest frontier is chosen as the goal 
 </figure> -->
 
 
-Thanks, Stella for starring in my concept video.
+<figure align = "left"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/DogFrontiers.png?raw=true" width="20%"/>
+<figcaption><em>Thanks Stella, for starring in my video.</em></figcaption>
+</figure>
+
+<figure align = "left"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/DogFrontiers.png?raw=true" width="20%"/>
+<figcaption><em>Thanks Srikanth, for lending me your Jackal when the dog broke.</em></figcaption>
+</figure>
 
 
 
