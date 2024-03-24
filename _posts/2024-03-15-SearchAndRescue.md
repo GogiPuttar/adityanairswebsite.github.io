@@ -26,14 +26,14 @@ Teleoperated concept video of the final product.
 <br>
 
 ## Overview
-The aim of this project is to enable the Unitree Go1 to autonomously explore an outdoor environment with reasonably uneven terrain, in order to search and locate a missing person.
-The motivation for this project is to allow robots to look for people missing in a natural environment ([example](https://www.youtube.com/watch?v=Fmxt7NZzmmU)), where gathering a search party ad-hoc is not very easy. 
+The aim of this project is to enable the Unitree Go1 to autonomously explore an outdoor environment with uneven terrain, in order to search and locate a missing person.
+The motivation for this project is to allow robots to look for people missing in a natural environment ([example](https://www.youtube.com/watch?v=Fmxt7NZzmmU)), where gathering a search party ad-hoc is difficult. 
 This leverages the unique advantages that legged robots as well as visual SLAM possess, in unmapped environments. 
-The dog (a Unitree Go1) is equipped with a **ZED 2i camera** and uses its built in Visual-Inertial Odometry (VIO) and mapping for SLAM, object detection be used for detecting human beings, a **frontier exploration algorithm** for searching and environment, and the **Nav Stack** for traveling to goal poses.
-Much of the work in this project has been about integrating many different sensors and computers using ROS2 `humble`.
+The dog (a **Unitree Go1**) is equipped with a **ZED 2i camera** and uses its built in Visual-Inertial Odometry (VIO) and mapping for SLAM, object detection for detecting human beings, a **frontier exploration algorithm** for searching and environment, and the **Nav Stack** for traveling to goal poses.
+Much of the work in this project has been about integrating many different sensors and computers using ROS2 `humble` on an **Nvidia Jetson Orin Nano**.
 
 Given below is a road map for completing the project.
-Currently, I'm at a point where the exploration algorithm is only suitable for dense environments, and hence has not been deployed for large sparsely populated outdoor scenes:
+Currently, I'm at a point where the exploration algorithm is only suitable for dense environments, and hence has not been deployed for large and sparse outdoor environments:
 
 <br>
 
@@ -64,8 +64,8 @@ All of these components are fixed to the Unitree using a 3-D printed mount desig
 
 <br>
 
-All ROS2 nodes run on the Jetson, and can be activated and visualized using an external computer through `ssh -Y` over WiFi, while using the same ROS2 distro (`humble` in my case).
-Wireless communication with ROS2 can be unreliable however, and a wired connection is recommended whenever possible. 
+All ROS2 nodes run on the Jetson, and can be activated and visualized using an external computer through `ssh -Y` over WiFi, using the same ROS2 distro (`humble` in my case).
+Wireless communication with ROS2 can be quite unreliable however, and a wired connection is recommended whenever possible, *especially* for testing. 
 
 <br>
 
@@ -77,7 +77,7 @@ Wireless communication with ROS2 can be unreliable however, and a wired connecti
 
 ### Unitree Go1
 
-the Unitree Go1 serves as a robust, holonomic mobile base that can easily deployed on moderately uneven terrain. 
+The Unitree Go1 serves as a robust, holonomic mobile base that can easily be deployed on moderately uneven terrain. 
 The [Unitree ROS2 wrapper](https://github.com/katie-hughes/unitree_ros2) by [Katie Hughes](https://katie-hughes.github.io/) has been utilized for high level control, and communication between the two needs to be initialized every time using:
 
 ```
@@ -87,6 +87,7 @@ sudo ifconfig enpxxx 192.168.123.162/24
 sudo ifconfig enpxxx up
 ping 192.168.123.161 
 ```
+I would recommend turning these commands into an alias and running it each time the Unitree and Jetson are switched on.
 
 <br>
 
@@ -104,18 +105,18 @@ High Level Control on the Unitree Go1.
 <br>
 
 ### Jetson Orin Nano
-The Jetson development boards by NVidia serve as compact, reliable and powerful Linux computers that can easily serve as the brain of many robotic systems.
+The Jetson development boards by NVidia are compact, reliable and powerful Linux computers that can easily serve as the brain of various robotic systems.
 The Jetson Orin Nano has been flashed using a micro SD card with the [Jetpack 5.1.2](https://developer.nvidia.com/embedded/jetpack-sdk-512), and runs Ubuntu 20.0.4 and ROS2 `humble`. 
 ROS2 can be installed by following this [Isaac ROS](https://nvidia-isaac-ros.github.io/getting_started/isaac_ros_buildfarm_cdn.html) tutorial.
 [Shail Dalal](https://sdalal1.github.io/projects/) and I tried multiple ways to flash the [Jetpack 6.0](https://developer.nvidia.com/embedded/jetpack) onto the Jetson Orin Nano (with Ubuntu 22.0.4 and ROS2 `iron`) but were unsuccessful, so we opted to use the Jetpack 5.1.2 instead. 
-Setting up a Jetson from scratch and installing packages on it can easily by a tiring process owing to the lack of software support and documentation by Nvidia and must be anticipated beforehand.
+Setting up a Jetson from scratch and installing packages on it can quickly become a tiring process owing to the lack of software support and documentation by Nvidia, which must be anticipated beforehand.
 After being set up however, the Jetson should operate quite reliably.
 
 <br>
 
 ### Zed 2i camera
-The Zed series of cameras by StereoLabs are a highly accurate stereo cameras which have built in Visual-Inertial Odometry, 3-D Mapping, and Object (including human) detection, among other features.
-Additionally, the cameras have a very well documented [ROS2 wrapper](https://github.com/stereolabs/zed-ros2-wrapper) which makes all of these features easy to deploy. 
+The Zed series of cameras by StereoLabs are a highly accurate stereo cameras which have built in Visual-Inertial Odometry, 3-D Mapping, and Object (including human) Detection, among other features.
+Additionally, the cameras have a very well documented [ROS2 wrapper](https://github.com/stereolabs/zed-ros2-wrapper) making rapid deployment of these features possible. 
 
 <br>
 
@@ -154,9 +155,9 @@ On the left is
 
 The 3-D map building tool is also very powerful and does not accumulate noticeable drift over large distances.
 However, it can register false locations because of virtual objects in reflective surfaces.
-It is also not robust to dynamic obstacles which is addressed in the map filter.
+It is also not robust to dynamic obstacles which is addressed in the [map filter](https://adityanairs.website/SearchAndRescue/#:~:text=and%20rescue%20operation.-,2%2DD%20Map%20filtering,-The%203D%20map).
 
-Here's a video of the 3-D map buildinng integrated with the 2-D filtered map while manually operating the Unitree:
+Here's a video of the 3-D map building integrated with the 2-D filtered map, while manually operating the Unitree:
 
 <div align="center"><iframe width="672" height="660" src="https://www.youtube.com/embed/eCHhzRkATEU" title="Visual SLAM with Zed2i and UnitreeGo1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 
@@ -164,26 +165,26 @@ Here's a video of the 3-D map buildinng integrated with the 2-D filtered map whi
 
 ### Human Detection
 
-Human detection is part of the object detection feature, and can track the motion of human beings. 
+Human detection is part of the object detection feature and can even [track the motion of crowds of people](https://katie-hughes.github.io/crowdnav/). 
 This is used to trigger a behaviour change upon encountering a human during the search and rescue operation.
 
 <br>
 
 ### 2-D Map filtering
 
-The 3D map needs to be projected onto a 2D plan to be utilized by Nav2. 
-While [RTAB Map](https://introlab.github.io/rtabmap/) is the most popular tool to project 3-D point clouds from LIDAR scans onto 2-D occupancy grids, the unique challenges associated with the Zed camera's 3-D mapping (reflective surfaces, dynamic obstacles) warrant a fair amount of post-processing making it more sensible to implement a custom node for this. 
+The 3D map needs to be projected onto a 2D grid to be utilized by Nav2. 
+While [RTAB Map](https://introlab.github.io/rtabmap/) is the most popular tool to project 3-D point clouds from LIDAR scans onto 2-D occupancy grids, the unique naunces associated with the Zed camera's 3-D mapping (reflective surfaces, dynamic obstacles etc.) warrant a fair amount of post-processing making it more sensible to implement a custom node for this. 
 For example, a human walking in front of the camera can register enough outliers to create the illusion of various pseudo-obstacles which can seriously bias the Nav2 costmap.
 
 <br>
 
-<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/Dog3Dmap.png?raw=true" width="50%"/>
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/Dog3Dmap.png?raw=true" width="80%"/>
 <figcaption>Fig. 3. Example of how dynamic obstacles can result in outliers in the well formed 3-D map.</figcaption>
 </figure>
 
 <br>
 
-The algorithm I have implemeneted is:
+The algorithm I have implemeneted for this is:
 
 1. Iterate over the point cloud and increment the cells of a 2-D occupancy grid for each point lying within a range of height values above the floor.
 
@@ -201,7 +202,7 @@ This algorithm is robust to smaller dynamic obstacles but not large ones.
 
 <br>
 
-<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/Dog2Dmap.png?raw=true" width="50%"/>
+<figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/Dog2Dmap.png?raw=true" width="80%"/>
 <figcaption><em>Fig. 4. A processed 2-D map suitable for Nav2.</em></figcaption>
 </figure>
 
@@ -210,7 +211,7 @@ This algorithm is robust to smaller dynamic obstacles but not large ones.
 ## Nav Stack
 
 I have used the `unitree_nav` [package](https://github.com/ngmor/unitree_nav) by [Nick Morales](https://ngmor.github.io/), [Marno Nel](https://marnonel6.github.io/), and [Katie Hughes](https://katie-hughes.github.io/). 
-This has a convenient service which allows setting and updating of `nav2` goal poses.
+This hosts a convenient service which allows setting and updating of `nav2` goal poses.
 Since this package is integrated with a RoboSense LIDAR, custom launch files have been made to integrate the Zed camera instead.
 
 <br>
@@ -237,10 +238,10 @@ There are certain salient considerations that were kept in mind while writing th
 - The Unitree is a holonomic mobile base and therefore has decoupled view and heading. If used correctly, this can be a major advantage in efficiently exploraing an area. 
 - The map may have small encalves of unexplored regions which can be outliers for the exploration algorithm.
 
-My frontier exploration algorithm is as follows:
+My frontier exploration algorithm works as follows:
 
 1. Dilate the free space of the map to cover any enclaves.
-2. Locate the position and direction of each frontiers by evaluating neighboring unexplored cells around free cells.
+2. Locate the position and direction of each frontier by evaluating neighboring unexplored cells around free cells.
 3. Update the goal pose by picking the closest frontier at every time step. This means that traveling exactly to a particular frontier is less of a priority than constantly moving and exploring.
 
 <br>
@@ -288,6 +289,7 @@ Fig. 5. Frontiers are identified and the closest frontier is chosen as the goal 
 </em>
 </figcaption>
 </figure> -->
+
 
 Thanks, Stella for starring in my concept video.
 
