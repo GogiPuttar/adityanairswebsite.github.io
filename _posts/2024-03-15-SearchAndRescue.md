@@ -179,7 +179,7 @@ For example, a human walking in front of the camera can register enough outliers
 <br>
 
 <figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/Dog3Dmap.png?raw=true" width="80%"/>
-<figcaption>Fig. 3. Example of how dynamic obstacles can result in outliers in the well formed 3-D map.</figcaption>
+<figcaption>Fig. 3. Example of how dynamic obstacles can result in outliers in an otherwise well formed 3-D map.</figcaption>
 </figure>
 
 <br>
@@ -282,22 +282,16 @@ On the other hand, a highly exploitative algorithm akin to Depth First Search wh
 
 ## Acknowledments
 
-<!-- <figure align = "center"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/DogFrontiers.png?raw=true" width="80%"/>
-<figcaption>
-<em>
-Fig. 5. Frontiers are identified and the closest frontier is chosen as the goal pose.
-</em>
-</figcaption>
-</figure> -->
-
-
-<figure align = "left"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/DogFrontiers.png?raw=true" width="20%"/>
+<figure align = "left"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/stella.png?raw=true" width="20%"/>
 <figcaption><em>Thanks Stella, for starring in my video.</em></figcaption>
 </figure>
 
-<figure align = "left"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/DogFrontiers.png?raw=true" width="20%"/>
+
+<figure align = "left"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/srikanth.png?raw=true" width="20%"/>
 <figcaption><em>Thanks Srikanth, for lending me your Jackal when the dog broke.</em></figcaption>
 </figure>
+
+<br>
 
 
 
