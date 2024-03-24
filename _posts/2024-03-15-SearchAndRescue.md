@@ -1,14 +1,15 @@
 ---
 layout: post
-title:  "Autonomous Search and Rescue with UnitreeGo1"
-categories: [ROS2/ROS, C++, Python, SLAM, Computer Vision, Legged Locomotion, Unitree, Zed, Exploration, Motion Planning, Dynamic Systems,Controls, Data Structures
+# title:  "Autonomous Search and Rescue with UnitreeGo1"
+title:  "Search-and-Rescue Robot Dog: Autonomous Exploration and Visual SLAM with Unitree Go1"
+categories: [ROS2/ROS, C++, Python, SLAM, Computer Vision, Legged Locomotion, Unitree, Zed, Jetson, Exploration, Motion Planning, Dynamic Systems,Controls, Data Structures
 ]
 image: assets/images/Dog.gif
-featured: false
-hidden: false
+featured: true
+hidden: true
 ---
 
-C++, ROS2/ROS, Python, SLAM, Computer Vision, Exploration, Legged Locomotion, Unitree, Zed
+C++, ROS2/ROS, Python, SLAM, Computer Vision, Exploration, Legged Locomotion, Unitree, Zed, Jetson
 
 <br>
 
@@ -19,7 +20,7 @@ C++, ROS2/ROS, Python, SLAM, Computer Vision, Exploration, Legged Locomotion, Un
 </div>
 <p align="center">
 <em>
-Teleoperated concept video of the final product.
+Concept video of the final product.
 </em>
 </p>
 
@@ -27,7 +28,7 @@ Teleoperated concept video of the final product.
 
 ## Overview
 The aim of this project is to enable the Unitree Go1 to autonomously explore an outdoor environment with uneven terrain, in order to search and locate a missing person.
-The motivation for this project is to allow robots to look for people missing in a natural environment ([example](https://www.youtube.com/watch?v=Fmxt7NZzmmU)), where gathering a search party ad-hoc is difficult. 
+The motivation for this project is to allow robots to look for people missing in a natural environment <a href="https://www.youtube.com/watch?v=Fmxt7NZzmmU" target="_blank">example</a>, where gathering a search party ad-hoc is difficult. 
 This leverages the unique advantages that legged robots as well as visual SLAM possess, in unmapped environments. 
 The dog (a **Unitree Go1**) is equipped with a **ZED 2i camera** and uses its built in Visual-Inertial Odometry (VIO) and mapping for SLAM, object detection for detecting human beings, a **frontier exploration algorithm** for searching and environment, and the **Nav Stack** for traveling to goal poses.
 Much of the work in this project has been about integrating many different sensors and computers using ROS2 `humble` on an **Nvidia Jetson Orin Nano**.
@@ -51,7 +52,7 @@ Currently, I'm at a point where the exploration algorithm is only suitable for d
 
 The system consists of a Unitree Go1, a Zed 2i Camera and an Nvidia Jetson Orin Nano, and uses ROS2 `humble`. 
 The Unitree and Jetson are connected using an ethernet cable while the Zed is connected to the Jetson through USB.
-All of these components are fixed to the Unitree using a 3-D printed mount designed by [David Dorf](https://www.daviddorf.com/). 
+All of these components are fixed to the Unitree using a 3-D printed mount designed by <a href="https://www.daviddorf.com/" target="_blank">David Dorf</a>. 
 
 <br>
 
@@ -78,7 +79,11 @@ Wireless communication with ROS2 can be quite unreliable however, and a wired co
 ### Unitree Go1
 
 The Unitree Go1 serves as a robust, holonomic mobile base that can easily be deployed on moderately uneven terrain. 
-The [Unitree ROS2 wrapper](https://github.com/katie-hughes/unitree_ros2) by [Katie Hughes](https://katie-hughes.github.io/) has been utilized for high level control, and communication between the two needs to be initialized every time using:
+The 
+<a href="https://github.com/katie-hughes/unitree_ros2" target="_blank">Unitree ROS2 Wrapper</a> 
+by 
+<a href="https://katie-hughes.github.io/" target="_blank">Katie Hughes</a>
+has been utilized for high level control, and communication between the two needs to be initialized every time using:
 
 ```
 ifconfig # Tells you enpxxx, your computer's network interfaces 
@@ -106,9 +111,16 @@ High Level Control on the Unitree Go1.
 
 ### Jetson Orin Nano
 The Jetson development boards by NVidia are compact, reliable and powerful Linux computers that can easily serve as the brain of various robotic systems.
-The Jetson Orin Nano has been flashed using a micro SD card with the [Jetpack 5.1.2](https://developer.nvidia.com/embedded/jetpack-sdk-512), and runs Ubuntu 20.0.4 and ROS2 `humble`. 
-ROS2 can be installed by following this [Isaac ROS](https://nvidia-isaac-ros.github.io/getting_started/isaac_ros_buildfarm_cdn.html) tutorial.
-[Shail Dalal](https://sdalal1.github.io/projects/) and I tried multiple ways to flash the [Jetpack 6.0](https://developer.nvidia.com/embedded/jetpack) onto the Jetson Orin Nano (with Ubuntu 22.0.4 and ROS2 `iron`) but were unsuccessful, so we opted to use the Jetpack 5.1.2 instead. 
+The Jetson Orin Nano has been flashed using a micro SD card with the
+<a href="https://developer.nvidia.com/embedded/jetpack-sdk-512" target="_blank">Jetpack 5.1.2</a>
+, and runs Ubuntu 20.0.4 and ROS2 `humble`. 
+ROS2 can be installed by following this 
+<a href="https://nvidia-isaac-ros.github.io/getting_started/isaac_ros_buildfarm_cdn.html" target="_blank">Isaac ROS</a>
+tutorial.
+<a href="https://sdalal1.github.io/projects/" target="_blank">Shail Dalal</a>
+and I tried multiple ways to flash the 
+<a href="https://developer.nvidia.com/embedded/jetpack" target="_blank">Jetpack 6.0</a>
+onto the Jetson Orin Nano (with Ubuntu 22.0.4 and ROS2 `iron`) but were unsuccessful, so we opted to use the Jetpack 5.1.2 instead. 
 Setting up a Jetson from scratch and installing packages on it can quickly become a tiring process owing to the lack of software support and documentation by Nvidia, which must be anticipated beforehand.
 After being set up however, the Jetson should operate quite reliably.
 
@@ -116,7 +128,9 @@ After being set up however, the Jetson should operate quite reliably.
 
 ### Zed 2i camera
 The Zed series of cameras by StereoLabs are a highly accurate stereo cameras which have built in Visual-Inertial Odometry, 3-D Mapping, and Object (including human) Detection, among other features.
-Additionally, the cameras have a very well documented [ROS2 wrapper](https://github.com/stereolabs/zed-ros2-wrapper) making rapid deployment of these features possible. 
+Additionally, the cameras have a very well documented 
+<a href="https://github.com/stereolabs/zed-ros2-wrapper" target="_blank">ROS2 wrapper</a>
+making rapid deployment of these features possible. 
 
 <br>
 
@@ -145,7 +159,8 @@ The odometry is also robust to the vibrations caused by the Unitree walking.
 
 <em>
 On the left is 
-<a href="https://nu-msr.github.io/hackathon/wavefront.html" target="_blank">Stereo Lab's demonstration</a>, and on the right is my test of the Zed camera's positional tracking.
+<a href="https://www.stereolabs.com/docs/positional-tracking" target="_blank">Stereo Lab's demonstration</a>
+, and on the right is my test of the Zed camera's positional tracking.
 </em>
 </p>
 
@@ -165,7 +180,9 @@ Here's a video of the 3-D map building integrated with the 2-D filtered map, whi
 
 ### Human Detection
 
-Human detection is part of the object detection feature and can even [track the motion of crowds of people](https://katie-hughes.github.io/crowdnav/). 
+Human detection is part of the object detection feature and can even 
+<a href="https://katie-hughes.github.io/crowdnav/" target="_blank">track the motion of crowds of people</a>
+. 
 This is used to trigger a behaviour change upon encountering a human during the search and rescue operation.
 
 <br>
@@ -173,7 +190,9 @@ This is used to trigger a behaviour change upon encountering a human during the 
 ### 2-D Map filtering
 
 The 3D map needs to be projected onto a 2D grid to be utilized by Nav2. 
-While [RTAB Map](https://introlab.github.io/rtabmap/) is the most popular tool to project 3-D point clouds from LIDAR scans onto 2-D occupancy grids, the unique naunces associated with the Zed camera's 3-D mapping (reflective surfaces, dynamic obstacles etc.) warrant a fair amount of post-processing making it more sensible to implement a custom node for this. 
+While 
+<a href="https://introlab.github.io/rtabmap/" target="_blank">RTAB Map</a>
+is the most popular tool to project 3-D point clouds from LIDAR scans onto 2-D occupancy grids, the unique naunces associated with the Zed camera's 3-D mapping (reflective surfaces, dynamic obstacles etc.) warrant a fair amount of post-processing making it more sensible to implement a custom node for this. 
 For example, a human walking in front of the camera can register enough outliers to create the illusion of various pseudo-obstacles which can seriously bias the Nav2 costmap.
 
 <br>
@@ -210,7 +229,15 @@ This algorithm is robust to smaller dynamic obstacles but not large ones.
 
 ## Nav Stack
 
-I have used the `unitree_nav` [package](https://github.com/ngmor/unitree_nav) by [Nick Morales](https://ngmor.github.io/), [Marno Nel](https://marnonel6.github.io/), and [Katie Hughes](https://katie-hughes.github.io/). 
+I have used the `unitree_nav` 
+<a href="https://github.com/ngmor/unitree_nav" target="_blank">package</a>
+by 
+<a href="https://ngmor.github.io/" target="_blank">Nick Morales</a>
+, 
+<a href="https://marnonel6.github.io/" target="_blank">Marno Nel</a>
+, and 
+<a href="https://katie-hughes.github.io/" target="_blank">Katie Hughes</a>
+. 
 This hosts a convenient service which allows setting and updating of `nav2` goal poses.
 Since this package is integrated with a RoboSense LIDAR, custom launch files have been made to integrate the Zed camera instead.
 
@@ -283,13 +310,16 @@ On the other hand, a highly exploitative algorithm akin to Depth First Search wh
 ## Acknowledments
 
 <figure align = "left"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/stella.png?raw=true" width="20%"/>
-<figcaption><em>Thanks Stella, for starring in my video.</em></figcaption>
 </figure>
+
+***Thanks <a href="https://nucapybara.github.io/" target="_blank">Stella</a>, for starring in my video.***
+
 
 
 <figure align = "left"><img src="https://github.com/GogiPuttar/adityanairswebsite.github.io/blob/main/assets/images/srikanth.png?raw=true" width="20%"/>
-<figcaption><em>Thanks Srikanth, for lending me your Jackal when the dog broke.</em></figcaption>
 </figure>
+
+***Thanks <a href="https://schelbert197.github.io/portfolio/" target="_blank">Srikanth</a>, for lending me your Jackal when the dog broke.***
 
 <br>
 

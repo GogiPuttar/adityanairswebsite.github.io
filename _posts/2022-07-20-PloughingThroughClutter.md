@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ploughing through Clutter: Robust Non-Holonomic Motion Control"
-categories: [Python, Controls, Nonlinear Optimization, Dynamic Systems, Manipulation, Simulation, PyBullet, Wheeled Locomotion
+categories: [Python, Controls, Nonlinear Optimization, Dynamic Systems, Manipulation, Simulation, PyBullet, Wheeled Locomotion, Turtlebot
 
 ]
 image: assets/images/Ploughing.gif
@@ -9,7 +9,7 @@ featured: false
 hidden: false
 ---
 
-Python, Controls, Nonlinear Optimization, Manipulation, PyBullet, Wheeled Locomotion
+Python, Controls, Nonlinear Optimization, Manipulation, PyBullet, Wheeled Locomotion, Turtlebot
 
 <br>
 

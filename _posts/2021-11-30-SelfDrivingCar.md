@@ -5,8 +5,8 @@ categories: [Python, Motion Planning, Controls, Simulation, Signals, Wheeled Loc
 
 ]
 image: assets/images/KF.gif
-featured: true
-hidden: true
+featured: false
+hidden: false
 ---
 
 Python, Motion Planning, Controls, Signals, Wheeled Locomotion, Webots
