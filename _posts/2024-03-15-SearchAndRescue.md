@@ -112,8 +112,8 @@ High Level Control on the Unitree Go1.
 ### Jetson Orin Nano
 The Jetson development boards by NVidia are compact, reliable and powerful Linux computers that can easily serve as the brain of various robotic systems.
 The Jetson Orin Nano has been flashed using a micro SD card with the
-<a href="https://developer.nvidia.com/embedded/jetpack-sdk-512" target="_blank">Jetpack 5.1.2</a>
-, and runs Ubuntu 20.0.4 and ROS2 `humble`. 
+<a href="https://developer.nvidia.com/embedded/jetpack-sdk-512" target="_blank">Jetpack 5.1.2</a>, 
+and runs Ubuntu 20.0.4 and ROS2 `humble`. 
 ROS2 can be installed by following this 
 <a href="https://nvidia-isaac-ros.github.io/getting_started/isaac_ros_buildfarm_cdn.html" target="_blank">Isaac ROS</a>
 tutorial.
