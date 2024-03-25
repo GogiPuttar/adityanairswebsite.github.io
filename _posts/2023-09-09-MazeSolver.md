@@ -5,7 +5,7 @@ categories: [Python, Motion Planning
 ]
 image: assets/images/MazeSolverFinal.gif
 featured: false
-hidden: false
+hidden: true
 ---
 
 Python, Motion Planning

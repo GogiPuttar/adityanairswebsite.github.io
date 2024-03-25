@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Complete Extended-Kalman-Filter SLAM Pipeline in C++ from Scratch"
-categories: [ROS2/ROS, C++, Python, SLAM, Machine Learning, LIDAR, Wheeled Locomotion, Motion Planning, Controls, Data Structures, Turtlebot
+categories: [ROS2/ROS, C++, CMake, Python, SLAM, Machine Learning, LIDAR, Wheeled Locomotion, Motion Planning, Controls, Data Structures,Kalman Filter, Turtlebot
 ]
 image: assets/images/SLAM.gif
 featured: false
 hidden: false
 ---
 
-ROS2/ROS, C++, SLAM, Machine Learning, Python, Wheeled Locomotion, Turtlebot
+ROS2/ROS, C++, CMake, SLAM, Machine Learning, Python, Wheeled Locomotion, Turtlebot
 
 <br>
 

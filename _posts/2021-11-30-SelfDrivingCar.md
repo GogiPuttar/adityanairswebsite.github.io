@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Navigation and Kalman Filter Localization of Self Driving Car"
-categories: [Python, Motion Planning, Controls, Simulation, Signals, Wheeled Locomotion, Dynamic Systems, Webots, Data Structures
+categories: [Python, Motion Planning, Controls, Simulation, Signals, Wheeled Locomotion, Dynamic Systems, Webots, Data Structures, Kalman Filter
 
 ]
 image: assets/images/KF.gif
