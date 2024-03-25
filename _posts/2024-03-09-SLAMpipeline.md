@@ -38,7 +38,29 @@ All of the helper functions for these are defined in the `turtlelib` package.
 
 <br>
 
-## Simulation
+## Low-Level Control
+I've developed a C++ library designed to manage 2D transformation matrix operations along with the forward and inverse kinematics computations for a differential drive robot. This library aids in translating a desired robot velocity, typically communicated through the `cmd_vel` topic, into corresponding wheel commands. Additionally, it facilitates the conversion of updates in encoder readings into a revised robot position using odometry calculations.
+
+<br>
+
+## Localization and Mapping
+I conducted online extended Kalman filter SLAM utilizing discrete features, which involves tracking the state of a robot in $$2$$-D (position coordinates $$x$$, $$y$$, and orientation $$\theta$$) along with $$n$$ map locations represented as cylinders centered at specific coordinates ($$m_{x_i}$$, $$m_{y_i}$$). 
+More details for this can be found 
+<a href="https://nu-msr.github.io/navigation_site/lectures/slam.pdf" target="_blank">here</a>.
+The implementation entails making predictions of the robot's new state and covariance based on odometry estimates during each iteration. 
+Subsequently, for every observed obstacle measurement, adjustments are made to refine the predictions of the map, robot state, and robot covariance. 
+This approach consistently demonstrates superior performance compared to relying solely on odometry, proven through evaluations in both simulated environments and real-world scenarios.
+
+<br>
+
+## Perception Pipeline
+First, I conducted supervised clustering of lidar data, which involves grouping together lidar points that are within a certain proximity threshold of each other.
+
+Second, I proceeded with circle regression and circle classification on these clusters. This process involves determining 
+<a href="https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-3/issue-none/Error-analysis-for-circle-fitting-algorithms/10.1214/09-EJS419.full" target="_blank">the center and radius of a circle in 2D</a>, 
+and evaluating whether it should be classified as a circle through radius filtering.
+
+Finally, I performed data association, which entails deciding whether a detected circle should be identified as a new map object or associated with an existing obstacle. This is achieved by computing the Mahalanobis distance from the robot to each previously initialized obstacle and selecting the minimum distance. If this minimum distance exceeds a specified threshold, the circle is categorized as a new obstacle; otherwise, it is associated with the obstacle having the minimum Mahalanobis distance.
 
 <br>
 
@@ -48,6 +70,10 @@ All of the helper functions for these are defined in the `turtlelib` package.
 " type="video/mp4">
 </video>
 </div>
+
+<br>
+
+The above video shows my full SLAM algorithm working in simulation. Again, the blue robot represents the odometry estimate and the green robot/landmarks represent the SLAM estimates. The red robot and obstacles represent the simulated “true” locations. Over time, the SLAM robot sticks with the location of the simulated robot over the odometry robot.
 
 <br>
 
