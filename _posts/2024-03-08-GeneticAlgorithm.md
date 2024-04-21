@@ -18,7 +18,9 @@ Python, MuJoCo, Machine Learning, Nonlinear Optimization, Controls
 
 ## Overview
 
+<br>
 
+<div align="center"><h2> <a href="https://github.com/GogiPuttar/SlitheringAndSidewindingCreatures" target="_blank">View it on Github ⇗</a></h2></div>
 
 <br>
 

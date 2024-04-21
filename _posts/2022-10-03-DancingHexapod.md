@@ -32,7 +32,7 @@ These keyframes are also stitched together using a Catmull-Rom spline (described
 
 <br>
 
-<div align="center"><h2> <a href="https://github.com/marmotlab/Yuna_PyBullet/blob/main/setup/yunaAnimatronics.py" target="_blank">View it on Github ⇗</a></h2></div>
+<div align="center"><h2> <a href="https://github.com/marmotlab/Yuna_PyBullet/blob/main/setup/yunaAnimatronics.py" target="_blank">View it on Github (Private Repo) ⇗</a></h2></div>
 
 <br>
 
