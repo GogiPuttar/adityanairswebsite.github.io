@@ -123,6 +123,7 @@ and I tried multiple ways to flash the
 onto the Jetson Orin Nano (with Ubuntu 22.0.4 and ROS2 `iron`) but were unsuccessful, so we opted to use the Jetpack 5.1.2 instead. 
 Setting up a Jetson from scratch and installing packages on it can quickly become a tiring process owing to the lack of software support and documentation by Nvidia, which must be anticipated beforehand.
 After being set up however, the Jetson should operate quite reliably.
+<a href="https://www.reddit.com/r/linuxmemes/comments/sje0k0/i_can_understand_the_pain/" target="_blank">(meme)</a>
 
 <br>
 
