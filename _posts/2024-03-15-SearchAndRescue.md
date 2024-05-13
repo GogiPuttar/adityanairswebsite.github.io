@@ -83,14 +83,15 @@ The
 <a href="https://github.com/katie-hughes/unitree_ros2" target="_blank">Unitree ROS2 Wrapper</a> 
 by 
 <a href="https://katie-hughes.github.io/" target="_blank">Katie Hughes</a>
-has been utilized for high level control, and communication between the two needs to be initialized every time using:
+has been utilized for high level control.
+After connecting your computer to the Go1 via ethernet, communication needs to be initialized every time using:
 
-```
-ifconfig # Tells you enpxxx, your computer's network interfaces 
-sudo ifconfig enpxxx down
-sudo ifconfig enpxxx 192.168.123.162/24
-sudo ifconfig enpxxx up
-ping 192.168.123.161 
+```console
+user@jetson:~$ ifconfig # Tells you enpxxx, your computer's network interfaces 
+user@jetson:~$ sudo ifconfig enpxxx down
+user@jetson:~$ sudo ifconfig enpxxx 192.168.123.162/24
+user@jetson:~$ sudo ifconfig enpxxx up
+user@jetson:~$ ping 192.168.123.161 
 ```
 I would recommend turning these commands into an alias and running it each time the Unitree and Jetson are switched on.
 
