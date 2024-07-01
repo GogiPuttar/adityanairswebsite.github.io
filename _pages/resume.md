@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resume and Contact Info
-permalink: /AdityaNair_Resume
+permalink: /Resume
 comments: false
 ---
 
