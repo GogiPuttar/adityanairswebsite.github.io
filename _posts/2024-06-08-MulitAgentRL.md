@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Multi-Agent Reinforcement Learning for Exploration, and Physics Engine from Scratch"
-categories: [Deep Learning, C++, CMake, ROS2, Python, SLAM, Simulation, Exploration, Turtlebot, Wheeled Locomotion, Machine Learning, LIDAR, Nonlinear Optimization, Controls, Data Structures, Reinforcement Learning, Motion Planning
+categories: [Deep Learning, C++, CMake, ROS2, Python, PyTorch, SLAM, Simulation, Exploration, Turtlebot, Wheeled Locomotion, Machine Learning, LIDAR, Nonlinear Optimization, Controls, Data Structures, Reinforcement Learning, Motion Planning
 ]
 image: assets/images/MARL.gif
 featured: false
 hidden: false
 ---
 
-Deep Learning, ROS2/ROS, C++, Python, SLAM, Simulation, Motion Planning, Turtlebot
+Deep Learning, ROS2/ROS, C++, PyTorch, SLAM, Simulation, Motion Planning, Turtlebot
 
 <br>
 
