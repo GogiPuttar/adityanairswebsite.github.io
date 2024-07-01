@@ -8,7 +8,7 @@ featured: true
 hidden: true
 ---
 
-Python, ROS2, Computer Vision, Manipulation, Motion Planning, Gazebo, Shadow Hands, Emika Franka Robot Arm, Intel RealSense, ABB Gofa Arm
+Python, ROS2/ROS, Computer Vision, Manipulation, Motion Planning, Gazebo, Shadow Hands, Emika Franka Robot Arm, Intel RealSense, ABB Gofa Arm
 
 <br>
 
@@ -43,13 +43,21 @@ This team effort was part of the final project in the [ME 495 Embedded Systems](
 ## Packages:
 
 This projects consists of the following packages:
-- [`teleop_tasks`](#teleop_tasks-package)
-- [`teleop_haptics`](#teleop_haptics-package)
-- [`teleop_sensing`](#teleop_sensing-package)
-- [`teleop_visualization`](#teleop_visualization-package)
-- [`teleop_avatar`](#teleop_avatar-package)
-- [`teleop_interfaces`](#teleop_interfaces-package)
-- [`teleop`](#teleop-package) (*work in progress*)
+- [Overview](#overview)
+  - [What Problem Does This Solve?](#what-problem-does-this-solve)
+  - [Team Members](#team-members)
+- [Packages:](#packages)
+- [`teleop_tasks` Package](#teleop_tasks-package)
+  - [RViz:](#rviz)
+  - [Gazebo:](#gazebo)
+- [`teleop_haptics` Package](#teleop_haptics-package)
+- [`teleop_sensing` Package](#teleop_sensing-package)
+- [`teleop_visualization` Package](#teleop_visualization-package)
+- [`teleop_avatar` Package](#teleop_avatar-package)
+- [`teleop_interfaces` Package](#teleop_interfaces-package)
+    - [Custom Messages:](#custom-messages)
+    - [Custom Services:](#custom-services)
+- [`teleop` Package](#teleop-package)
 
 *Instructions on how to run/launch nodes in each package can be found within the READMEs of the individual packages.*
 

@@ -40,10 +40,12 @@ My approach instead uses a time-invariant controller based on a non-linear vecto
 ### This Post is under construction 🛠️
 Building a perfect portfolio from the ground up is a demanding process.
 Over the coming weeks, I will be adding more information about my personal and professional projects. 
-If you're interested, please check back on February 28th, 2024.
+If you're interested, please check back on July 30th, 2024.
 Your curiosity is greatly appreciated `:)`
 
 In the meanwhile, the posts on:
+- [**Search-and-Rescue Robot Dog: Autonomous Exploration and Visual SLAM with Unitree Go1**](https://adityanairs.website/SearchAndRescue/), 
+- [**Complete Extended-Kalman-Filter SLAM Pipeline in C++ from Scratch**](https://adityanairs.website/SLAMpipeline/), 
 - [**Dexterous Manipulation through Virtual Reality**](https://adityanairs.website/DexterousManipulationThroughVR/), 
 - [**Optimized Torques for Load Carrying**](https://adityanairs.website/JointTorqueOptimization/),
 - [**Dancing Hexapod - Full SE3 Body Pose Control**](https://adityanairs.website/DancingHexapod/), 
