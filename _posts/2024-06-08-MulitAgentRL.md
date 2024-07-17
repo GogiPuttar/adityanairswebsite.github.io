@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Multi-Agent Reinforcement Learning for Exploration, and Physics Engine from Scratch"
+title:  "Multi-Agent Reinforcement Learning for Exploration with custom Physics Simulator from Scratch"
 categories: [Deep Learning, C++, CMake, ROS2, Python, PyTorch, SLAM, Simulation, Exploration, Turtlebot, Wheeled Locomotion, Machine Learning, LIDAR, Nonlinear Optimization, Controls, Data Structures, Reinforcement Learning, Motion Planning
 ]
 image: assets/images/MARL.gif
