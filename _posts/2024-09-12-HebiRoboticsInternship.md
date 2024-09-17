@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "HEBI Robotics: Internship"
-categories: [C++, C, Python, ROS2/ROS, Java, MATLAB, API, Professional Software Development, Manipulation, Motion Planning, Dynamics Systems, Controls, Data Structures, Simulation, Wheeled Locomotion, Legged Locomotion
-
+categories: [C++, C, Python, ROS2/ROS, Java, MATLAB, API, Manipulation, Motion Planning, Dynamics Systems, Controls, Data Structures, Simulation, Wheeled Locomotion, Legged Locomotion
 ]
 image: assets/images/HebiRoboticsInternship.gif
 featured: false
