@@ -129,7 +129,7 @@ After being set up however, the Jetson should operate quite reliably.
 <br>
 
 ### Zed 2i camera
-The Zed series of cameras by StereoLabs are a highly accurate stereo cameras which have built in Visual-Inertial Odometry, 3-D Mapping, and Object (including human) Detection, among other features.
+The Zed series of cameras by StereoLabs are highly accurate stereo cameras which have built in Visual-Inertial Odometry, 3-D Mapping, and Object (including human) Detection, among other features.
 Additionally, the cameras have a very well documented 
 <a href="https://github.com/stereolabs/zed-ros2-wrapper" target="_blank">ROS2 wrapper</a>
 making rapid deployment of these features possible. 
