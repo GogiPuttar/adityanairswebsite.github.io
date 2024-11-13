@@ -12,7 +12,7 @@ Deep Learning, ROS2/ROS, C++, PyTorch, SLAM, Simulation, Motion Planning, Turtle
 
 <br>
 
-<div align="center"><iframe width="1273" height="466" src="https://www.youtube.com/embed/jl-HGsEevnM" title="Multi-Agent Reinforcement Learning for efficient exploration, in a custom sim environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div align="center"><iframe width="1273" height="616" src="https://www.youtube.com/embed/jl-HGsEevnM" title="Multi-Agent Reinforcement Learning for efficient exploration, in a custom sim environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 <br>
 
