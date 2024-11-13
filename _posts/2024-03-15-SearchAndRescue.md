@@ -4,7 +4,7 @@ layout: post
 title:  "Search-and-Rescue Robot Dog: Autonomous Exploration and Visual SLAM with Unitree Go1"
 categories: [ROS2/ROS, C++, CMake, Python, SLAM, Computer Vision, Legged Locomotion, Unitree, Zed, Jetson, Exploration, Motion Planning, Dynamic Systems,Controls, Data Structures
 ]
-image: assets/images/Dog.gif
+image: assets/images/DogGIF-new.gif
 featured: true
 hidden: true
 ---
