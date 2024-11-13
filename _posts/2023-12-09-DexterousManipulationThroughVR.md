@@ -3,7 +3,7 @@ layout: post
 title:  "Dexterous Manipulation through Virtual Reality"
 categories: [Python, ROS2/ROS, Computer Vision, Manipulation, Motion Planning, Dynamic Systems, Controls, Simulation, Gazebo, Shadow Hands, Emika Franka Robot Arm, Intel RealSense, ABB Gofa Arm, Data Structures
 ]
-image: assets/images/ShadowHands.gif
+image: assets/images/ShadowHandsGIF-new.gif
 featured: true
 hidden: true
 ---
