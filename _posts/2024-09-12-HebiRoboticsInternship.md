@@ -11,6 +11,10 @@ C++, Python, ROS2/ROS, C, Java, MATLAB, Professional Software Development
 
 <br>
 
+<div align="center"><iframe width="1273" height="616" src="https://www.youtube.com/embed/NNT_y1tU--c" title="HEBI Robotic Arm Demos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+<br>
+
 ## Overview
 
 I spent the summer of 2024 at Hebi Robotics, Pittsburgh as a **Robotics Software Engineering Intern** and had an absolutlely amazing time. My main responsibilities were:
@@ -20,10 +24,6 @@ I spent the summer of 2024 at Hebi Robotics, Pittsburgh as a **Robotics Software
 - **Innovative Examples:** Created visually appealing, functional examples showcasing advanced API features like force control and sensor fusion, along with video tutorials for custom development.
 - **Efficient File Management**: Developed a custom file management system that reduced code complexity and improved usability.
 - **Automated Repository Sync:** Implemented GitHub Actions to automate synchronization of configuration files across repositories, enhancing workflow efficiency.
-
-I'll go into more detail about my internship experience after finalizing a few things with HEBI, so stay tuned `:)`
-
-
 
 <br>
 
