@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "HEBI Robotics: Internship"
-categories: [C++, C, Python, ROS2/ROS, Java, MATLAB, API, Manipulation, Motion Planning, Dynamic Systems, Controls, Data Structures, Simulation
+categories: [C++, C, Python, ROS2/ROS, Java, MATLAB, API, Manipulation, Motion Planning, Dynamic Systems, Controls, Data Structures, Simulation, CMake
 ]
 image: assets/images/HebiRoboticsInternship.gif
 featured: false

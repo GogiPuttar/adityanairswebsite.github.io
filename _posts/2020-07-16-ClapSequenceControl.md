@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Home Automation with Clap Sequence Control"
-categories: [Arduino, C++, Signal Processing, Circuit Design
+categories: [C++, Signal Processing, Circuit Design
 ]
 image: assets/images/Clap.gif
 featured: false
 hidden: false
 ---
 
-Arduino, C++, Signal Processing, Circuit Design
+C++, Signal Processing, Circuit Design
 
 <br>
 

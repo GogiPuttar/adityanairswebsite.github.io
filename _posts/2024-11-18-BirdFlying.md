@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Data-Driven Control for Agile Flight in a Confined Space"
-categories: [C++, Python, ROS2/ROS, Motion Planning, Dynamic Systems, Controls, Data Structures, Aerial Robots
+categories: [C++, Python, ROS2/ROS, Motion Planning, Dynamic Systems, Controls, Data Structures, Aerial Robots, Mechatronics, Circuit Design, Computer Vision, CMake
 ]
 image: assets/images/Bird2.gif
 featured: false
 hidden: false
 ---
-C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Dynamic Systems 
+C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic Systems 
 
 ## Overview
 
