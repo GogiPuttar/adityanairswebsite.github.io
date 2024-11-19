@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "HEBI Robotics: Internship"
-categories: [C++, C, Python, ROS2/ROS, Java, MATLAB, API, Manipulation, Motion Planning, Dynamics Systems, Controls, Data Structures, Simulation, Wheeled Locomotion, Legged Locomotion
+categories: [C++, C, Python, ROS2/ROS, Java, MATLAB, API, Manipulation, Motion Planning, Dynamic Systems, Controls, Data Structures, Simulation
 ]
 image: assets/images/HebiRoboticsInternship.gif
 featured: false
@@ -17,7 +17,7 @@ C++, Python, ROS2/ROS, C, Java, MATLAB, Professional Software Development
 
 ## Overview
 
-I spent the summer of 2024 at Hebi Robotics, Pittsburgh as a **Robotics Software Engineering Intern** and had an absolutlely amazing time. My main responsibilities were:
+I spent the summer of 2024 at Hebi Robotics, Pittsburgh as a **Robotics Software Engineering Intern** and had an absolutely amazing time. My main responsibilities were:
 
 - **Standardized Multi-API Integration:** Unified example scripts across C++, Python, MATLAB, and ROS2 APIs, improving cross-platform usability and simplifying user transitions.
  - **API Enhancements:** Identified and fixed critical bugs while contributing significant improvements to C++, Python, MATLAB, ROS2, C, and Java APIs.

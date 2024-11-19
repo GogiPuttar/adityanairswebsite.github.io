@@ -6,7 +6,7 @@ categories: [Research, Legged Locomotion, Manipulation
 ]
 image: assets/images/ReviewPaper.jpg
 featured: false
-hidden: true
+hidden: false
 ---
 
 Research, Legged Locomotion, Manipulation

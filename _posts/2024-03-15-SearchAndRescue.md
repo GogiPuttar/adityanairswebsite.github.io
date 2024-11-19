@@ -205,7 +205,7 @@ For example, a human walking in front of the camera can register enough outliers
 
 <br>
 
-The algorithm I have implemeneted for this is:
+The algorithm I have implemented for this is:
 
 1. Iterate over the point cloud and increment the cells of a 2-D occupancy grid for each point lying within a range of height values above the floor.
 
