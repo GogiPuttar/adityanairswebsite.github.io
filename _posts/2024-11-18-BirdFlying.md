@@ -11,7 +11,7 @@ C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic 
 
 ## Overview
 
-<iframe src="{{ site.baseurl }}/assets/images/animated_trajectory.html" width="100%" height="500px"></iframe>
+<!-- <iframe src="{{ site.baseurl }}/assets/images/animated_trajectory.html" width="100%" height="500px"></iframe> -->
 
 <br>
 
