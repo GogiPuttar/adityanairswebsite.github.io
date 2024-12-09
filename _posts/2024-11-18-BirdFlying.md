@@ -11,6 +11,8 @@ C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic 
 
 ## Overview
 
+<iframe src="{{ site.baseurl }}/assets/images/animated_trajectory.html" width="100%" height="500px"></iframe>
+
 <br>
 
 ## Personal Motivation
@@ -21,21 +23,44 @@ C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic 
 
 <br>
 
-## System Design
+## Control Architecture
 
-### Transmitter - Feedforward
-
-<figure align = "center"><img src="{{ site.baseurl }}/assets/images/bird-remote-schematic.png" width="80%"/>
+<figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdcontrolsgraph.svg" width="95%"/>
 <figcaption>
 <em>
-Fig. x. Schematic for the electronically controlled transmitter module for a MetaFly.
+Fig. x. Final control architecture of the system
 </em>
 </figcaption>
 </figure>
 
+<br>
+
+## Motion Planner
+
+<br>
+
+## System Design
+
+<figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdsystem2.svg" width="95%"/>
+<figcaption>
+<em>
+Fig. x. The whole system as a control loop
+</em>
+</figcaption>
+</figure>
+
+### Transmitter - Feedforward
+
+<figure align = "center">
+<img src="{{ site.baseurl }}/assets/images/birdremote.jpg" width="51.7%"/>
+<img src="{{ site.baseurl }}/assets/images/birdremoteschematic3.svg" width="45%"/>
+<figcaption><em>Fig. x. Schematic and picture of the electronically controlled transmitter module for the MetaFly
+</em></figcaption>
+</figure>
+
 ### Motion Capture - Feedback
 
-<iframe src="{{ site.baseurl }}/assets/images/3d_plot_interactive_spin_manual.html" width="100%" height="500px"></iframe>
+<iframe src="{{ site.baseurl }}/assets/images/3d_plot_interactive_spin.html" width="100%" height="500px"></iframe>
 
 ### The Closed Loop
 Skip to [Control Architecture](#control-architecture) which discusses the various control strategies that work.
@@ -50,55 +75,17 @@ Skip to [Control Architecture](#control-architecture) which discusses the variou
 
 <br>
 
-## Control Architecture
+## Future Work
 
-### Feedback Altitude Control
+### 1. Reactive Drift Control
 
-<figure align = "center"><img src="{{ site.baseurl }}/assets/images/bird-altitude-control.png" width="100%"/>
-<figcaption>
-<em>
-Fig. x. Block diagram representation of the altitude (z) controller.
-</em>
-</figcaption>
-</figure>
+### 2. Imitation Learning through Data Collection
 
-### Feedback Roll Control
+### 3. Tuning gains "on the fly"
 
-<figure align = "center"><img src="{{ site.baseurl }}/assets/images/bird-roll-control.png" width="100%"/>
-<figcaption>
-<em>
-Fig. x. Block diagram representation of the roll (α) controller.
-</em>
-</figcaption>
-</figure>
+### 4. Transitioning from one set of constraints to another
 
-### Feedback Turning Radius Control
-
-<figure align = "center"><img src="{{ site.baseurl }}/assets/images/bird-radius-control.png" width="100%"/>
-<figcaption>
-<em>
-Fig. x. Block diagram representation of the turning radius (R) controller.
-</em>
-</figcaption>
-</figure>
-
-### Feedback Yaw Control
-
-<figure align = "center"><img src="{{ site.baseurl }}/assets/images/bird-yaw-control.png" width="100%"/>
-<figcaption>
-<em>
-Fig. x. Block diagram representation of the yaw (γ) controller.
-</em>
-</figcaption>
-</figure>
-
-<br>
-
-## Motion Planner
-
-<br>
-
-## Negative Results and Discussion
+### 5. Minimal radius control 
 
 <br>
 
