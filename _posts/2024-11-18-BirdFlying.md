@@ -9,15 +9,35 @@ hidden: false
 ---
 C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic Systems 
 
+<br>
+
+<div align="center"><iframe width="1333" height="650" src="https://www.youtube.com/embed/oVQGfwPvMw4" title="Data Driven Control of an Agile Robot Bird in a Confined Space" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+
+<br>
+
 ## Overview
 
-<!-- <iframe src="{{ site.baseurl }}/assets/images/animated_trajectory.html" width="100%" height="500px"></iframe> -->
+<br>
+
+<figure align = "center">
+<img src="{{ site.baseurl }}/assets/images/birdsideview.gif" width="80%"/>
+
+<img src="{{ site.baseurl }}/assets/images/birdtopview.gif" width="80%"/>
+<figcaption><em> Top and side views of the bird successfully flying in circles.
+</em></figcaption>
+</figure>
+
+<br>
+
+<div align="center"><h2> <a href="https://github.com/GogiPuttar/Search_for_missing_person_Unitree_Go1/tree/main" target="_blank">View it on Github ⇗</a></h2></div>
 
 <br>
 
 ## Personal Motivation
 
 ### MetaFly by Bionic Bird
+
+<div align="center"><iframe width="90%" height="650" src="https://player.vimeo.com/video/377080293?autoplay=1&amp;dnt=1&app_id=122963" title="Data Driven Control of an Agile Robot Bird in a Confined Space" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 ### How hard is it to fly this thing?
 
@@ -36,6 +56,17 @@ Fig. x. Final control architecture of the system
 <br>
 
 ## Motion Planner
+
+<div align="center">
+<video width="90%" controls loop autoplay muted>
+    <source src="https://github.com/user-attachments/assets/7d3f5dd1-43ff-4e1a-bd0b-074c8641f635" type="video/mp4">
+</video>
+</div>
+<p align="center">
+<em>
+The motion planner in action viewed through RViz.
+</em>
+</p>
 
 <br>
 
@@ -60,10 +91,17 @@ Fig. x. The whole system as a control loop
 
 ### Motion Capture - Feedback
 
-<iframe src="{{ site.baseurl }}/assets/images/3d_plot_interactive_spin.html" width="100%" height="500px"></iframe>
+<figure align = "center"><img src="{{ site.baseurl }}/assets/images/mocap.gif" width="90%"/>
+<figcaption><em>The bird being tracked by multiple cameras of the OptiTrack system.
+</em></figcaption>
+</figure>
 
-### The Closed Loop
-Skip to [Control Architecture](#control-architecture) which discusses the various control strategies that work.
+<iframe src="{{ site.baseurl }}/assets/images/3d_plot_interactive_spin.html" width="100%" height="500px"></iframe>
+<p align="center">
+<em>
+Fig. x. The portion of the drone cage that is observable using the OptiTrack system.
+</em>
+</p>
 
 <br>
 
@@ -71,7 +109,28 @@ Skip to [Control Architecture](#control-architecture) which discusses the variou
 
 ### Screw Trajectory
 
+<div align="center">
+<video width="80%" controls loop autoplay muted>
+    <source src="https://github.com/user-attachments/assets/46f692a1-a44e-469a-bf53-0ba79c8d96f4" type="video/mp4">
+</video>
+</div>
+<p align="center">
+<em>
+Screw-like trajectory of the robot. The green dot represents the instantaneous center on the x-y plane.
+</em>
+</p>
+
 ### Data Collection
+
+<figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdpitchvsteering.png" width="60%"/>
+<figcaption><em>Fig. x. Relation between screw pitch and steering command for 100+ trials at constant max speed input.
+</em></figcaption>
+</figure>
+
+<figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdrollvsteering.png" width="60%"/>
+<figcaption><em>Fig. x. Relation between roll and steering command for 100+ trials at constant max speed input.
+</em></figcaption>
+</figure>
 
 <br>
 
@@ -79,7 +138,17 @@ Skip to [Control Architecture](#control-architecture) which discusses the variou
 
 ### 1. Reactive Drift Control
 
+<figure align = "center"><img src="{{ site.baseurl }}/assets/images/birddrift.gif" width="60%"/>
+<figcaption><em>The bird drifting and the instantaneous measured drift.
+</em></figcaption>
+</figure>
+
 ### 2. Imitation Learning through Data Collection
+
+<figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdps3.jpg" width="50%"/>
+<figcaption><em>Fig. x. The bird can even be controlled using a PS3 remote through ROS2.
+</em></figcaption>
+</figure>
 
 ### 3. Tuning gains "on the fly"
 
@@ -105,30 +174,6 @@ Skip to [Control Architecture](#control-architecture) which discusses the variou
 </figure>
 
 ***Thanks <a href="https://robotics.northwestern.edu/people/profiles/students/curtis-drew.html" target="_blank">Drew</a>, for helping me set up and debug the OptiTrack system.***
-
-<br>
-
-### This Post is under construction 🛠️
-Building a perfect portfolio from the ground up is a demanding process.
-Over the coming weeks, I will be adding more information about my personal and professional projects. 
-If you're interested, please check back on July 30th, 2024.
-Your curiosity is greatly appreciated `:)`
-
-In the meanwhile, the posts on:
-- [**Search-and-Rescue Robot Dog: Autonomous Exploration and Visual SLAM with Unitree Go1**](https://adityanairs.website/SearchAndRescue/), 
-- [**Complete Extended-Kalman-Filter SLAM Pipeline in C++ from Scratch**](https://adityanairs.website/SLAMpipeline/), 
-- [**Dexterous Manipulation through Virtual Reality**](https://adityanairs.website/DexterousManipulationThroughVR/), 
-- [**Optimized Torques for Load Carrying**](https://adityanairs.website/JointTorqueOptimization/),
-- [**Dancing Hexapod - Full SE3 Body Pose Control**](https://adityanairs.website/DancingHexapod/), 
-- [**Navigation and Kalman Filter Localization of Self Driving Car**](https://adityanairs.website/SelfDrivingCar/), 
-- [**Mobile/Whole-body Manipulation with KUKA youBot**](https://adityanairs.website/MobileManipulation/),
-- [**Legged Robots for Object Manipulation: A Review**](https://adityanairs.website/LeggedRobotsForObjectManipulation/), 
-- [**TeleOperation of Robot Swarms**](https://adityanairs.website/TeleOperationOfRobotSwarms/), 
-- [**Home Automation with Clap Sequence Control**](https://adityanairs.website/ClapSequenceControl/), 
-- [**Robot playing T-Rex Game**](https://adityanairs.website/TRexGame/), and
-- [**Maze Solver**](https://adityanairs.website/MazeSolver/)
-
-are complete and ready for viewing!
 
 <br>
 
