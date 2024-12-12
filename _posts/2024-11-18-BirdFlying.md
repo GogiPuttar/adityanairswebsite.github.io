@@ -29,7 +29,7 @@ C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic 
 
 <br>
 
-<div align="center"><h2> <a href="https://github.com/GogiPuttar/Search_for_missing_person_Unitree_Go1/tree/main" target="_blank">View it on Github ⇗</a></h2></div>
+<div align="center"><h2> <a href="https://github.com/GogiPuttar/ros2_metafly" target="_blank">View it on Github ⇗</a></h2></div>
 
 <br>
 
@@ -54,7 +54,47 @@ MetaFly product video.
 
 ## Control Architecture
 
-<figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdcontrolsgraph.svg" width="95%"/>
+The control architecture was developed after several hours of experimentation, involving tradeoffs between efficacy and complexity.
+At the heart of it is an altitude ($$z$$) controller that commands speed ($$\sigma$$), and a roll ($$\alpha$$) controller that outputs steering ($$\phi$$).
+This assumes that the bird is two parallel Single Input Single Output (SISO) system as opposed to a Multi Input Multi Output (MIMO) system, which is fair since the height and roll are the only known parameters that remain relatively independent, at least in the controls domain that we prefer to operate the bird in.
+More on the domain in [the Data Collection section](#data-collection).
+The controller is exactly described by:
+
+$$
+\begin{equation}
+    \sigma = \sigma_{d}~+~K_{p_z}(z_t - z),
+\end{equation}
+$$
+
+$$
+\begin{equation}
+    \phi = K_{p_{\alpha}}(\alpha_t - \alpha)~+~K_{d_{\alpha}}(\dot{\alpha}_t - \dot{\alpha}),
+\end{equation}
+$$
+
+where $$\sigma_d$$ is the feedforward speed command required to maintain altitude. 
+Here, the desired roll ($$\alpha_t$$) is either:
+
+$$
+\begin{equation}
+    \alpha_t = \alpha_d + K_{p_{R}}(R_t - R),
+\end{equation}
+$$
+
+or 
+
+$$
+\begin{equation}
+    \alpha_t = \alpha_d + K_{p_{\gamma}}(\gamma_t - \gamma),
+\end{equation}
+$$
+
+decided by the motion planner, which also calculates the desired yaw ($$\gamma_t$$) and the desired radius ($$R_t$$).
+More on this in [the Motion Planner section](#motion-planner).
+The tunable parameters of this architecture are: $$\{K_{p_z}, K_{p_\alpha}, K_{p_R}, K_{p_\gamma}, K_{d_\alpha}, \sigma_{d}, \alpha_d\}$$, which are distributed across controllers making them relatively easy to tune.
+There are more tunable parameters in the motion planner.
+
+<figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdcontrolsgraph2.svg" width="95%"/>
 <figcaption>
 <em>
 Fig. 1. Final control architecture of the system
@@ -66,6 +106,38 @@ Fig. 1. Final control architecture of the system
 
 ## Motion Planner
 
+The goal of the motion planner is to counteract the overall drift of the system that accumulates over time, to prevent the bird from violating the constraints of the room. 
+This switches the behaviour over longer time horizons, since experiments with reactive approaches did not give good results.
+This also relies on a special elliptical manifold which functions as mixture of the target circle and cuboidal constraints of the drone cage.
+This aproach does not have a strong theoretical motivation, although a blending objective-based controller that emulates the functionality of this motion planner might make it a less contrived approach which could be used in other systems.
+The tunable parameters for this are:
+- The center and dimensions of the ellipse
+- The range about the tangent for the heading vector
+
+The pseudocode for the motion planner is:
+
+```
+START
+
+DEPLOY a height controller for speed command
+
+IF the bird is inside the ellipse:
+  DEPLOY a radius controller for steering command, to track the target circle's radius
+
+OTHERWISE:
+  IF the tangent vector from the bird to the target circle is within a certain range of the bird's heading vector:
+    DEPLOY a yaw controller to make the bird travel along the tangent
+
+  OTHERWISE:
+    DEPLOY a radius controller to make a sharp turn, so that it doesn't stray too far from the ellipse
+
+GO TO START
+```
+
+Here's a video of the motion planner in action.
+
+<br>
+
 <div align="center">
 <video width="90%" controls loop autoplay muted>
     <source src="https://github.com/user-attachments/assets/7d3f5dd1-43ff-4e1a-bd0b-074c8641f635" type="video/mp4">
@@ -73,7 +145,7 @@ Fig. 1. Final control architecture of the system
 </div>
 <p align="center">
 <em>
-The motion planner in action viewed through RViz.
+The motion planner in action, viewed through RViz. The bounding box is green when the bird is inside the ellipse, and mauve when the bird is outside it.
 </em>
 </p>
 
@@ -130,6 +202,9 @@ Screw-like trajectory of the robot. The green dot represents the instantaneous c
 </p>
 
 ### Data Collection
+
+The controls domain comprises integer values for speed ($$0~\mbox{-}~127$$) and steering ($$-127~\mbox{-}~127$$), and the range we prefer to operate 
+ ($$\sigma \approx 0~\mbox{-}~127$$, $$\phi \approx -70~\mbox{-}~70$$).
 
 <figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdpitchvsteering.png" width="60%"/>
 <figcaption><em>Fig. 5. Relation between screw pitch and steering command for 100+ trials at constant max speed input.
