@@ -135,9 +135,7 @@ GO TO START
 ```
 
 Here's a video of the motion planner in action.
-
 <br>
-
 <div align="center">
 <video width="90%" controls loop autoplay muted>
     <source src="https://github.com/user-attachments/assets/7d3f5dd1-43ff-4e1a-bd0b-074c8641f635" type="video/mp4">
@@ -148,11 +146,12 @@ Here's a video of the motion planner in action.
 The motion planner in action, viewed through RViz. The bounding box is green when the bird is inside the ellipse, and mauve when the bird is outside it.
 </em>
 </p>
-
 <br>
 
 ## System Design
 
+The system comprises: ROS2 Network on a Linux Device, transmitter module for MetaFly, Windows machine with the OptiTrack, and the MetaFly itself, which form a closed loop together:
+<br>
 <figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdsystem2.svg" width="95%"/>
 <figcaption>
 <em>
@@ -161,7 +160,12 @@ Fig. 2. The whole system as a control loop
 </figcaption>
 </figure>
 
+<br>
+
 ### Transmitter - Feedforward
+The transmitter module consists of an **Arduino Nano**, the **MetaFly remote controller's PCB** with it's potentiometers remote and a small circuit which all fits together as interchangeable shields.
+It's job is to take speed and steering commands through serial communication and transmit them to the bird by emualting potentiometers using the Arduino's analog output and a capacitor.
+I picked a Nano over a Teensy or something else of higher quality because it's cheap and easy to replace.
 
 <figure align = "center">
 <img src="{{ site.baseurl }}/assets/images/birdremote.jpg" width="51.7%"/>
@@ -172,10 +176,29 @@ Fig. 2. The whole system as a control loop
 
 ### Motion Capture - Feedback
 
+The OptiTrack system is incredibly useful for aerial vehicles with a small payloads, but because the MetaFly weighs ~10g and has barely any payload, I had to create my own retroreflective markers using styrofoam balls and retroreflective tape.
+These weighed 1/5th of similar-sized standard motion capture markers (~0.2g vs ~1g). 
+After attaching these to the bird in whatever manner you want, you can register your bird as a rigid body by placing it at the origin of the motion capture system with the bird aligned with the X-axis.
+If you require, the ROS2 listener node can also add a fixed transform offset to the bird's pose using the [`pose_offsets.yaml`](https://github.com/GogiPuttar/ros2_metafly/blob/main/metafly_listener/config/pose_offsets.yaml) file.
+I also built a drone cage around the OptiTrack system using ropes and batting nets.
+
 <figure align = "center"><img src="{{ site.baseurl }}/assets/images/mocap.gif" width="90%"/>
 <figcaption><em>The bird being tracked by multiple cameras of the OptiTrack system.
 </em></figcaption>
 </figure>
+
+A python script on the windows machine sends UDP pose messages over an ethernet connection to the ROS2 listener node. 
+Set the Motive software to broadcast with **loopback** and select only the rigid body you want to broadcast.
+Then run the broadcast script which should keep spitting out some output.
+Connect your Linux device via ethernet to the Windows machine and run this command on the Linux device to configure it's settings, after which the `metafly_listener` node should publish the correct pose values on the `/metafly_pose` topic:
+
+```
+sudo ifconfig eno0 192.168.1.2 netmask 255.255.255.0 up
+```
+
+The observable workspace with the initial motion capture setup involving 10 cameras did not have great coverage over drone cage's volume.
+I added on and refocused 6 more cameras to get almost full coverage.
+This is what the observable workspace looks like now:
 
 <iframe src="{{ site.baseurl }}/assets/images/3d_plot_interactive_spin.html" width="100%" height="500px"></iframe>
 <p align="center">
