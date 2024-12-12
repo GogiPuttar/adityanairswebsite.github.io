@@ -17,6 +17,10 @@ C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic 
 
 ## Overview
 
+In this project, I designed a stable flight controller for a commercially available biomimetic agile bird-like robot called **MetaFly**, capable of sustained flights of upto **2 minutes** in a closed **confined space**.
+I also developed the complete end-to-end system for testing high-level control policies by interfacing with the MetaFly's **RF transmitter** and an OptiTrack **motion capture system** through **ROS2**.
+This project was successful in developing a stable controller for indoor flight.
+
 <br>
 
 <figure align = "center">
@@ -33,11 +37,10 @@ C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic 
 
 <br>
 
-## Personal Motivation
-
 ### MetaFly by Bionic Bird
 
-<br>
+The MetaFly is a very cool biomimetic aerial platform sold by the company MetaFly.
+The thrust and lift vectors of this are coupled (somewhat like a fixed wing airplane) which means that it's practically impossible for it to hover in place.
 
 <div align="center"><iframe width="650" height="317" src="https://player.vimeo.com/video/377080293?autoplay=1&amp;dnt=1&app_id=122963" title="Data Driven Control of an Agile Robot Bird in a Confined Space" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 <p align="center">
@@ -46,9 +49,10 @@ MetaFly product video.
 </em>
 </p>
 
-<br>
-
 ### How hard is it to fly this thing?
+
+While, it flies really well in outdoor open spaces, it's really hard to fly it outside when there is any wind outside (which is pretty much always in Chicago), and next to impossible to fly it for any duration longer than 5 seconds in an indoor environment.
+I will also add a video of me interviewing a few of my friends trying to fly it in a large indoor space.
 
 <br>
 
@@ -187,7 +191,7 @@ I also built a drone cage around the OptiTrack system using ropes and batting ne
 </em></figcaption>
 </figure>
 
-A python script on the windows machine sends UDP pose messages over an ethernet connection to the ROS2 listener node. 
+A python script (credited to Drew Curtis) on the windows machine sends UDP pose messages over an ethernet connection to the ROS2 listener node. 
 Set the Motive software to broadcast with **loopback** and select only the rigid body you want to broadcast.
 Then run the broadcast script which should keep spitting out some output.
 Connect your Linux device via ethernet to the Windows machine and run this command on the Linux device to configure it's settings, after which the `metafly_listener` node should publish the correct pose values on the `/metafly_pose` topic:
@@ -262,6 +266,8 @@ The controls domain comprises integer values for speed ($$0~\mbox{-}~127$$) and 
 ### 4. Transitioning from one set of constraints to another
 
 ### 5. Minimal radius control 
+
+### 6. Hovering
 
 <br>
 
