@@ -37,7 +37,16 @@ C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic 
 
 ### MetaFly by Bionic Bird
 
-<div align="center"><iframe width="90%" height="650" src="https://player.vimeo.com/video/377080293?autoplay=1&amp;dnt=1&app_id=122963" title="Data Driven Control of an Agile Robot Bird in a Confined Space" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<br>
+
+<div align="center"><iframe width="650" height="317" src="https://player.vimeo.com/video/377080293?autoplay=1&amp;dnt=1&app_id=122963" title="Data Driven Control of an Agile Robot Bird in a Confined Space" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<p align="center">
+<em>
+MetaFly product video.
+</em>
+</p>
+
+<br>
 
 ### How hard is it to fly this thing?
 
@@ -48,7 +57,7 @@ C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic 
 <figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdcontrolsgraph.svg" width="95%"/>
 <figcaption>
 <em>
-Fig. x. Final control architecture of the system
+Fig. 1. Final control architecture of the system
 </em>
 </figcaption>
 </figure>
@@ -75,7 +84,7 @@ The motion planner in action viewed through RViz.
 <figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdsystem2.svg" width="95%"/>
 <figcaption>
 <em>
-Fig. x. The whole system as a control loop
+Fig. 2. The whole system as a control loop
 </em>
 </figcaption>
 </figure>
@@ -85,7 +94,7 @@ Fig. x. The whole system as a control loop
 <figure align = "center">
 <img src="{{ site.baseurl }}/assets/images/birdremote.jpg" width="51.7%"/>
 <img src="{{ site.baseurl }}/assets/images/birdremoteschematic3.svg" width="45%"/>
-<figcaption><em>Fig. x. Schematic and picture of the electronically controlled transmitter module for the MetaFly
+<figcaption><em>Fig. 3. Schematic and picture of the electronically controlled transmitter module for the MetaFly
 </em></figcaption>
 </figure>
 
@@ -99,7 +108,7 @@ Fig. x. The whole system as a control loop
 <iframe src="{{ site.baseurl }}/assets/images/3d_plot_interactive_spin.html" width="100%" height="500px"></iframe>
 <p align="center">
 <em>
-Fig. x. The portion of the drone cage that is observable using the OptiTrack system.
+Fig. 4. The portion of the drone cage that is observable using the OptiTrack system.
 </em>
 </p>
 
@@ -123,12 +132,12 @@ Screw-like trajectory of the robot. The green dot represents the instantaneous c
 ### Data Collection
 
 <figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdpitchvsteering.png" width="60%"/>
-<figcaption><em>Fig. x. Relation between screw pitch and steering command for 100+ trials at constant max speed input.
+<figcaption><em>Fig. 5. Relation between screw pitch and steering command for 100+ trials at constant max speed input.
 </em></figcaption>
 </figure>
 
 <figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdrollvsteering.png" width="60%"/>
-<figcaption><em>Fig. x. Relation between roll and steering command for 100+ trials at constant max speed input.
+<figcaption><em>Fig. 6. Relation between roll and steering command for 100+ trials at constant max speed input.
 </em></figcaption>
 </figure>
 
@@ -146,7 +155,7 @@ Screw-like trajectory of the robot. The green dot represents the instantaneous c
 ### 2. Imitation Learning through Data Collection
 
 <figure align = "center"><img src="{{ site.baseurl }}/assets/images/birdps3.jpg" width="50%"/>
-<figcaption><em>Fig. x. The bird can even be controlled using a PS3 remote through ROS2.
+<figcaption><em>Fig. 7. The bird can even be controlled using a PS3 remote through ROS2.
 </em></figcaption>
 </figure>
 
