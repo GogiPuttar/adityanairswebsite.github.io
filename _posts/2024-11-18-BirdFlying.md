@@ -44,7 +44,7 @@ The RF transmitter can send it speed and steering commands.
 The speed command indicates an increase/decrease in the flapping speed which makes the bird travel faster and higher, or slower and lower.
 The steering command works by a) moving the tail which creates a yawing drag moment, and b) by warping the wings in an asymmetrical manner which creates a difference in lift creating a rolling thrust moment... or at least I think it does.
 
-<div align="center"><iframe width="650" height="317" src="https://player.vimeo.com/video/377080293?autoplay=1&amp;dnt=1&app_id=122963" title="Data Driven Control of an Agile Robot Bird in a Confined Space" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div align="center"><iframe width="650" height="317" src="https://player.vimeo.com/video/377080293?autoplay=1&amp;dnt=1&app_id=122963" title="Data Driven Control of an Agile Robot Bird in a Confined Space" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 <p align="center">
 <em>
 MetaFly product video.
