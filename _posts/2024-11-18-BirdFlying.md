@@ -187,22 +187,27 @@ I picked a Nano over a Teensy or something else of higher quality because it's c
 The OptiTrack system is incredibly useful for aerial vehicles with a small payloads, but because the MetaFly weighs ~10g and has barely any payload, I had to create my own retroreflective markers using styrofoam balls and retroreflective tape.
 These weighed 1/5th of similar-sized standard motion capture markers (~0.2g vs ~1g in my case). 
 After attaching these to the bird in whatever manner you want, you can register your bird as a rigid body by placing it at the origin of the motion capture system with the bird aligned with the X-axis.
+You can fix its orientation by putting it in the charging position on the remote.
 If you require, the ROS2 listener node can also add a fixed transform offset to the bird's pose using the [`pose_offsets.yaml`](https://github.com/GogiPuttar/ros2_metafly/blob/main/metafly_listener/config/pose_offsets.yaml) file.
-I also built a drone cage around the OptiTrack system using ropes and batting nets.
+I also built a drone cage around the OptiTrack system using ropes and baseball nets.
 
 <figure align = "center"><img src="{{ site.baseurl }}/assets/images/mocap.gif" width="90%"/>
 <figcaption><em>The bird being tracked by multiple cameras of the OptiTrack system.
 </em></figcaption>
 </figure>
 
-A python script (credited to Drew Curtis) on the windows machine sends UDP pose messages over an ethernet connection to the ROS2 listener node. 
-Set the Motive software to broadcast with **loopback** and select only the rigid body you want to broadcast.
-Then run the broadcast script which should keep spitting out some output.
-Connect your Linux device via ethernet to the Windows machine and run this command on the Linux device to configure it's settings, after which the `metafly_listener` node should publish the correct pose values on the `/metafly_pose` topic:
+A [broadcaster script](https://github.com/GogiPuttar/ros2_metafly/blob/main/metafly_listener/windows/motion_position_broadcast.py) (credited to Drew Curtis) on the windows machine sends UDP pose messages over an ethernet connection to the ROS2 listener node. 
+Since this connection is what causes the largest delay in the system and a wireless connection in place of this would perform more poorly, an **ethernet connection is required** for real time control.
 
-```
-sudo ifconfig eno0 192.168.1.2 netmask 255.255.255.0 up
-```
+**Follow these steps** to use the `metafly_listener` package for publishing pose messages from the OptiTrack system to your ROS2 network:
+1. Open Motive on Windows and only select your rigid body in the "Assets" tab.
+2. Make sure streaming is on, and that the "local interface" is set to "loopback". Alternatively, you can simply import [this motive profile](https://github.com/GogiPuttar/ros2_metafly/blob/main/metafly_listener/windows/MetaFlyWiredUDP.cal).
+3. Connect your Linux Device via ethernet to the Windows device, and run this command on the Linux device:
+  ```
+  sudo ifconfig eno0 192.168.1.2 netmask 255.255.255.0 up
+  ```
+4. Run the broadcaster script on you windows machine. It should keep spitting out info.
+5. Launch the `listener.launch.py` file from the `metafly_listener` package. You should see real time pose info on the `/metafly_pose` topic.
 
 The observable workspace with the initial motion capture setup involving 10 cameras did not have great coverage over drone cage's volume.
 I added on and refocused 6 more cameras to get almost full coverage.
