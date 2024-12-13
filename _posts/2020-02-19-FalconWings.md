@@ -1,14 +1,14 @@
 ---
 layout: post
 title:  "Expandable Falcon Wings"
-categories: [CAD, Mechanical Design, Fusion360
+categories: [CAD
 ]
 image: assets/images/FalconWings.gif
 featured: false
 hidden: false
 ---
 
-CAD, Mechanical Design, Fusion360
+CAD
 
 <br>
 
