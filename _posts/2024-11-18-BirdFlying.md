@@ -17,9 +17,9 @@ C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic 
 
 ## Overview
 
-In this project, I designed a stable flight controller for a commercially available biomimetic agile bird-like robot called **MetaFly**, capable of sustained flights of upto **2 minutes** in a closed **confined space**.
-I also developed the complete end-to-end system for testing high-level control policies by interfacing with the MetaFly's **RF transmitter** and an OptiTrack **motion capture system** through **ROS2**.
-The aim of this project was to investigate the controls, and to build a substantial body of foundational work towards using the MetaFly as a generalized robot platform.
+In this project, I designed a stable flight controller for a commercially available biomimetic agile bird-like robot called **MetaFly**, thereby making it capable of sustained flights of upto **2 minutes** in a closed **confined space**, as opposed to 10 seconds by a human operator.
+I also developed the complete end-to-end system for testing high-level control policies by interfacing with the MetaFly's **RF transmitter** and an OptiTrack **motion capture system** using **ROS2**.
+The aim of this project was to investigate the dynamics and controls of the MetaFly, and to build a substantial body of foundational work towards using the MetaFly as a generalized robot platform.
 This project was successful in developing a stable controller for indoor flight.
 
 <figure align = "center">
@@ -62,7 +62,7 @@ I will also add a video of me interviewing a few of my friends trying to fly it 
 
 The control architecture was developed after several hours of experimentation, involving tradeoffs between efficacy and complexity.
 At the heart of it is an altitude ($$z$$) controller that commands speed ($$\sigma$$), and a roll ($$\alpha$$) controller that outputs steering ($$\phi$$).
-This assumes that the bird is two parallel Single Input Single Output (SISO) system as opposed to a Multi Input Multi Output (MIMO) system, which is fair since the height and roll are the only known parameters that remain relatively independent, at least in the controls domain that we prefer to operate the bird in.
+This assumes that the bird is two parallel Single Input Single Output (SISO) systems as opposed to a Multi Input Multi Output (MIMO) system, which is fair since the height and roll are the only known parameters that remain relatively independent, at least in the controls domain that we prefer to operate the bird in.
 More on the domain in [the Data Collection section](#data-collection).
 The controller is exactly described by:
 
@@ -113,7 +113,7 @@ Fig. 1. Final control architecture of the system
 
 ## Motion Planner
 
-The goal of the motion planner is to counteract the overall drift of the system that accumulates over time, to prevent the bird from violating the constraints of the room. 
+The goal of the motion planner is to counteract the overall drift in the system that accumulates over time, to prevent the bird from violating the constraints of the room. 
 It basically emulates a *throw* back towards the center if the bird strays too far from the center / too close to the walls. 
 It works by switching the behaviour over long time horizons, since experiments with reactive approaches did not give good results.
 This also relies on a special elliptical manifold which functions as mixture of the target circle and cuboidal constraints of the drone cage.
