@@ -289,6 +289,7 @@ $$.
 
 I use the word naive because the direction and magnitude of $$V_{thrust}$$ is not known (to me), and there might be second order dynamical relationships that can't be ignored.
 
+The real advantage is that this would allow the bird to track any arbitrary closed trajectory.
 I tried various reactive approaches but was not able to find one that made a noticeable improvement.
 
 ### 2. Imitation Learning through Data Collection
