@@ -63,10 +63,10 @@ I will also add a video of me interviewing a few of my friends trying to fly it 
 The control architecture was developed after several hours of experimentation, involving tradeoffs between efficacy and complexity.
 In a nutshell, after carefully observing the bird in all of these trials, the following empirical rules guided my design of the controller:
 1. The bird takes speed and steering commands at every instant, and the wings flap fast enough for their actual position to not be significant.
-1. The bird follows a screw-like trajectory, and generally moves in the direction it faces. 
+2. The bird follows a screw-like trajectory, and its direction of motion is within some cone of the direction it's facing. 
 The characteristics of this trajectory are not only a function of the commands sent to the bird, but also the bird's current state, and external factors like wind.
-2. At large steering commands, the bird cannot generate enough lift and starts to descend.
-3. At smaller steering commands, the bird can be treated as two parallel Single Input Single Output (SISO) systems, as opposed to a general Multi Input Multi Output (MIMO) system. 
+1. At large steering commands, the bird cannot generate enough lift and starts to descend.
+2. At smaller steering commands, the bird can be treated as two parallel Single Input Single Output (SISO) systems, as opposed to a general Multi Input Multi Output (MIMO) system. 
 Here, the speed dictates the vertical velocity, and the roll dictates the radius of turning, with very little variance.
 
 The motivation behind these rules is discussed in greater detail in the [the Data Collection section](#data-collection).
@@ -179,8 +179,8 @@ Fig. 2. The whole system as a control loop
 <br>
 
 ### Transmitter - Feedforward
-The transmitter module consists of an **Arduino Nano**, the **MetaFly remote controller's PCB** with it's potentiometers removed, and a small circuit which fits everything together as interchangeable shields.
-It's job is to take speed and steering commands through serial communication and transmit them to the bird.
+The transmitter module consists of an **Arduino Nano**, the **MetaFly remote controller's PCB** with its potentiometers removed, and a small circuit which fits everything together as interchangeable shields.
+Its job is to take speed and steering commands through serial communication and transmit them to the bird.
 The Arduino's analog outputs are used in parallel with large capacitors to emulate a potentiometer's signal.
 I picked a Nano over a Teensy or something else of higher quality because it's cheap and easy to replace.
 
@@ -337,7 +337,7 @@ Maybe not instantaneously... but at least over a large horizon.
 
 ### 7. Not relying on the OptiTrack
 
-If you can figure out a way to add some sort of onboard sensing unit, that would at the very least sense it's orientation, this thing could be taken outdoors. 
+If you can figure out a way to add some sort of onboard sensing unit, that would at the very least sense its orientation, this thing could be taken outdoors. 
 This can also be used a platform for collecting data for training a model that improves the capability of a subpar sensor towards sensing pose / nearby obstacles.
 If flies can do this, then why can't we?
 
