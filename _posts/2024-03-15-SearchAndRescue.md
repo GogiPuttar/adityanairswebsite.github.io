@@ -28,10 +28,10 @@ Concept video of the final product.
 
 ## Overview
 The aim of this project is to enable the Unitree Go1 to autonomously explore an outdoor environment with uneven terrain, in order to search and locate a missing person.
-The motivation for this project is to allow robots to look for people missing in a natural environment <a href="https://www.youtube.com/watch?v=Fmxt7NZzmmU" target="_blank">example</a>, where gathering a search party ad-hoc is difficult. 
+The motivation for this project is to allow robots to look for people missing in a natural environment (<a href="https://www.youtube.com/watch?v=Fmxt7NZzmmU" target="_blank">example</a>), where gathering a search party ad-hoc is difficult. 
 This leverages the unique advantages that legged robots as well as visual SLAM possess, in unmapped environments. 
-The dog (a **Unitree Go1**) is equipped with a **ZED 2i camera** and uses its built in Visual-Inertial Odometry (VIO) and mapping for SLAM, object detection for detecting human beings, a **frontier exploration algorithm** for searching and environment, and the **Nav Stack** for traveling to goal poses.
-Much of the work in this project has been about integrating many different sensors and computers using ROS2 `humble` on an **Nvidia Jetson Orin Nano**.
+The dog (a **Unitree Go1**) is equipped with a **ZED 2i camera** and uses its built in Visual-Inertial Odometry (VIO) for Simulataneous Localization and Mapping (SLAM), object detection for detecting human beings, a **frontier exploration algorithm** for searching an environment, and the **Nav Stack** for traveling to goal poses.
+Much of the project has centered around integrating many different sensors and computers using ROS2 `humble` on an **Nvidia Jetson Orin Nano**.
 
 Given below is a road map for completing the project.
 Currently, I'm at a point where the exploration algorithm is only suitable for dense environments, and hence has not been deployed for large and sparse outdoor environments:
