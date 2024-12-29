@@ -11,7 +11,7 @@ C++, Python, ROS2/ROS, Aerial Robots, Motion Planning, Computer Vision, Dynamic 
 
 <br>
 
-<div align="center"><iframe width="1333" height="650" src="https://www.youtube.com/embed/oVQGfwPvMw4" title="Data Driven Control of an Agile Robot Bird in a Confined Space" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div align="center"><iframe width="1333" height="650" src="https://www.youtube.com/embed/OVE-8s1t6wc" title="My Robot Bird Flies Like A REAL ONE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 <br>
 
@@ -54,7 +54,9 @@ MetaFly product video.
 ### How hard is it to fly this thing?
 
 While it flies really well in outdoor open spaces, it's really hard to fly it outside when there is any wind (which is pretty much always in Chicago), and next to impossible to fly it for any duration longer than 10 seconds in an indoor environment.
-I will also add a video of me interviewing a few of my friends trying to fly it in a large indoor space.
+Here's a snippet from my YouTube video of my friends trying to fly this device in an indoor space.
+
+<div align="center"><iframe width="650" height="417" src="https://www.youtube.com/embed/OVE-8s1t6wc?start=78&end=155" title="How hard is it to fly this thing?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 
 <br>
 
