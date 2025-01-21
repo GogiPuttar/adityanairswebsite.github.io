@@ -283,7 +283,9 @@ Since we don't want the bird to decrease in height too much, we prefer to operat
 
 ## Future Work
 
-There are many possible offshoots this work can be a foundational block in. 
+**UPDATE:** *Check out the capabilities of the latest MetaFly <a href="https://www.bionicbird.com/usa/xfly_details/" target="_blank">here</a>!*
+
+There are many possible offshoots that this work can be a foundational block in. 
 Some that come to mind are:
 
 ### 1. Reactive Drift Control
